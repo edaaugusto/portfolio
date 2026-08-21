@@ -269,11 +269,11 @@ body.intro-cover .hnp-fullname{font-size:clamp(2.75rem,7vw,4.8rem);margin-top:4p
 .hnp-word span.pending{-webkit-text-fill-color:var(--text-muted);background:none}
 
 .hero-fill{flex:1 1 320px;min-width:0;overflow:visible;opacity:1;transition:opacity .6s ease .35s}
-body.intro-cover .hero-fill{flex:0 0 0;width:0;overflow:hidden;opacity:0;transition:opacity 0s}
+body.intro-cover .hero-fill{display:none;opacity:0}
 .hero-fill p{color:var(--text-muted);font-size:1.1rem}
 
 .hero-side{opacity:1;overflow:visible;transition:opacity .6s ease .5s}
-body.intro-cover .hero-side{opacity:0;overflow:hidden;transition:opacity 0s}
+body.intro-cover .hero-side{display:none;opacity:0}
 
 #inicio h1{
   font-size:clamp(1.5rem,3vw,2rem);font-weight:600;margin-bottom:24px;
@@ -326,8 +326,6 @@ body.intro-cover .hero-side{opacity:0;overflow:hidden;transition:opacity 0s}
   body.intro-cover .hero-row{text-align:center}
   .hero-namepanel{text-align:left}
   body.intro-cover .hero-namepanel{text-align:center}
-  .hero-fill{width:auto}
-  body.intro-cover .hero-fill{height:0}
   .hero-fill p{margin:0 auto 32px}
   .actions,.kpis,.hero-ctas{justify-content:center}
   .stack-list li{justify-content:center}
