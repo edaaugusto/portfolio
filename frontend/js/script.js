@@ -193,6 +193,8 @@ class PortfolioApp {
         if(panelAnim){ panelAnim.cancel(); panelAnim = null; }
         window.scrollTo(0, 0);
         document.body.classList.add('intro-cover');
+        requestAnimationFrame(() => window.scrollTo(0, 0));
+        setTimeout(() => window.scrollTo(0, 0), 50);
         let doneCount = 0;
         const checkBoth = () => {
           if(token !== introToken) return;
