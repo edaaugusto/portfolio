@@ -4,8 +4,8 @@
 :root{
   --bg-base:#09090b; --bg-soft:#18181b;
   --text-main:#f4f4f5; --text-muted:#a1a1aa;
-  --primary-rgb:89,152,207; --primary:rgb(var(--primary-rgb)); --primary-glow:rgba(var(--primary-rgb),.15);
-  --secondary:#41C890; --on-primary:#0a0a0a;
+  --primary-rgb:65,200,144; --primary:rgb(var(--primary-rgb)); --primary-glow:rgba(var(--primary-rgb),.15);
+  --secondary:#5998CF; --on-primary:#0a0a0a;
   --card-bg:rgba(24,24,27,.65); --glass:rgba(255,255,255,.03);
   --border-light:rgba(255,255,255,.08); --border-hover:rgba(var(--primary-rgb),.3);
   --radius:16px;
@@ -17,8 +17,8 @@
 :root[data-theme="light"]{
   --bg-base:#fafafa; --bg-soft:#ffffff;
   --text-main:#09090b; --text-muted:#52525b;
-  --primary-rgb:37,85,126; --primary-glow:rgba(var(--primary-rgb),.15);
-  --secondary:#227753; --on-primary:#ffffff;
+  --primary-rgb:34,119,83; --primary-glow:rgba(var(--primary-rgb),.15);
+  --secondary:#25557E; --on-primary:#ffffff;
   --card-bg:rgba(255,255,255,.8); --glass:rgba(0,0,0,.02);
   --border-light:rgba(0,0,0,.08); --border-hover:rgba(var(--primary-rgb),.4);
   --shadow-base:0 4px 20px -8px rgba(0,0,0,.08);
@@ -274,7 +274,7 @@ h2{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;line-height:1.2;margin-bo
   display:flex;align-items:center;justify-content:center;
   font-size:3.5rem;font-weight:800;letter-spacing:-.05em;
   /* cor fixa (não var(--primary)): o fundo aqui é sempre escuro, independente do tema */
-  color:#5998CF;
+  color:#41C890;
 }
 
 .cv-photo-wrap{display:flex;justify-content:center}
@@ -287,7 +287,7 @@ h2{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;line-height:1.2;margin-bo
 .nav-avatar .photo{
   width:100%;height:100%;display:flex;align-items:center;justify-content:center;
   background:linear-gradient(140deg,#27272a,#3f3f46 45%,#18181b);
-  font-size:.9rem;font-weight:800;color:#5998CF;letter-spacing:-.05em;
+  font-size:.9rem;font-weight:800;color:#41C890;letter-spacing:-.05em;
 }
 
 @media (max-width:900px){
