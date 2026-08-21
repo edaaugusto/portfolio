@@ -23,11 +23,14 @@
       </svg>
     </a>
 
+    <div class="nav-avatar" aria-hidden="true"><div class="photo">AB</div></div>
+
     <nav class="nav-links" id="nav-links" aria-label="Navegação Principal">
-      <a href="#inicio"   data-i18n="nav-home"     class="active" aria-current="page">Início</a>
-      <a href="#sobre"    data-i18n="nav-about">Sobre</a>
-      <a href="#projetos" data-i18n="nav-projects">Projetos</a>
-      <a href="#contato"  data-i18n="nav-contact">Contato</a>
+      <a href="#inicio"    data-i18n="nav-home"     class="active" aria-current="page">Início</a>
+      <a href="#sobre"     data-i18n="nav-about">Sobre</a>
+      <a href="#projetos"  data-i18n="nav-projects">Projetos</a>
+      <a href="curriculo.html" data-i18n="nav-cv">Currículo</a>
+      <a href="#contato"   data-i18n="nav-contact">Contato</a>
     </nav>
 
     <button id="lang-toggle" class="btn secondary" type="button" aria-label="Alternar idioma">EN</button>
@@ -54,10 +57,7 @@
   <!-- ===================== HERO ===================== -->
   <section id="inicio" class="hero container" aria-label="Apresentação">
     <div class="reveal intro">
-      <span class="tag" style="margin-bottom:16px;display:inline-flex;align-items:center;gap:8px">
-        <span class="pulse-dot"></span>
-        <span data-i18n="hero-badge">Disponível para novos desafios</span>
-      </span>
+      <span class="hero-name" data-i18n="hero-name">Seu Nome</span>
       <h1 data-i18n="hero-title">Engenheiro de Software</h1>
       <p data-i18n="hero-desc">Foco em <strong>arquitetura de software</strong>, <strong>sistemas distribuídos</strong> e <strong>infraestrutura em nuvem</strong>. APIs resilientes, microsserviços e pipelines de dados de alta performance.</p>
       <div class="kpis">
@@ -73,7 +73,6 @@
     </div>
 
     <aside class="hero-side reveal">
-      <div class="avatar" aria-hidden="true"><div class="photo">AB</div></div>
       <div class="card">
         <ul class="stack-list">
           <li><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--primary)" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg><span data-i18n="stack-1">Arquitetura, Microsserviços &amp; DDD</span></li>
@@ -236,13 +235,14 @@
       <h3 data-i18n="footer-title">Vamos construir o futuro juntos?</h3>
       <p data-i18n="footer-desc">Aberto a desafios que exijam arquitetura robusta e resolução de problemas complexos.</p>
       <div class="actions" style="margin-top:24px;justify-content:flex-start">
-        <a class="btn light" href="#contato" data-i18n="footer-btn">Analisar Currículo</a>
+        <a class="btn light" href="curriculo.html" data-i18n="footer-btn">Analisar Currículo</a>
       </div>
     </div>
     <nav class="sitemap" aria-label="Mapa do site">
-      <a href="#sobre"    data-i18n="nav-about">Sobre</a>
-      <a href="#projetos" data-i18n="nav-projects">Projetos</a>
-      <a href="#contato"  data-i18n="nav-contact">Contato</a>
+      <a href="#sobre"        data-i18n="nav-about">Sobre</a>
+      <a href="#projetos"     data-i18n="nav-projects">Projetos</a>
+      <a href="curriculo.html" data-i18n="nav-cv">Currículo</a>
+      <a href="#contato"      data-i18n="nav-contact">Contato</a>
     </nav>
     <div class="social" aria-label="Perfis sociais">
       <a href="#" aria-label="GitHub" title="GitHub">

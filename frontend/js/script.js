@@ -4,8 +4,8 @@
 const i18nDict = {
   pt: {},   // PT é o texto que já está no HTML
   en: {
-    'nav-home':'Home','nav-about':'About','nav-projects':'Projects','nav-contact':'Contact',
-    'hero-badge':'Available for new challenges','hero-title':'Software Engineer',
+    'nav-home':'Home','nav-about':'About','nav-projects':'Projects','nav-cv':'Resume','nav-contact':'Contact',
+    'hero-title':'Software Engineer',
     'hero-desc':'Focused on software architecture, distributed systems and cloud infrastructure. Resilient APIs, microservices and high-performance data pipelines.',
     'hero-btn-talk':'Get in touch','hero-btn-cv':'View Projects',
     'stack-1':'Architecture, Microservices & DDD','stack-2':'Cloud (AWS), Docker & Kubernetes','stack-3':'Java, Python, Node.js & TypeScript',
@@ -14,6 +14,7 @@ const i18nDict = {
     'about-c2-t':'Backend & Architecture','about-c2-d':'Java, Python, Node.js and SQL. Microservices, Serverless, AWS, CQRS, Circuit Breaker, SAGA and Event-Driven Architecture. PostgreSQL and MongoDB.',
     'about-c3-t':'DevOps & Quality','about-c3-d':'Docker, Kubernetes, CI/CD (GitHub Actions), Apache Airflow. TDD, Clean Architecture, advanced Git flow and agile methodologies.',
     'proj-title':'Featured Projects','proj-sub':'A selection of my most complex back-end architectures and data integrations.',
+    'cv-title':'Resume','cv-sub':'My professional journey summarized in one place.',
     'f-all':'All','f-arch':'Architecture','f-back':'Back-End','f-data':'Data',
     'p1-t':'BazaBank Core','p1-d':'Simulated banking core system focused on secure processing of financial operations using microservices and distributed messaging.',
     'p2-t':'CarefulBaza','p2-d':'Dropshipping e-commerce platform focused on resilience and high availability.',
