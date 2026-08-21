@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
@@ -56,23 +56,25 @@
 <main>
   <!-- ===================== HERO ===================== -->
   <section id="inicio" class="hero container" aria-label="Apresentação">
-    <div class="hero-namepanel" id="hero-namepanel">
-      <span class="hnp-word hnp-eyebrow" id="hnp-eyebrow" data-text="Portfólio"></span>
-      <span class="hnp-word hnp-fullname" id="hnp-fullname" data-text="Eduardo Augusto"></span>
-    </div>
-
-    <div class="hero-fill" id="hero-fill">
-      <h1 data-i18n="hero-title">Engenheiro de Software</h1>
-      <p data-i18n="hero-desc">Foco em <strong>arquitetura de software</strong>, <strong>sistemas distribuídos</strong> e <strong>infraestrutura em nuvem</strong>. APIs resilientes, microsserviços e pipelines de dados de alta performance.</p>
-      <div class="kpis">
-        <span class="kpi">Java</span>
-        <span class="kpi">AWS</span>
-        <span class="kpi">Microsserviços</span>
-        <span class="kpi">Kubernetes</span>
+    <div class="hero-row" id="hero-row">
+      <div class="hero-namepanel" id="hero-namepanel">
+        <span class="hnp-word hnp-eyebrow" id="hnp-eyebrow">Portfólio</span>
+        <span class="hnp-word hnp-fullname" id="hnp-fullname">Eduardo Augusto</span>
       </div>
-      <div class="hero-ctas">
-        <a class="btn" href="#contato" data-i18n="hero-btn-talk">Fale Comigo</a>
-        <a class="btn secondary" href="#projetos" data-i18n="hero-btn-cv">Ver Projetos</a>
+
+      <div class="hero-fill" id="hero-fill">
+        <h1 data-i18n="hero-title">Engenheiro de Software</h1>
+        <p data-i18n="hero-desc">Foco em <strong>arquitetura de software</strong>, <strong>sistemas distribuídos</strong> e <strong>infraestrutura em nuvem</strong>. APIs resilientes, microsserviços e pipelines de dados de alta performance.</p>
+        <div class="kpis">
+          <span class="kpi">Java</span>
+          <span class="kpi">AWS</span>
+          <span class="kpi">Microsserviços</span>
+          <span class="kpi">Kubernetes</span>
+        </div>
+        <div class="hero-ctas">
+          <a class="btn" href="#contato" data-i18n="hero-btn-talk">Fale Comigo</a>
+          <a class="btn secondary" href="#projetos" data-i18n="hero-btn-cv">Ver Projetos</a>
+        </div>
       </div>
     </div>
 
@@ -264,7 +266,7 @@
   </div>
 </footer>
 
-<script src="js/script.js" defer></script>
+<script src="js/script.js?v=5" defer></script>
 <script src="js/api-status.js" defer></script>
 </body>
 </html>

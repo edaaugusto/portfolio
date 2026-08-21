@@ -123,19 +123,25 @@ class PortfolioApp {
     document.addEventListener('keydown', (e) => { if(e.key === 'Escape') toggleMenu(true); });
   }
 
-  /* --- INTRO DO HERO (decodificação + encaixe) --- */
+  /* --- INTRO DO HERO (decodificação + encaixe) ---
+     Por padrão (sem JS, ou se algo aqui falhar) o Hero já mostra o
+     layout final, totalmente visível — este método só adiciona a
+     animação por cima quando consegue rodar até o fim. */
   initHeroIntro(){
     const stage = document.querySelector('#inicio');
     const namePanel = document.querySelector('#hero-namepanel');
     const eyebrow = document.querySelector('#hnp-eyebrow');
     const fullname = document.querySelector('#hnp-fullname');
+    const brand = document.querySelector('.brand');
     if(!stage || !namePanel || !eyebrow || !fullname) return;
 
-    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const eyebrowText = eyebrow.textContent;
+    const fullnameText = fullname.textContent;
     const GLITCH_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&*';
+    let introToken = 0;
+    let panelAnim = null;
 
-    const glitchInto = (el, onDone) => {
-      const text = el.dataset.text || '';
+    const glitchInto = (el, text, token, onDone) => {
       el.innerHTML = '';
       const spans = text.split('').map(ch => {
         const s = document.createElement('span');
@@ -144,17 +150,13 @@ class PortfolioApp {
         el.appendChild(s);
         return s;
       });
-      if(reduceMotion){
-        spans.forEach((s, i) => { s.textContent = text[i]; s.className = ''; });
-        if(onDone) onDone();
-        return;
-      }
       let settled = 0;
       spans.forEach((span, i) => {
         if(text[i] === ' '){ settled++; return; }
         let ticks = 0;
         const maxTicks = 4 + Math.floor(Math.random()*3) + Math.floor(i/2);
         const iv = setInterval(() => {
+          if(token !== introToken){ clearInterval(iv); return; }
           ticks++;
           if(ticks < maxTicks){
             span.textContent = GLITCH_CHARS[Math.floor(Math.random()*GLITCH_CHARS.length)];
@@ -169,28 +171,43 @@ class PortfolioApp {
       });
     };
 
-    const collapseToHero = () => {
+    const expandToHero = (token) => {
+      if(token !== introToken) return;
       const first = namePanel.getBoundingClientRect();
-      stage.classList.add('mode-hero');
-      if(reduceMotion) return;
+      document.body.classList.remove('intro-cover');
       const last = namePanel.getBoundingClientRect();
       const dx = first.left - last.left;
       const dy = first.top - last.top;
       const sx = first.width / last.width;
       const sy = first.height / last.height;
-      namePanel.animate([
+      if(panelAnim) panelAnim.cancel();
+      panelAnim = namePanel.animate([
         { transform: `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})` },
         { transform: 'translate(0px, 0px) scale(1, 1)' }
       ], { duration: 1100, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' });
     };
 
-    let doneCount = 0;
-    const checkBoth = () => {
-      doneCount++;
-      if(doneCount === 2) setTimeout(collapseToHero, reduceMotion ? 0 : 1800);
+    const playIntro = () => {
+      const token = ++introToken;
+      try {
+        if(panelAnim){ panelAnim.cancel(); panelAnim = null; }
+        window.scrollTo(0, 0);
+        document.body.classList.add('intro-cover');
+        let doneCount = 0;
+        const checkBoth = () => {
+          if(token !== introToken) return;
+          doneCount++;
+          if(doneCount === 2) setTimeout(() => expandToHero(token), 1800);
+        };
+        glitchInto(eyebrow, eyebrowText, token, checkBoth);
+        glitchInto(fullname, fullnameText, token, checkBoth);
+      } catch(e) {
+        document.body.classList.remove('intro-cover');
+      }
     };
-    glitchInto(eyebrow, checkBoth);
-    glitchInto(fullname, checkBoth);
+
+    playIntro();
+    if(brand) brand.addEventListener('click', playIntro);
   }
 
   /* --- REVEAL --- */
