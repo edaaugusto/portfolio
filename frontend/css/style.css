@@ -293,7 +293,6 @@ h2{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;line-height:1.2;margin-bo
 @media (max-width:768px){
   .hero{text-align:center}
   .hero .intro p{margin:0 auto 32px}
-  .hero-side{grid-row:1}
   .actions,.kpis,.hero-ctas{justify-content:center}
   .stack-list li{justify-content:center}
 }
