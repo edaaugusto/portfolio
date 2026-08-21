@@ -38,7 +38,7 @@ const i18nDict = {
     'p1-t':'Accex — Urban Accessibility','p1-d':'Full-stack web platform for urban accessibility classification, built as a group capstone project.',
     'p2-t':'Sales Analytics Dashboard','p2-d':'Hands-on Power BI project with ETL, data modeling and DAX measures to track sales performance and business indicators.',
     'p3-t':'Visual Identity — F M Locação','p3-d':'Visual identity consulting for a local business: logo, digital materials and ongoing Instagram marketing, producing reels, photos and videos.',
-    'btn-deploy':'Open Deploy','btn-site':'Open Site','btn-repo':'Repository','proj-all':'See more on GitHub',
+    'btn-deploy':'Open Deploy','btn-site':'Open Site','btn-repo':'Repository','btn-insta':'View Instagram','proj-all':'See more on GitHub',
     'contact-title':'Contact','contact-sub':'Looking for a dedicated intern or junior developer for your team? Let’s talk.',
     'wpp-title':'Direct Call','wpp-desc':'Send a direct WhatsApp message for an immediate reply.','lbl-msg2':'Your Message','wpp-btn':'Send on WhatsApp',
     'mail-title':'Via E-mail','mail-desc':'Prefer the formality of e-mail? Fill in the fields below.',
