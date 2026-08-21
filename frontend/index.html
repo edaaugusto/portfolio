@@ -6,8 +6,8 @@
 <title>Eduardo Augusto — Portfólio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
-<link rel="stylesheet" href="css/style.css?v=8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Dancing+Script:wght@600;700&display=swap">
+<link rel="stylesheet" href="css/style.css?v=9">
 </head>
 <body>
 
@@ -17,10 +17,7 @@
 <header class="navbar" role="banner">
   <div class="container inner">
     <a class="brand" href="#inicio" aria-label="Ir para o início">
-      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true">
-        <rect x="1" y="1" width="38" height="38" rx="11" fill="none" stroke="var(--primary)" stroke-width="2"/>
-        <path d="M12 28 L20 12 L28 28 M15.5 23 H24.5" fill="none" stroke="var(--primary)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      <span class="logo-text">Eduardo</span>
     </a>
 
     <div class="nav-avatar" aria-hidden="true"><div class="photo">EA</div></div>
@@ -70,6 +67,8 @@
           <span class="kpi">Node.js</span>
           <span class="kpi">MySQL</span>
           <span class="kpi">Power BI</span>
+          <span class="kpi">Cloud (AWS/GCP)</span>
+          <span class="kpi">IA Generativa</span>
         </div>
         <div class="hero-ctas">
           <a class="btn" href="#contato" data-i18n="hero-btn-talk">Fale Comigo</a>
@@ -101,7 +100,7 @@
         </div>
         <div class="card reveal">
           <strong data-i18n="about-c2-t">Formação Acadêmica</strong>
-          <p data-i18n="about-c2-d">Técnico em Informática para Internet pela FIEB (2021–2023). Atualmente cursando Análise e Desenvolvimento de Sistemas na Universidade Cruzeiro do Sul (2024–atual), com foco em metodologias ágeis e prototipação no Figma.</p>
+          <p data-i18n="about-c2-d">Técnico em Informática para Internet pela FIEB (2021–2023). Atualmente cursando Análise e Desenvolvimento de Sistemas na Universidade Cruzeiro do Sul (2024–atual), com foco em desenvolvimento, programação, gestão de projetos e metodologias ágeis.</p>
         </div>
         <div class="card reveal">
           <strong data-i18n="about-c3-t">Habilidades &amp; Ferramentas</strong>
@@ -114,7 +113,7 @@
             </li>
             <li><span data-i18n="skill-2">Power BI — Senai</span> <span class="skills-year">2025</span></li>
             <li><span data-i18n="skill-3">Informática — Microcamp</span> <span class="skills-year">2024</span></li>
-            <li><span data-i18n="skill-4">Soluções de IA Generativa com AWS</span></li>
+            <li><span data-i18n="skill-4">Soluções de IA Generativa com AWS</span> <span class="skills-year">2026</span></li>
           </ul>
         </div>
       </div>
@@ -166,12 +165,13 @@
         <article class="card project-card reveal" data-project="identidade-visual" data-tags="design">
           <div class="thumb" style="background:linear-gradient(135deg,#3f2d1a,#1c1917 60%,#78350f)">Identidade Visual</div>
           <h3 data-i18n="p3-t">Identidade Visual — F M Locação</h3>
-          <p data-i18n="p3-d">Consultoria e criação de identidade visual para um empreendimento local: logotipo, materiais digitais e gestão contínua do marketing no Instagram, com produção de reels, fotos e vídeos.</p>
+          <p data-i18n="p3-d">Consultoria, gestão de projetos e criação de identidade visual para um empreendimento local: logotipo, materiais digitais e gestão contínua do marketing no Instagram, com produção de reels, fotos e vídeos.</p>
           <div class="project-meta">
             <span class="tag skill">Branding</span>
             <span class="tag skill">Design Gráfico</span>
             <span class="tag skill">Marketing Digital</span>
             <span class="tag skill">Instagram (Reels, Fotos &amp; Vídeos)</span>
+            <span class="tag skill">Gestão de Projetos</span>
           </div>
           <div class="actions">
             <a class="btn" href="https://www.instagram.com/fmlocacao" target="_blank" rel="noopener" data-i18n="btn-insta">Ver Instagram</a>
@@ -243,6 +243,7 @@
 <footer class="footer" role="contentinfo">
   <div class="container top">
     <div class="cta">
+      <span class="logo-text footer-logo">Eduardo</span>
       <h3 data-i18n="footer-title">Vamos construir o futuro juntos?</h3>
       <p data-i18n="footer-desc">Aberto a oportunidades de estágio ou início de carreira em tecnologia — desenvolvimento, dados ou o que fizer sentido pro time.</p>
       <div class="actions" style="margin-top:24px;justify-content:flex-start">
@@ -271,7 +272,7 @@
   </div>
 </footer>
 
-<script src="js/script.js?v=11" defer></script>
+<script src="js/script.js?v=12" defer></script>
 <script src="js/api-status.js" defer></script>
 </body>
 </html>
