@@ -59,6 +59,7 @@ class PortfolioApp {
     this.initTheme();
     this.initI18n();
     this.initNavigation();
+    this.initHeroIntro();
     this.initScrollReveal();
     this.initSmoothScroll();
     this.initSectionHighlight();
@@ -120,6 +121,76 @@ class PortfolioApp {
       if(navLinks.classList.contains('open') && !navLinks.contains(e.target) && !navToggle.contains(e.target)) toggleMenu(true);
     });
     document.addEventListener('keydown', (e) => { if(e.key === 'Escape') toggleMenu(true); });
+  }
+
+  /* --- INTRO DO HERO (decodificação + encaixe) --- */
+  initHeroIntro(){
+    const stage = document.querySelector('#inicio');
+    const namePanel = document.querySelector('#hero-namepanel');
+    const eyebrow = document.querySelector('#hnp-eyebrow');
+    const fullname = document.querySelector('#hnp-fullname');
+    if(!stage || !namePanel || !eyebrow || !fullname) return;
+
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const GLITCH_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&*';
+
+    const glitchInto = (el, onDone) => {
+      const text = el.dataset.text || '';
+      el.innerHTML = '';
+      const spans = text.split('').map(ch => {
+        const s = document.createElement('span');
+        s.className = 'pending';
+        s.textContent = ch === ' ' ? ' ' : ch;
+        el.appendChild(s);
+        return s;
+      });
+      if(reduceMotion){
+        spans.forEach((s, i) => { s.textContent = text[i]; s.className = ''; });
+        if(onDone) onDone();
+        return;
+      }
+      let settled = 0;
+      spans.forEach((span, i) => {
+        if(text[i] === ' '){ settled++; return; }
+        let ticks = 0;
+        const maxTicks = 4 + Math.floor(Math.random()*3) + Math.floor(i/2);
+        const iv = setInterval(() => {
+          ticks++;
+          if(ticks < maxTicks){
+            span.textContent = GLITCH_CHARS[Math.floor(Math.random()*GLITCH_CHARS.length)];
+          } else {
+            span.textContent = text[i];
+            span.className = '';
+            clearInterval(iv);
+            settled++;
+            if(settled >= text.length && onDone) onDone();
+          }
+        }, 95);
+      });
+    };
+
+    const collapseToHero = () => {
+      const first = namePanel.getBoundingClientRect();
+      stage.classList.add('mode-hero');
+      if(reduceMotion) return;
+      const last = namePanel.getBoundingClientRect();
+      const dx = first.left - last.left;
+      const dy = first.top - last.top;
+      const sx = first.width / last.width;
+      const sy = first.height / last.height;
+      namePanel.animate([
+        { transform: `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})` },
+        { transform: 'translate(0px, 0px) scale(1, 1)' }
+      ], { duration: 1100, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'forwards' });
+    };
+
+    let doneCount = 0;
+    const checkBoth = () => {
+      doneCount++;
+      if(doneCount === 2) setTimeout(collapseToHero, reduceMotion ? 0 : 1800);
+    };
+    glitchInto(eyebrow, checkBoth);
+    glitchInto(fullname, checkBoth);
   }
 
   /* --- REVEAL --- */

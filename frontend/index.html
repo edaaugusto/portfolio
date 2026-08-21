@@ -56,8 +56,12 @@
 <main>
   <!-- ===================== HERO ===================== -->
   <section id="inicio" class="hero container" aria-label="Apresentação">
-    <div class="reveal intro">
-      <span class="hero-name" data-i18n="hero-name">Seu Nome</span>
+    <div class="hero-namepanel" id="hero-namepanel">
+      <span class="hnp-word hnp-eyebrow" id="hnp-eyebrow" data-text="Portfólio"></span>
+      <span class="hnp-word hnp-fullname" id="hnp-fullname" data-text="Eduardo Augusto"></span>
+    </div>
+
+    <div class="hero-fill" id="hero-fill">
       <h1 data-i18n="hero-title">Engenheiro de Software</h1>
       <p data-i18n="hero-desc">Foco em <strong>arquitetura de software</strong>, <strong>sistemas distribuídos</strong> e <strong>infraestrutura em nuvem</strong>. APIs resilientes, microsserviços e pipelines de dados de alta performance.</p>
       <div class="kpis">
@@ -72,7 +76,7 @@
       </div>
     </div>
 
-    <aside class="hero-side reveal">
+    <aside class="hero-side" id="hero-side">
       <div class="card">
         <ul class="stack-list">
           <li><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--primary)" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg><span data-i18n="stack-1">Arquitetura, Microsserviços &amp; DDD</span></li>
