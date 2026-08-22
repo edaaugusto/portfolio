@@ -21,6 +21,8 @@ const i18nDict = {
     'proj-title':'Featured Projects','proj-sub':'A selection of hands-on projects in web development, data and design.',
     'cv-title':'Resume','cv-sub':'My professional journey summarized in one place.',
     'cv-resumo-title':'Summary','cv-resumo-text':'Undergraduate in Systems Analysis and Development, I found my way into tech after a path through sales and nearly two years at a call center — experiences that gave me public speaking, negotiation skills and a sharp read on deals. I have hands-on knowledge in Java, MySQL and full-stack web development, proven in the Accex academic project, plus data analysis skills with Power BI (Dashboards and DAX) and a Google Cloud Computing Foundations certification. I\'m also enthusiastic about Artificial Intelligence, studying Generative AI solutions with AWS services. Looking for an internship or junior opportunity, bringing adaptability, good communication and a genuine will to learn.',
+    'cv-experiencia-title':'Experience',
+    'cv-exp-1-t':'Call Center','cv-exp-1-y':'EMDIA Serviços Especializados em Cobranças LTDA','cv-exp-1-d':'Focused on assisting customers, working in negotiations, debt regularization and detailing financial situations.',
     'cv-projetos-title':'Projects',
     'cv-proj-1-t':'Accex — Urban Accessibility','cv-proj-1-d':'Full-stack web platform (Node.js, MySQL, EJS) for urban accessibility classification — technical school capstone project.',
     'cv-proj-2-t':'Sales Analytics Dashboard','cv-proj-2-d':'Hands-on Power BI project with ETL, data modeling and DAX measures to track sales performance and business indicators.',
