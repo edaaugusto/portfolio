@@ -326,10 +326,8 @@ body.intro-cover .hero-side{display:none;opacity:0}
 .avatar .photo{
   width:100%;height:100%;border-radius:inherit;
   background:linear-gradient(140deg,#27272a,#3f3f46 45%,#18181b);
-  display:flex;align-items:center;justify-content:center;
-  font-size:3.5rem;font-weight:800;letter-spacing:-.05em;
-  /* cor fixa (não var(--primary)): o fundo aqui é sempre escuro, independente do tema */
-  color:#41C890;
+  display:block;object-fit:cover;
+  transform:scale(2.15);transform-origin:43% 40%;
 }
 
 .cv-photo-wrap{display:flex;justify-content:center}
@@ -340,9 +338,9 @@ body.intro-cover .hero-side{display:none;opacity:0}
   background:linear-gradient(135deg,var(--primary-glow),transparent);
 }
 .nav-avatar .photo{
-  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  width:100%;height:100%;display:block;object-fit:cover;
   background:linear-gradient(140deg,#27272a,#3f3f46 45%,#18181b);
-  font-size:.9rem;font-weight:800;color:#41C890;letter-spacing:-.05em;
+  transform:scale(2.15);transform-origin:43% 40%;
 }
 
 @media (max-width:900px){

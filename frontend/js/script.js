@@ -9,7 +9,7 @@ const i18nDict = {
   pt: {},   // PT é o texto que já está no HTML
   en: {
     'nav-home':'Home','nav-about':'About','nav-projects':'Projects','nav-cv':'Resume','nav-contact':'Contact',
-    'hero-title':'Junior Full-Stack Developer',
+    'hero-title':'Technology & Projects Analyst',
     'hero-desc':'Undergraduate in Systems Analysis and Development, with hands-on experience in full-stack web development and data analysis. Looking for an internship or junior role to get hands-on and keep learning.',
     'hero-btn-talk':'Get in touch','hero-btn-cv':'View Projects',
     'stack-1':'Full-Stack Web Development (Node.js, MySQL & EJS)','stack-2':'Business Intelligence (Power BI, DAX & ETL)','stack-3':'Java, Python & Cloud fundamentals (GCP/AWS)',
