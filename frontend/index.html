@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Dancing+Script:wght@600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=19">
+<link rel="stylesheet" href="css/style.css?v=20">
 </head>
 <body>
 
@@ -145,11 +145,10 @@
           <article class="card featured-card">
             <div class="thumb featured-thumb" style="background:linear-gradient(135deg,#0f2d26,#0a1f1b 60%,#133a30)" data-i18n="featured-site-thumb">Capturas em breve</div>
             <h3 data-i18n="featured-site-t">Site Institucional</h3>
-            <p data-i18n="featured-site-d">Catálogo público com preço por item e pacotes por número de convidados, simulador de composição de mesa e um assistente de coleta guiado por roteiro de perguntas — sem IA de linguagem — que organiza o pedido numa mensagem pronta para o WhatsApp da empresa. Inclui geração de imagens ilustrativas por IA para composições de mesa (sempre identificadas como simulação) e um painel administrativo próprio, enxuto, restrito à rede privada, com login individual e fluxo de rascunho → revisão → publicação. Testes automatizados cobrem o site público, o painel e cenários de tentativa de invasão.</p>
+            <p data-i18n="featured-site-d">Catálogo com preços e simulador de composição de mesa, mais um assistente que guia o cliente pergunta a pergunta e entrega o pedido pronto no WhatsApp da empresa. O conteúdo é editado num painel próprio, acessível só pela rede privada, e cada publicação passa por verificação automática e testes de invasão.</p>
             <div class="project-meta">
               <span class="tag skill indentificador Python">Python</span>
               <span class="tag skill indentificador JavaScript">JavaScript</span>
-              <span class="tag skill" data-i18n="featured-tag-ia">IA Generativa</span>
               <span class="tag skill" data-i18n="featured-tag-sec">Segurança</span>
               <span class="tag skill">GitHub Actions</span>
             </div>
@@ -159,9 +158,12 @@
           </article>
 
           <article class="card featured-card">
-            <div class="thumb featured-thumb" style="background:linear-gradient(135deg,#1c2436,#0f1420 60%,#232c45)" data-i18n="featured-sys-thumb">Acesso interno — capturas em breve</div>
+            <button type="button" class="thumb featured-thumb featured-shot" data-gallery-open="0" aria-label="Abrir as telas do sistema">
+              <img src="img/projetos/fm-sistema/capa.webp" alt="" width="960" height="512" loading="lazy">
+              <span class="featured-shot-tag" data-i18n="featured-sys-shots">4 telas · dados fictícios</span>
+            </button>
             <h3 data-i18n="featured-sys-t">Sistema de Gestão (interno)</h3>
-            <p data-i18n="featured-sys-d">Controla a disponibilidade do estoque como um cálculo por janela de datas — considerando preparo, higienização e material sublocado de terceiros — em vez de um contador simples. O fluxo de orçamento vira contrato sem redigitar nada, com conferência de saída e retorno de material pelo celular, registro de avarias e controle de sublocação com fornecedores. Tem módulo financeiro, exportação completa dos dados como rede de segurança e controle de acesso por perfil: cada pessoa (comercial, galpão, financeiro, proprietária) vê só o que precisa — o galpão, por exemplo, nunca vê valores nem dados pessoais do cliente. Mais de 200 testes automatizados cobrem as regras de negócio.</p>
+            <p data-i18n="featured-sys-d">Calcula a disponibilidade do estoque por período — descontando reservas, higienização e material sublocado que precisa voltar ao fornecedor —, transforma o orçamento aprovado em contrato sem redigitar nada e controla o acesso por perfil: cada pessoa vê só o que precisa. Mais de 200 testes automatizados cobrem as regras de negócio.</p>
             <div class="project-meta">
               <span class="tag skill indentificador Python">Python</span>
               <span class="tag skill">Django</span>
@@ -169,12 +171,38 @@
               <span class="tag skill" data-i18n="featured-tag-access">Controle de Acesso por Perfil</span>
               <span class="tag skill" data-i18n="featured-tag-pm">Gestão de Projetos</span>
             </div>
+            <p class="featured-note" data-i18n="featured-sys-note">Uso interno — sem acesso público.</p>
             <div class="actions">
-              <span class="btn secondary" aria-disabled="true" data-i18n="featured-sys-badge">Uso interno — sem acesso público</span>
+              <button type="button" class="btn" data-gallery-open="0" data-i18n="featured-sys-gallery">Veja representações ativas do modelo</button>
             </div>
           </article>
         </div>
       </div>
+
+      <dialog class="gallery" id="fm-gallery" aria-labelledby="fm-gallery-title">
+        <div class="gallery-head">
+          <div>
+            <h3 id="fm-gallery-title" data-i18n="gallery-title">Sistema de Gestão — representações do modelo</h3>
+            <p class="gallery-note" data-i18n="gallery-note">Telas reais do sistema, preenchidas com dados fictícios para preservar clientes e valores.</p>
+          </div>
+          <button type="button" class="gallery-close" data-gallery-close aria-label="Fechar">&times;</button>
+        </div>
+        <figure class="gallery-stage">
+          <img class="gallery-img" src="img/projetos/fm-sistema/01-disponibilidade.webp" alt="" width="1600" height="1000">
+          <figcaption class="gallery-caption"></figcaption>
+        </figure>
+        <div class="gallery-nav">
+          <button type="button" class="btn secondary gallery-prev" aria-label="Tela anterior">&larr;</button>
+          <span class="gallery-count" aria-live="polite">1 / 4</span>
+          <button type="button" class="btn secondary gallery-next" aria-label="Próxima tela">&rarr;</button>
+        </div>
+        <ul class="gallery-slides" hidden>
+          <li data-src="img/projetos/fm-sistema/01-disponibilidade.webp" data-w="1600" data-h="1000"><span data-i18n="gallery-1">Consulta de disponibilidade — unidades livres no período, já descontando reservas, higienização e material sublocado que precisa voltar ao fornecedor.</span></li>
+          <li data-src="img/projetos/fm-sistema/02-orcamentos.webp" data-w="1600" data-h="1000"><span data-i18n="gallery-2">Orçamentos — todas as propostas com código, versão, responsável, status e validade.</span></li>
+          <li data-src="img/projetos/fm-sistema/03-orcamento-detalhe.webp" data-w="1600" data-h="1287"><span data-i18n="gallery-3">Detalhe do orçamento — itens, diárias, material sublocado, serviços e total. Aprovado, vira contrato sem redigitar nada.</span></li>
+          <li data-src="img/projetos/fm-sistema/04-conferencia-celular.webp" data-w="780" data-h="1688"><span data-i18n="gallery-4">Conferência de saída no celular — o galpão confere item a item, organizado pela localização no estoque, e registra divergências.</span></li>
+        </ul>
+      </dialog>
 
       <div id="project-filters" class="reveal" role="group" aria-label="Filtrar projetos">
         <button class="btn secondary active" type="button" data-filter="all"    data-i18n="f-all">Todos</button>
@@ -327,7 +355,7 @@
   </div>
 </footer>
 
-<script src="js/script.js?v=20" defer></script>
+<script src="js/script.js?v=22" defer></script>
 <script src="js/api-status.js" defer></script>
 </body>
 </html>

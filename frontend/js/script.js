@@ -22,11 +22,17 @@ const i18nDict = {
     'featured-tag':'Featured case','featured-title':'FM Locação — Site & Management System',
     'featured-intro':'Over the past months I\'ve been building the full digital ecosystem for an event-rental company: the institutional site that presents the business to clients, and the internal management system that runs day-to-day operations. Both grew out of my own written spec, worked out rule by rule alongside the business owner, in short work sessions covered by automated tests.',
     'featured-site-thumb':'Screenshots coming soon','featured-site-t':'Institutional Site',
-    'featured-site-d':'Public catalog with per-item pricing and guest-count packages, a table-setting simulator, and a guided intake assistant — rule-based, no language model — that turns a request into a message ready for the company\'s WhatsApp. Includes AI-generated illustrative images for table setups (always labeled as a simulation) and a lightweight, purpose-built admin panel restricted to a private network, with individual logins and a draft → review → publish flow. Automated tests cover the public site, the panel, and intrusion-attempt scenarios.',
-    'featured-tag-ia':'Generative AI','featured-tag-sec':'Security','featured-site-btn':'URL coming soon',
-    'featured-sys-thumb':'Internal access — screenshots coming soon','featured-sys-t':'Management System (internal)',
-    'featured-sys-d':'Treats stock availability as a date-window calculation — accounting for prep time, cleaning turnaround and third-party sub-rented stock — instead of a simple counter. A quote becomes a contract without retyping anything, with mobile checkout/check-in of equipment, damage logging and supplier sub-rental tracking. It has a financial module, a full data export as a safety net, and role-based access: each person (sales, warehouse, finance, owner) sees only what they need — warehouse staff, for instance, never see prices or customer personal data. 200+ automated tests cover the business rules.',
-    'featured-tag-tests':'Automated Testing','featured-tag-access':'Role-Based Access','featured-tag-pm':'Project Management','featured-sys-badge':'Internal use — no public access',
+    'featured-site-d':'Catalog with prices and a table-setting simulator, plus an assistant that guides the customer question by question and delivers a ready-to-send order to the company\'s WhatsApp. Content is edited in a purpose-built panel reachable only through a private network, and every publish goes through automated checks and intrusion tests.',
+    'featured-tag-sec':'Security','featured-site-btn':'URL coming soon',
+    'featured-sys-t':'Management System (internal)',
+    'featured-sys-d':'Calculates stock availability per period — accounting for reservations, cleaning turnaround and sub-rented stock that must go back to the supplier — turns an approved quote into a contract with no retyping, and enforces role-based access: each person sees only what they need. 200+ automated tests cover the business rules.',
+    'featured-tag-tests':'Automated Testing','featured-tag-access':'Role-Based Access','featured-tag-pm':'Project Management',
+    'featured-sys-shots':'4 screens · fictional data','featured-sys-note':'Internal use — no public access.','featured-sys-gallery':'See live representations of the system',
+    'gallery-title':'Management System — screens of the model','gallery-note':'Real system screens, filled with fictional data to protect clients and pricing.',
+    'gallery-1':'Availability check — units free for the period, already accounting for reservations, cleaning turnaround and sub-rented stock that must go back to the supplier.',
+    'gallery-2':'Quotes — every proposal with code, version, owner, status and expiry date.',
+    'gallery-3':'Quote detail — items, daily rates, sub-rented stock, services and total. Once approved, it becomes a contract with no retyping.',
+    'gallery-4':'Mobile checkout — warehouse staff check item by item, grouped by storage location, and log any discrepancy.',
     'cv-title':'Resume','cv-sub':'My professional journey summarized in one place.',
     'cv-resumo-title':'Summary','cv-resumo-text':'Undergraduate in Systems Analysis and Development, I found my way into tech after a path through sales and nearly two years at a call center — experiences that gave me public speaking, negotiation skills and a sharp read on deals. I have hands-on knowledge of SQL and full-stack web development, proven in the Accex academic project, plus some experience with Java, data analysis skills with Power BI (Dashboards and DAX) and a Google Cloud Computing Foundations certification. I\'m also enthusiastic about Artificial Intelligence, studying Generative AI solutions with AWS services. Looking for an internship or junior opportunity, bringing adaptability, good communication and a genuine will to learn.',
     'cv-experiencia-title':'Experience',
@@ -94,6 +100,7 @@ class PortfolioApp {
     this.initSmoothScroll();
     this.initSectionHighlight();
     this.initProjectFilters();
+    this.initGallery();
     this.initMagneticButtons();
     this.initContactHandling();
     this.setupDynamicYears();
@@ -289,6 +296,44 @@ class PortfolioApp {
       });
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0.01 });
     this.DOM.sections.forEach(s => io.observe(s));
+  }
+
+  /* --- GALERIA (telas do sistema FM Locação) --- */
+  initGallery(){
+    const dlg = document.querySelector('#fm-gallery');
+    if(!dlg || typeof dlg.showModal !== 'function') return;
+    const slides = [...dlg.querySelectorAll('.gallery-slides li')];
+    const img = dlg.querySelector('.gallery-img');
+    const cap = dlg.querySelector('.gallery-caption');
+    const count = dlg.querySelector('.gallery-count');
+    let i = 0;
+    const show = (n) => {
+      i = (n + slides.length) % slides.length;
+      const s = slides[i];
+      const text = s.textContent.trim();
+      img.src = s.dataset.src;
+      img.width = +s.dataset.w;
+      img.height = +s.dataset.h;
+      img.alt = text;
+      cap.textContent = text;
+      count.textContent = `${i + 1} / ${slides.length}`;
+    };
+    document.querySelectorAll('[data-gallery-open]').forEach(btn => btn.addEventListener('click', () => {
+      show(parseInt(btn.dataset.galleryOpen, 10) || 0);
+      dlg.showModal();
+    }));
+    dlg.querySelector('.gallery-prev').addEventListener('click', () => show(i - 1));
+    dlg.querySelector('.gallery-next').addEventListener('click', () => show(i + 1));
+    dlg.querySelector('[data-gallery-close]').addEventListener('click', () => dlg.close());
+    // clique fora da caixa (no fundo escurecido) fecha
+    dlg.addEventListener('click', (e) => {
+      const r = dlg.getBoundingClientRect();
+      if(e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dlg.close();
+    });
+    dlg.addEventListener('keydown', (e) => {
+      if(e.key === 'ArrowLeft') show(i - 1);
+      else if(e.key === 'ArrowRight') show(i + 1);
+    });
   }
 
   /* --- FILTROS --- */
