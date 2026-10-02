@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Dancing+Script:wght@600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=20">
+<link rel="stylesheet" href="css/style.css?v=21">
 </head>
 <body>
 
@@ -160,10 +160,10 @@
           <article class="card featured-card">
             <button type="button" class="thumb featured-thumb featured-shot" data-gallery-open="0" aria-label="Abrir as telas do sistema">
               <img src="img/projetos/fm-sistema/capa.webp" alt="" width="960" height="512" loading="lazy">
-              <span class="featured-shot-tag" data-i18n="featured-sys-shots">4 telas · dados fictícios</span>
+              <span class="featured-shot-tag" data-i18n="featured-sys-shots">8 telas · dados fictícios</span>
             </button>
             <h3 data-i18n="featured-sys-t">Sistema de Gestão (interno)</h3>
-            <p data-i18n="featured-sys-d">Calcula a disponibilidade do estoque por período — descontando reservas, higienização e material sublocado que precisa voltar ao fornecedor —, transforma o orçamento aprovado em contrato sem redigitar nada e controla o acesso por perfil: cada pessoa vê só o que precisa. Mais de 200 testes automatizados cobrem as regras de negócio.</p>
+            <p data-i18n="featured-sys-d">Sistema interno de uma locadora de materiais para eventos — mesas, cadeiras, louças e tecidos. Antes, saber o que estava livre numa data dependia da memória, e cada orçamento era redigitado no Word e de novo no contrato. Agora o sistema calcula a disponibilidade por período — descontando reservas, higienização e material sublocado que precisa voltar ao fornecedor —, transforma o orçamento aprovado em contrato sem redigitar nada e controla o acesso por perfil: cada pessoa vê só o que precisa. Mais de 200 testes automatizados cobrem as regras de negócio.</p>
             <div class="project-meta">
               <span class="tag skill indentificador Python">Python</span>
               <span class="tag skill">Django</span>
@@ -183,7 +183,7 @@
         <div class="gallery-head">
           <div>
             <h3 id="fm-gallery-title" data-i18n="gallery-title">Sistema de Gestão — representações do modelo</h3>
-            <p class="gallery-note" data-i18n="gallery-note">Telas reais do sistema, preenchidas com dados fictícios para preservar clientes e valores.</p>
+            <p class="gallery-note" data-i18n="gallery-note">Sistema interno de uma locadora de materiais para eventos. Telas reais, preenchidas com dados fictícios para preservar clientes e valores.</p>
           </div>
           <button type="button" class="gallery-close" data-gallery-close aria-label="Fechar">&times;</button>
         </div>
@@ -193,14 +193,19 @@
         </figure>
         <div class="gallery-nav">
           <button type="button" class="btn secondary gallery-prev" aria-label="Tela anterior">&larr;</button>
-          <span class="gallery-count" aria-live="polite">1 / 4</span>
+          <span class="gallery-count" aria-live="polite">1 / 8</span>
           <button type="button" class="btn secondary gallery-next" aria-label="Próxima tela">&rarr;</button>
         </div>
+        <div class="gallery-thumbs" aria-label="Escolher tela"></div>
         <ul class="gallery-slides" hidden>
           <li data-src="img/projetos/fm-sistema/01-disponibilidade.webp" data-w="1600" data-h="1000"><span data-i18n="gallery-1">Consulta de disponibilidade — unidades livres no período, já descontando reservas, higienização e material sublocado que precisa voltar ao fornecedor.</span></li>
+          <li data-src="img/projetos/fm-sistema/07-disponibilidade-celular.webp" data-w="780" data-h="1688"><span data-i18n="gallery-5">A mesma consulta no celular — a tabela vira uma lista fácil de ler na palma da mão.</span></li>
           <li data-src="img/projetos/fm-sistema/02-orcamentos.webp" data-w="1600" data-h="1000"><span data-i18n="gallery-2">Orçamentos — todas as propostas com código, versão, responsável, status e validade.</span></li>
           <li data-src="img/projetos/fm-sistema/03-orcamento-detalhe.webp" data-w="1600" data-h="1287"><span data-i18n="gallery-3">Detalhe do orçamento — itens, diárias, material sublocado, serviços e total. Aprovado, vira contrato sem redigitar nada.</span></li>
+          <li data-src="img/projetos/fm-sistema/08-orcamento-celular.webp" data-w="780" data-h="1688"><span data-i18n="gallery-6">Orçamento no celular — itens em cartões e o total sempre visível no rodapé.</span></li>
+          <li data-src="img/projetos/fm-sistema/05-contrato-detalhe.webp" data-w="1600" data-h="1606"><span data-i18n="gallery-7">Contrato — cliente, evento, itens com valor de reposição e todos os documentos do negócio numa pasta só.</span></li>
           <li data-src="img/projetos/fm-sistema/04-conferencia-celular.webp" data-w="780" data-h="1688"><span data-i18n="gallery-4">Conferência de saída no celular — o galpão confere item a item, organizado pela localização no estoque, e registra divergências.</span></li>
+          <li data-src="img/projetos/fm-sistema/06-inicio-celular.webp" data-w="780" data-h="1688"><span data-i18n="gallery-8">Tela inicial no celular — lembra os contratos sem assinatura e as sublocações que vencem nos próximos dias.</span></li>
         </ul>
       </dialog>
 
@@ -355,7 +360,7 @@
   </div>
 </footer>
 
-<script src="js/script.js?v=22" defer></script>
+<script src="js/script.js?v=23" defer></script>
 <script src="js/api-status.js" defer></script>
 </body>
 </html>
