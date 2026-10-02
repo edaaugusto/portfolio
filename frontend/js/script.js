@@ -337,6 +337,7 @@ class PortfolioApp {
       show(parseInt(btn.dataset.galleryOpen, 10) || 0);
       dlg.showModal();
     }));
+    img.addEventListener('click', () => window.open(img.src, '_blank', 'noopener'));
     dlg.querySelector('.gallery-prev').addEventListener('click', () => show(i - 1));
     dlg.querySelector('.gallery-next').addEventListener('click', () => show(i + 1));
     dlg.querySelector('[data-gallery-close]').addEventListener('click', () => dlg.close());

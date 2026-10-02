@@ -209,37 +209,38 @@ body.intro-cover .navbar{opacity:0;pointer-events:none;position:fixed;width:100%
 
 /* galeria (dialog) */
 .gallery{
-  width:min(1180px,calc(100vw - 32px));max-width:none;max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);
-  margin:auto;padding:20px 20px 16px;overflow:auto;
-  border:1px solid var(--border-light);border-radius:var(--radius);
-  background:var(--bg-soft);color:var(--text-main);box-shadow:var(--shadow-hover);
+  position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;
+  margin:0;padding:14px 16px 12px;border:0;border-radius:0;overflow:hidden;
+  background:#0b0b0d;color:#f4f4f5;
 }
-.gallery[open]{display:flex;flex-direction:column;gap:14px}
-.gallery::backdrop{background:rgba(0,0,0,.75);backdrop-filter:blur(4px)}
+.gallery[open]{display:flex;flex-direction:column;gap:10px}
+.gallery::backdrop{background:#0b0b0d}
 body:has(.gallery[open]){overflow:hidden}
-.gallery-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
-.gallery-head h3{font-size:1.1rem;font-weight:800;line-height:1.3}
-.gallery-note{color:var(--text-muted);font-size:.85rem;margin-top:4px}
+.gallery-head{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1400px;width:100%;margin:0 auto}
+.gallery-head h3{font-size:1rem;font-weight:800;line-height:1.3}
+.gallery-note{color:#a1a1aa;font-size:.8rem;margin-top:2px}
 .gallery-close{
   flex-shrink:0;width:40px;height:40px;border-radius:10px;cursor:pointer;
-  border:1px solid var(--border-light);background:var(--glass);color:var(--text-main);font-size:1.5rem;line-height:1;
+  border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#f4f4f5;font-size:1.5rem;line-height:1;
 }
 .gallery-close:hover{border-color:var(--primary);color:var(--primary)}
-.gallery-stage{display:flex;flex-direction:column;align-items:center;gap:10px;margin:0;min-height:0}
-.gallery-img{
-  display:block;width:auto;height:auto;max-width:100%;
-  max-height:calc(100vh - 320px);max-height:calc(100dvh - 320px);
-  object-fit:contain;border-radius:10px;border:1px solid var(--border-light);background:#f3f5f4;
-}
-.gallery-caption{color:var(--text-muted);font-size:.9rem;text-align:center;max-width:72ch}
+.gallery-stage{flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;gap:8px;margin:0}
+.gallery-img{display:block;flex:1;min-height:0;width:100%;height:100%;object-fit:contain;cursor:zoom-in}
+.gallery-caption{color:#d4d4d8;font-size:.88rem;text-align:center;max-width:80ch}
 .gallery-nav{display:flex;justify-content:center;align-items:center;gap:16px}
-.gallery-nav .btn{padding:8px 18px}
+.gallery-nav .btn{padding:6px 16px}
+.gallery .btn.secondary{background:rgba(255,255,255,.06);color:#f4f4f5;border-color:rgba(255,255,255,.15)}
 .gallery-thumbs{display:flex;gap:8px;justify-content:center;overflow-x:auto;padding:2px}
-.gallery-thumb{flex:0 0 auto;width:72px;height:48px;padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;cursor:pointer;background:none;opacity:.55;transition:opacity .2s,border-color .2s}
+.gallery-thumb{flex:0 0 auto;width:64px;height:42px;padding:0;border:2px solid transparent;border-radius:6px;overflow:hidden;cursor:pointer;background:none;opacity:.5;transition:opacity .2s,border-color .2s}
 .gallery-thumb img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 .gallery-thumb:hover,.gallery-thumb.ativo{opacity:1}
 .gallery-thumb.ativo{border-color:var(--primary)}
-.gallery-count{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--text-muted);font-variant-numeric:tabular-nums}
+.gallery-count{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#a1a1aa;font-variant-numeric:tabular-nums}
+@media (max-width:600px){
+  .gallery{padding:10px 10px 8px}
+  .gallery-note,.gallery-thumbs{display:none}
+  .gallery-caption{font-size:.8rem}
+}
 
 .stack-list{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:.95rem;color:var(--text-muted)}
 .stack-list li{display:flex;align-items:center;gap:10px}
