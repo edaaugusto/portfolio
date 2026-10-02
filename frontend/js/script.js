@@ -11,7 +11,7 @@ const i18nDict = {
     'nav-home':'Home','nav-about':'About','nav-projects':'Projects','nav-cv':'Resume','nav-contact':'Contact',
     'hero-title':'Technology & Projects Analyst',
     'hero-desc':'Undergraduate in Systems Analysis and Development, with hands-on experience in full-stack web development and data analysis. Looking for an internship or junior role to get hands-on and keep learning.',
-    'hero-btn-talk':'Get in touch','hero-btn-cv':'View Projects',
+    'hero-btn-talk':'Get in touch','hero-btn-cv':'View Projects','kpi-dev':'Development','kpi-ia':'Generative AI',
     'stack-1':'Full-Stack Web Development (SQL & EJS)','stack-2':'Business Intelligence (Power BI, DAX & ETL)','stack-3':'Python & Cloud fundamentals (GCP/AWS)',
     'about-title':'About me','about-sub':'From sales and a call center to tech — building my path through practice, communication and a will to learn.',
     'about-c1-t':'My Journey','about-c1-d':'I started early, balancing a technical high school in Web Development with freelance gigs at events and helping my mother. I worked temporarily as a salesperson at a surf shop, where I had my first professional commitment, then spent nearly two years at a call center, where I developed public speaking, negotiation skills and a solid grasp of interest rates and deals.',
