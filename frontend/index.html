@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Dancing+Script:wght@600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=17">
+<link rel="stylesheet" href="css/style.css?v=18">
 </head>
 <body>
 
@@ -118,7 +118,12 @@
             </li>
             <li><span data-i18n="skill-2">Power BI — Senai</span> <span class="skills-year">2025</span></li>
             <li><span data-i18n="skill-3">Informática — Microcamp</span> <span class="skills-year">2024</span></li>
-            <li><span data-i18n="skill-4">Soluções de IA Generativa com AWS</span> <span class="skills-year">2026</span></li>
+            <li>
+              <span data-i18n="skill-4">AWS — Generative AI Foundations (Senai)</span>
+              <span class="skills-year">2026</span>
+              <a href="https://www.credly.com/badges/b56936c3-143b-4568-8aef-1e836a293dcb/public_url" target="_blank" rel="noopener" data-i18n="skill-4-link">Ver badge</a>
+            </li>
+            <li><span data-i18n="skill-5">Desenvolvimento de Agentes com IA — AI-103 (Senai)</span> <span class="skills-year">2026</span></li>
           </ul>
         </div>
       </div>
@@ -130,6 +135,47 @@
     <div class="container">
       <h2 id="projetos-title" class="reveal" data-i18n="proj-title">Projetos em Destaque</h2>
       <p class="sub reveal" data-i18n="proj-sub">Uma seleção de projetos práticos em desenvolvimento web, dados e design.</p>
+
+      <div class="featured-case reveal">
+        <div class="featured-case-head">
+          <span class="featured-tag" data-i18n="featured-tag">Case em destaque</span>
+          <h3 data-i18n="featured-title">FM Locação — Site &amp; Sistema de Gestão</h3>
+          <p data-i18n="featured-intro">Nos últimos meses venho desenvolvendo o ecossistema digital completo de uma locadora de materiais para eventos: o site institucional que apresenta a empresa aos clientes e o sistema de gestão interno que organiza a operação do dia a dia. Os dois nasceram de uma especificação própria, escrita regra por regra ao lado da proprietária do negócio, com sessões de trabalho curtas e cobertura de testes automatizados.</p>
+        </div>
+        <div class="grid featured-grid">
+          <article class="card featured-card">
+            <div class="thumb featured-thumb" style="background:linear-gradient(135deg,#0f2d26,#0a1f1b 60%,#133a30)" data-i18n="featured-site-thumb">Capturas em breve</div>
+            <h3 data-i18n="featured-site-t">Site Institucional</h3>
+            <p data-i18n="featured-site-d">Catálogo público com preço por item e pacotes por número de convidados, simulador de composição de mesa e um assistente de coleta guiado por roteiro de perguntas — sem IA de linguagem — que organiza o pedido numa mensagem pronta para o WhatsApp da empresa. Inclui geração de imagens ilustrativas por IA para composições de mesa (sempre identificadas como simulação) e um painel administrativo próprio, enxuto, restrito à rede privada, com login individual e fluxo de rascunho → revisão → publicação. Testes automatizados cobrem o site público, o painel e cenários de tentativa de invasão.</p>
+            <div class="project-meta">
+              <span class="tag skill indentificador Python">Python</span>
+              <span class="tag skill indentificador JavaScript">JavaScript</span>
+              <span class="tag skill" data-i18n="featured-tag-ia">IA Generativa</span>
+              <span class="tag skill" data-i18n="featured-tag-sec">Segurança</span>
+              <span class="tag skill">GitHub Actions</span>
+            </div>
+            <div class="actions">
+              <a class="btn secondary" href="#" aria-disabled="true" tabindex="-1" data-i18n="featured-site-btn">URL em breve</a>
+            </div>
+          </article>
+
+          <article class="card featured-card">
+            <div class="thumb featured-thumb" style="background:linear-gradient(135deg,#1c2436,#0f1420 60%,#232c45)" data-i18n="featured-sys-thumb">Acesso interno — capturas em breve</div>
+            <h3 data-i18n="featured-sys-t">Sistema de Gestão (interno)</h3>
+            <p data-i18n="featured-sys-d">Controla a disponibilidade do estoque como um cálculo por janela de datas — considerando preparo, higienização e material sublocado de terceiros — em vez de um contador simples. O fluxo de orçamento vira contrato sem redigitar nada, com conferência de saída e retorno de material pelo celular, registro de avarias e controle de sublocação com fornecedores. Tem módulo financeiro, exportação completa dos dados como rede de segurança e controle de acesso por perfil: cada pessoa (comercial, galpão, financeiro, proprietária) vê só o que precisa — o galpão, por exemplo, nunca vê valores nem dados pessoais do cliente. Mais de 200 testes automatizados cobrem as regras de negócio.</p>
+            <div class="project-meta">
+              <span class="tag skill indentificador Python">Python</span>
+              <span class="tag skill">Django</span>
+              <span class="tag skill" data-i18n="featured-tag-tests">Testes Automatizados</span>
+              <span class="tag skill" data-i18n="featured-tag-access">Controle de Acesso por Perfil</span>
+              <span class="tag skill" data-i18n="featured-tag-pm">Gestão de Projetos</span>
+            </div>
+            <div class="actions">
+              <span class="btn secondary" aria-disabled="true" data-i18n="featured-sys-badge">Uso interno — sem acesso público</span>
+            </div>
+          </article>
+        </div>
+      </div>
 
       <div id="project-filters" class="reveal" role="group" aria-label="Filtrar projetos">
         <button class="btn secondary active" type="button" data-filter="all"    data-i18n="f-all">Todos</button>
@@ -282,7 +328,7 @@
   </div>
 </footer>
 
-<script src="js/script.js?v=15" defer></script>
+<script src="js/script.js?v=16" defer></script>
 <script src="js/api-status.js" defer></script>
 </body>
 </html>
