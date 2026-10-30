@@ -23,7 +23,7 @@ const i18nDict = {
     'featured-intro':'Over the past months I\'ve been building the full digital ecosystem for an event-rental company: the institutional site that presents the business to clients, and the internal management system that runs day-to-day operations. Both grew out of my own written spec, worked out rule by rule alongside the business owner, in short work sessions covered by automated tests.',
     'featured-site-thumb':'Screenshots coming soon','featured-site-t':'Institutional Site',
     'featured-site-d':'Catalog with prices and a table-setting simulator, plus an assistant that guides the customer question by question and delivers a ready-to-send order to the company\'s WhatsApp. Content is edited in a purpose-built panel reachable only through a private network, and every publish goes through automated checks and intrusion tests.',
-    'featured-tag-sec':'Security','featured-site-btn':'Visit website',
+    'featured-tag-sec':'Security','featured-site-btn':'Visit website','featured-site-video':'Panel video','painel-title':'Site panel — demo','painel-note':'What is edited in the panel shows up on the site within minutes. The panel has restricted access.',
     'featured-sys-t':'Management System (internal)',
     'featured-sys-d':'Internal system for an event-rental company — tables, chairs, tableware and linens. Before, knowing what was free on a given date depended on memory, and every quote was retyped in Word and again in the contract. Now the system calculates availability per period — accounting for reservations, cleaning turnaround and sub-rented stock that must go back to the supplier — turns an approved quote into a contract with no retyping, and enforces role-based access: each person sees only what they need. 200+ automated tests cover the business rules.',
     'featured-tag-tests':'Automated Testing','featured-tag-access':'Role-Based Access','featured-tag-pm':'Project Management',
@@ -101,6 +101,7 @@ class PortfolioApp {
     this.initSectionHighlight();
     this.initProjectFilters();
     this.initGallery();
+    this.initVideoDialogs();
     this.initMagneticButtons();
     this.initContactHandling();
     this.setupDynamicYears();
@@ -296,6 +297,22 @@ class PortfolioApp {
       });
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0.01 });
     this.DOM.sections.forEach(s => io.observe(s));
+  }
+
+  /* --- VÍDEOS EM MODAL (painel do site) --- */
+  initVideoDialogs(){
+    document.querySelectorAll('[data-video-open]').forEach(btn => {
+      const dlg = document.getElementById(btn.dataset.videoOpen);
+      if(!dlg || typeof dlg.showModal !== 'function') return;
+      const video = dlg.querySelector('video');
+      btn.addEventListener('click', () => { dlg.showModal(); video?.play().catch(() => {}); });
+      dlg.querySelector('[data-gallery-close]')?.addEventListener('click', () => dlg.close());
+      dlg.addEventListener('close', () => video?.pause());
+      dlg.addEventListener('click', (e) => {
+        const r = dlg.getBoundingClientRect();
+        if(e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dlg.close();
+      });
+    });
   }
 
   /* --- GALERIA (telas do sistema FM Locação) --- */

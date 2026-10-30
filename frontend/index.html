@@ -156,6 +156,7 @@
             </div>
             <div class="actions">
               <a class="btn" href="https://fmlocacao.com.br" target="_blank" rel="noopener" data-i18n="featured-site-btn">Ver site</a>
+              <button type="button" class="btn secondary" data-video-open="painel-video" data-i18n="featured-site-video">Vídeo do painel</button>
             </div>
           </article>
 
@@ -180,6 +181,19 @@
           </article>
         </div>
       </div>
+
+      <dialog class="gallery" id="painel-video" aria-labelledby="painel-video-title">
+        <div class="gallery-head">
+          <div>
+            <h3 id="painel-video-title" data-i18n="painel-title">Painel do site — demonstração</h3>
+            <p class="gallery-note" data-i18n="painel-note">O que é editado no painel aparece no site em poucos minutos. O painel é de acesso restrito.</p>
+          </div>
+          <button type="button" class="gallery-close" data-gallery-close aria-label="Fechar">&times;</button>
+        </div>
+        <figure class="gallery-stage">
+          <video class="gallery-video" src="img/projetos/fm-site/painel.mp4" poster="img/projetos/fm-site/painel-poster.webp" width="1280" height="720" controls muted playsinline preload="none"></video>
+        </figure>
+      </dialog>
 
       <dialog class="gallery" id="fm-gallery" aria-labelledby="fm-gallery-title">
         <div class="gallery-head">
@@ -364,7 +378,7 @@
   </div>
 </footer>
 
-<script src="js/script.js?v=27" defer></script>
+<script src="js/script.js?v=28" defer></script>
 <script src="js/api-status.js" defer></script>
 </body>
 </html>
