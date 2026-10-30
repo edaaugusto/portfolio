@@ -262,6 +262,7 @@ body:has(.gallery[open]){overflow:hidden}
 .cv-item p.cv-item-org{color:var(--primary);font-weight:600;font-size:.85rem;margin-top:2px}
 .cv-item .cv-link{display:inline-block;margin-top:10px;font-size:.85rem;color:var(--primary);text-decoration:none;font-weight:600}
 .cv-item .cv-link:hover{text-decoration:underline}
+.cv-item .cv-link + .cv-link{margin-left:18px}
 .cv-resumo-text{max-width:70ch;margin:0 auto;color:var(--text-muted);font-size:1.05rem;line-height:1.75}
 
 /* ============================================================ */
