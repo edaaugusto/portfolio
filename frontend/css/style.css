@@ -225,6 +225,8 @@ body:has(.gallery[open]){overflow:hidden}
 }
 .gallery-close:hover{border-color:var(--primary);color:var(--primary)}
 .gallery-stage{flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;gap:8px;margin:0}
+.gallery-video{display:block;flex:1;min-height:0;width:100%;height:100%;object-fit:contain;background:#000}
+.gallery-video[hidden],.gallery-img[hidden]{display:none}
 .gallery-img{display:block;flex:1;min-height:0;width:100%;height:100%;object-fit:contain;cursor:zoom-in}
 .gallery-caption{color:#d4d4d8;font-size:.88rem;text-align:center;max-width:80ch}
 .gallery-nav{display:flex;justify-content:center;align-items:center;gap:16px}

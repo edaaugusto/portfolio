@@ -27,7 +27,7 @@ const i18nDict = {
     'featured-sys-t':'Management System (internal)',
     'featured-sys-d':'Internal system for an event-rental company — tables, chairs, tableware and linens. Before, knowing what was free on a given date depended on memory, and every quote was retyped in Word and again in the contract. Now the system calculates availability per period — accounting for reservations, cleaning turnaround and sub-rented stock that must go back to the supplier — turns an approved quote into a contract with no retyping, and enforces role-based access: each person sees only what they need. 200+ automated tests cover the business rules.',
     'featured-tag-tests':'Automated Testing','featured-tag-access':'Role-Based Access','featured-tag-pm':'Project Management',
-    'featured-sys-shots':'8 screens · fictional data','gallery-5':'The same check on a phone — the table turns into an easy-to-read list.','gallery-6':'Quote on a phone — items as cards and the total always visible at the bottom.','gallery-7':'Contract — client, event, items with replacement value and every document of the deal in one folder.','gallery-8':'Home screen on a phone — reminds unsigned contracts and sub-rentals due in the next days.','featured-sys-note':'Internal use — no public access.','featured-sys-gallery':'See live representations of the system',
+    'featured-sys-shots':'video + 8 screens · fictional data','gallery-video':'Demo video — the main screens and features of the system, still being implemented.','gallery-5':'The same check on a phone — the table turns into an easy-to-read list.','gallery-6':'Quote on a phone — items as cards and the total always visible at the bottom.','gallery-7':'Contract — client, event, items with replacement value and every document of the deal in one folder.','gallery-8':'Home screen on a phone — reminds unsigned contracts and sub-rentals due in the next days.','featured-sys-note':'Internal use — no public access.','featured-sys-gallery':'See live representations of the system',
     'gallery-title':'Management System — screens of the model','gallery-note':'Internal system for an event-rental company. Real screens, filled with fictional data to protect clients and pricing.',
     'gallery-1':'Availability check — units free for the period, already accounting for reservations, cleaning turnaround and sub-rented stock that must go back to the supplier.',
     'gallery-2':'Quotes — every proposal with code, version, owner, status and expiry date.',
@@ -304,6 +304,7 @@ class PortfolioApp {
     if(!dlg || typeof dlg.showModal !== 'function') return;
     const slides = [...dlg.querySelectorAll('.gallery-slides li')];
     const img = dlg.querySelector('.gallery-img');
+    const video = dlg.querySelector('.gallery-video');
     const cap = dlg.querySelector('.gallery-caption');
     const count = dlg.querySelector('.gallery-count');
     const thumbsBox = dlg.querySelector('.gallery-thumbs');
@@ -313,7 +314,7 @@ class PortfolioApp {
       b.className = 'gallery-thumb';
       b.setAttribute('aria-label', `Tela ${k + 1}`);
       const t = document.createElement('img');
-      t.src = s.dataset.src.replace('fm-sistema/', 'fm-sistema/thumbs/');
+      t.src = 'video' in s.dataset ? s.dataset.src : s.dataset.src.replace('fm-sistema/', 'fm-sistema/thumbs/');
       t.alt = ''; t.loading = 'lazy'; t.width = 150; t.height = 100;
       b.appendChild(t);
       b.addEventListener('click', () => show(k));
@@ -326,6 +327,12 @@ class PortfolioApp {
       thumbs.forEach((b, k) => b.classList.toggle('ativo', k === i));
       const s = slides[i];
       const text = s.textContent.trim();
+      const isVideo = 'video' in s.dataset;
+      if(video){
+        video.hidden = !isVideo;
+        if(isVideo) video.play().catch(() => {}); else video.pause();
+      }
+      img.hidden = isVideo;
       img.src = s.dataset.src;
       img.width = +s.dataset.w;
       img.height = +s.dataset.h;
@@ -341,6 +348,7 @@ class PortfolioApp {
     dlg.querySelector('.gallery-prev').addEventListener('click', () => show(i - 1));
     dlg.querySelector('.gallery-next').addEventListener('click', () => show(i + 1));
     dlg.querySelector('[data-gallery-close]').addEventListener('click', () => dlg.close());
+    dlg.addEventListener('close', () => video?.pause());
     // clique fora da caixa (no fundo escurecido) fecha
     dlg.addEventListener('click', (e) => {
       const r = dlg.getBoundingClientRect();
