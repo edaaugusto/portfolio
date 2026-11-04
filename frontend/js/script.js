@@ -62,7 +62,7 @@ const i18nDict = {
     'lbl-name':'Full Name','lbl-email':'E-mail Address','lbl-msg':'Opportunity Details','btn-send':'Send E-mail',
     'msg-ok':'Excellent! Message sent successfully.','msg-err':'Please check that all fields are filled in correctly.',
     'footer-title':'Let’s build the future together?','footer-desc':'Open to internships or entry-level tech roles — development, data, or wherever I can add value to the team.',
-    'footer-btn':'Review Résumé','footer-copy':'Built with clean code (pure HTML/CSS/JS).','footer-back':'Back to top'
+    'footer-btn':'Download Résumé','footer-copy':'Built with clean code (pure HTML/CSS/JS).','footer-back':'Back to top'
   }
 };
 
