@@ -436,6 +436,8 @@ dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
 .mv .short{display:none}
 @media (max-width:960px){.mv .long{display:none}.mv .short{display:inline}.mv{padding:0 4px;font-size:.66rem}}
 @media (max-width:430px){.tools a.tb[download]{display:none}.tg{width:108px}}
+.dl-btns{display:flex;flex-wrap:wrap;gap:12px}
+.dl .btn.o{background:transparent!important;color:inherit!important;border:2px solid currentColor}
 </style>
 </head>
 <body>
@@ -578,7 +580,7 @@ dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
         <li><b>Google Cloud Computing Foundations</b><span>2025 · <a href="https://www.skills.google/public_profiles/7eddcbe9-1340-4e33-bcc8-31cb21a17556" target="_blank" rel="noopener">ver certificado</a></span></li>
         <li><b>Power BI</b><span>Senai · 2025</span></li><li><b>Informática</b><span>Microcamp · 2024</span></li></ul></div>
     </div>
-    <div class="dl rv"><p>Currículo completo, numa página, pronto para imprimir.</p><a class="btn mag" href="curriculo-eduardo-augusto.pdf" download>Baixar Currículo <span class="ar">↓</span></a></div>
+    <div class="dl rv"><p>Currículo completo, numa página, pronto para imprimir.</p><span class="dl-btns"><a class="btn mag" href="curriculo.html">Ver currículo completo <span class="ar">→</span></a><a class="btn o mag" href="curriculo-eduardo-augusto.pdf" download>Baixar Currículo <span class="ar">↓</span></a></span></div>
   </div>
 </section>
 
@@ -601,7 +603,7 @@ dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
   <div class="idx-g">
     <div><h2>Seções</h2><ul><li><a href="#inicio" data-go="#inicio">Início</a></li><li><a href="#sobre" data-go="#sobre">Sobre</a></li><li><a href="#projetos" data-go="#projetos">Projetos</a></li><li><a href="#curriculo" data-go="#curriculo">Currículo</a></li><li><a href="#contato" data-go="#contato">Contato</a></li></ul></div>
     <div><h2>Projetos</h2><ul><li><a href="https://fmlocacao.com.br" target="_blank" rel="noopener">FM Locação — site</a><small>Python, JavaScript, GitHub Actions</small></li><li><button type="button" data-play="sistema">FM Locação — sistema (vídeo)</button><small>Python, Django, 200+ testes</small></li><li><button type="button" data-play="site">FM Locação — site e painel (vídeo)</button><small>Python, JavaScript, GitHub Actions</small></li><li><a href="https://github.com/oAccex/Accex-main---Copia.git" target="_blank" rel="noopener">Accex</a><small>Web · Node.js, MySQL, EJS</small></li><li><a href="https://app.powerbi.com/view?r=eyJrIjoiZWFlZWM5ZGMtMTE4Zi00NDQwLThkY2EtYmQxMWYzN2IxNjc5IiwidCI6ImIxMDUxYzRiLTNiOTQtNDFhYi05NDQxLWU3M2E3MjM0MmZkZCJ9" target="_blank" rel="noopener">Dashboard de vendas</a><small>Dados · Power BI, DAX, ETL</small></li><li><a href="https://www.instagram.com/fmlocacao" target="_blank" rel="noopener">Identidade visual FM</a><small>Design · branding</small></li></ul></div>
-    <div><h2>Currículo</h2><ul><li>ADS<small>Cruzeiro do Sul · Ago.2024 – atual</small></li><li>Call center · EMDIA<small>Set.2024 – Jul.2026</small></li><li>Técnico em Informática para Internet<small>FIEB · Jan.2021 – Dez.2023</small></li><li>AWS GenAI Foundations · AI-103<small>Senai · 2026</small></li><li>Google Cloud Computing Foundations<small>2025</small></li><li><a href="curriculo-eduardo-augusto.pdf" download>Baixar Currículo (PDF)</a></li></ul></div>
+    <div><h2>Currículo</h2><ul><li>ADS<small>Cruzeiro do Sul · Ago.2024 – atual</small></li><li>Call center · EMDIA<small>Set.2024 – Jul.2026</small></li><li>Técnico em Informática para Internet<small>FIEB · Jan.2021 – Dez.2023</small></li><li>AWS GenAI Foundations · AI-103<small>Senai · 2026</small></li><li>Google Cloud Computing Foundations<small>2025</small></li><li><a href="curriculo.html">Ver currículo completo</a></li><li><a href="curriculo-eduardo-augusto.pdf" download>Baixar Currículo (PDF)</a></li></ul></div>
     <div><h2>Contato</h2><ul><li><a href="mailto:edaugusto0111@gmail.com">edaugusto0111@gmail.com</a></li><li><a href="https://wa.me/5511953784814" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://www.linkedin.com/in/edaugusto" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://github.com/edaaugusto" target="_blank" rel="noopener">GitHub</a></li></ul></div>
   </div>
 </dialog>
@@ -637,7 +639,7 @@ const D={
 'Crio sistemas web e análises de dados para problemas reais de operação.':'Building web systems and data analysis for real operational problems.',
 'Antes da tecnologia, vendas e quase dois anos de call center, onde desenvolvi oratória, argumentação e leitura de negociação. Hoje, graduando em ADS e buscando estágio ou júnior.':
   "Before tech, I worked in sales and spent almost two years in a call center, where I built public speaking, persuasion and negotiation skills. Now I'm studying Systems Analysis and Development and looking for an internship or junior role.",
-'Ver projetos':'See projects','Agentes com IA — AI-103':'Developing AI Apps and Agents — AI-103','Informática':'Computer Skills','Baixar currículo':'Download résumé','Baixar Currículo':'Download résumé','Baixar Currículo (PDF)':'Download résumé (PDF)','Currículo PDF':'Résumé PDF',
+'Ver projetos':'See projects','Ver currículo completo':'View full résumé','Agentes com IA — AI-103':'Developing AI Apps and Agents — AI-103','Informática':'Computer Skills','Baixar currículo':'Download résumé','Baixar Currículo':'Download résumé','Baixar Currículo (PDF)':'Download résumé (PDF)','Currículo PDF':'Résumé PDF',
 'Foto de Eduardo Augusto em serigrafia de quatro cores':'Photo of Eduardo Augusto as a four-color screen print',
 'ADS':'Associate degree','Cruzeiro do Sul · 2024–atual':'Cruzeiro do Sul · 2024–present','Técnico':'Technical diploma','Informática para Internet · FIEB':'Web Development · FIEB',
 'Cursos de IA':'AI courses','Rolar ↓':'Scroll ↓',
