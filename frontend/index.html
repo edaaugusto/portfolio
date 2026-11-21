@@ -1,384 +1,803 @@
 <!doctype html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Eduardo Augusto — Portfólio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Dancing+Script:wght@600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=25">
+<title>Eduardo Augusto — Desenvolvimento web e dados</title>
+<meta name="description" content="Eduardo Augusto — desenvolvimento web e dados. Graduando em Análise e Desenvolvimento de Sistemas, buscando estágio ou júnior.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231A2414'/%3E%3Cg fill='%23A8BF6E'%3E%3Crect x='10' y='12' width='6' height='40'/%3E%3Crect x='10' y='12' width='20' height='6'/%3E%3Crect x='10' y='29' width='16' height='6'/%3E%3Crect x='10' y='46' width='20' height='6'/%3E%3Crect x='40' y='10' width='6' height='44' transform='rotate(18 43 32)'/%3E%3Crect x='46' y='10' width='6' height='44' transform='rotate(-18 49 32)'/%3E%3C/g%3E%3C/svg%3E">
+<script>(function(){var t=null;try{t=localStorage.getItem('ea5-theme')}catch(e){}var q=new URLSearchParams(location.search).get('theme');
+document.documentElement.dataset.theme=q||t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.classList.add('js');var m=null;try{m=localStorage.getItem('ea5-motion')}catch(e){}var qm=new URLSearchParams(location.search).get('motion');if(qm)m=qm;var os=matchMedia('(prefers-reduced-motion: reduce)').matches;if(m==='off'||(m!=='on'&&os))document.documentElement.classList.add('rm');if(os&&!m)document.documentElement.classList.add('os-rm')})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@600..800&family=Hanken+Grotesk:ital,wght@0,400..700;1,400..600&display=swap">
+<style>
+/* =====================================================================
+   v5 — identidade Bastidores (musgo/oliva dominante, azul-tinta com presença)
+   Verde da marca: #A8BF6E (escuro) / #4B6420 (claro), matiz ~80°, distinto do verde da FM.
+   Azul: #0C2742 / #0A1E33 / #1C3150 (escuro) · #C9D9EA / #B8CCE1 (claro).
+   Estêncil só em nome, títulos de seção e números. Corpo em Hanken Grotesk.
+   ===================================================================== */
+:root{--disp:'Big Shoulders Stencil Display',Impact,sans-serif;--sans:'Hanken Grotesk',system-ui,sans-serif;
+  --ease:cubic-bezier(.76,0,.24,1);--out:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,4.5vw,72px);--max:1320px}
+:root[data-theme="dark"]{
+  --bg:#1A2414;--deep:#121A0E;--surf:#232F1B;--surf2:#2C3A23;--ink:#ECEEDF;--muted:#AEB69A;--line:#33422A;--tape:#A8BF6E;--tape-txt:#A8BF6E;--on-tape:#141C0E;
+  --hero-l:#121A0E;--hero-ink:#ECEEDF;--hero-muted:#AEB69A;--hero-tape:#A8BF6E;
+  --b-bg:#0C2742;--b-deep:#0A1E33;--b-surf:#13304F;--b-ink:#E6ECF2;--b-muted:#A9B9CB;--b-line:#23395A;--b-acc:#9DB6D3;--b-tag:#1C3150;--b-on-tag:#C9D9EA;
+  --duo-d:#0A1E33;--duo-l:#A8BF6E;--focus:#9DB6D3}
+:root[data-theme="light"]{
+  --bg:#E3E6D3;--deep:#3E5220;--surf:#D7DCC2;--surf2:#CDD3B5;--ink:#1A2414;--muted:#4F5A3E;--line:#BFC6A6;--tape:#4B6420;--tape-txt:#4B6420;--on-tape:#F1F2E6;
+  --hero-l:#3E5220;--hero-ink:#F1F2E6;--hero-muted:#D3D9BE;--hero-tape:#DDE7B8;
+  --b-bg:#C9D9EA;--b-deep:#0C2742;--b-surf:#B8CCE1;--b-ink:#0C2742;--b-muted:#3B4F66;--b-line:#A9BDD3;--b-acc:#1C3150;--b-tag:#1C3150;--b-on-tag:#E1EAF4;
+  --duo-d:#1C3150;--duo-l:#DDE7B8;--focus:#1C3150}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 1.03rem/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+::selection{background:var(--tape);color:var(--on-tape)}
+.lbl{font:700 .72rem/1.25 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.wrap{max-width:var(--max);margin:0 auto}
+.skip{position:absolute;left:-999px;top:8px;z-index:400;background:var(--tape);color:var(--on-tape);padding:8px 14px}.skip:focus{left:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* fita de marcação */
+.mark{position:absolute;width:24px;height:24px;pointer-events:none}
+.mark::before,.mark::after{content:"";position:absolute;background:var(--mk,var(--tape))}
+.mark::before{left:0;top:0;width:100%;height:5px}.mark::after{left:0;top:0;width:5px;height:100%}
+.mark.tl{left:0;top:0}.mark.tr{right:0;top:0;transform:scaleX(-1)}.mark.bl{left:0;bottom:0;transform:scaleY(-1)}.mark.br{right:0;bottom:0;transform:scale(-1,-1)}
+.x{position:absolute;width:20px;height:20px;pointer-events:none}
+.x::before,.x::after{content:"";position:absolute;left:0;top:7.5px;width:100%;height:5px;background:var(--mk,var(--tape));transform:rotate(45deg)}.x::after{transform:rotate(-45deg)}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 22px;background:var(--tape);color:var(--on-tape);font:700 .92rem/1 var(--sans);position:relative;will-change:transform}
+.btn .ar{transition:transform .35s var(--ease)}.btn:hover .ar{transform:translateX(4px)}
+.btn.o{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.blue{background:var(--b-tag);color:var(--b-on-tag)}
+
+/* header */
+.top{position:fixed;inset:0 0 auto;z-index:80;display:flex;align-items:center;gap:22px;padding:14px var(--pad);transition:background .35s,box-shadow .35s}
+.top.solid{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:var(--hero-ink);--tape:var(--hero-tape)}
+.top.solid .brand,.top.on-light .brand{color:var(--ink);--tape:var(--tape-txt)}
+.brand svg{width:48px;height:27px}
+.brand span{font:700 1.15rem/1 var(--disp);letter-spacing:.07em;text-transform:uppercase}
+.nav{display:flex;gap:2px;margin-left:auto;background:var(--surf);padding:3px}
+.nav a{position:relative;padding:9px 12px;font:600 .9rem/1 var(--sans);color:var(--ink);opacity:.82}
+.nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:4px;background:var(--tape);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.nav a:hover,.nav a.on{opacity:1}.nav a:hover::after,.nav a.on::after{transform:scaleX(1)}
+.tools{display:flex;gap:6px}
+.tb{height:40px;padding:0 14px;display:inline-flex;align-items:center;font:700 .72rem var(--sans);letter-spacing:.12em;text-transform:uppercase;background:var(--surf);color:var(--ink)}
+.tb:hover{background:var(--surf2)}
+.tg{position:relative;width:150px;padding:0 4px}
+.tg i{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);background:var(--tape);transition:transform .55s var(--ease)}
+:root[data-theme="dark"] .tg i{transform:translateX(100%)}
+.tg span{position:relative;z-index:1;width:50%;text-align:center}
+:root[data-theme="light"] .tg .l,:root[data-theme="dark"] .tg .d{color:var(--on-tape)}
+.menu-btn{display:none}
+
+/* faixas de profundidade entre seções */
+.band{height:16vh;min-height:90px}
+.band.g2b{background:linear-gradient(180deg,var(--bg),var(--b-bg))}
+.band.b2g{background:linear-gradient(180deg,var(--b-bg),var(--bg))}
+.band.g2d{background:linear-gradient(180deg,var(--bg),var(--hero-l))}
+
+/* ===== INÍCIO ===== */
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);min-height:min(100svh,940px);background:var(--bg)}
+.hl{position:relative;background:var(--hero-l);color:var(--hero-ink);padding:140px var(--pad) 64px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;--mk:var(--hero-tape)}
+:root[data-theme="dark"] .hl{background:linear-gradient(165deg,#121A0E 55%,#0E1C26)}
+.hl .lbl{color:var(--hero-muted)}
+.name{font:700 clamp(2.8rem,5.4vw,5.2rem)/.92 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-top:16px}
+.name .ln{display:block;overflow:hidden}.name .ln>span{display:inline-block}
+.name .ln:last-child{color:var(--hero-tape)}
+.pos-line{font:600 clamp(1.05rem,1.5vw,1.3rem)/1.3 var(--sans);margin-top:22px;color:var(--hero-tape);letter-spacing:.01em}
+.value{font:500 clamp(1.5rem,2.5vw,2.35rem)/1.2 var(--sans);letter-spacing:-.015em;margin-top:14px;max-width:24ch}
+.bridge{color:var(--hero-muted);margin-top:16px;max-width:52ch}
+.hl .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.hl .btn{background:var(--hero-tape);color:#141C0E}
+.hl .btn.o{background:transparent;color:var(--hero-ink)}
+.hr{position:relative;padding:140px var(--pad) 64px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:24px;overflow:hidden}
+.spot{position:relative;width:min(100%,300px);padding:14px}
+.duo{position:relative;background:var(--duo-l);overflow:hidden}
+.duo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.15);mix-blend-mode:multiply}
+.duo::after{content:"";position:absolute;inset:0;background:var(--duo-d);mix-blend-mode:lighten}
+.spot .duo{aspect-ratio:4/5}.spot img{object-position:46% 28%}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;color:var(--muted);font-size:.9rem;max-width:380px}
+.facts b{display:block;color:var(--ink);font:700 1.15rem/1.1 var(--disp);letter-spacing:.06em;text-transform:uppercase}
+.scroll-cue{position:absolute;right:var(--pad);bottom:28px;color:var(--muted)}
+
+/* ===== títulos de seção ===== */
+.sec{padding:110px var(--pad) 110px;position:relative}
+.sh{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:24px;align-items:end;margin-bottom:56px}
+.sh .no{font:700 clamp(3rem,4.8vw,4.4rem)/.9 var(--disp);color:var(--tape-txt)}
+.sh h2{font:700 clamp(2.2rem,4vw,3.6rem)/1 var(--disp);letter-spacing:.05em;text-transform:uppercase}
+.sh p{color:var(--muted);max-width:62ch;margin-top:12px;font-size:1.05rem}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.06em}.w>span{display:inline-block}
+
+/* ===== SOBRE (azul) ===== */
+.blue{background:var(--b-bg);color:var(--b-ink);--tape-txt:var(--b-acc);--muted:var(--b-muted);--line:var(--b-line);--mk:var(--b-acc)}
+:root[data-theme="dark"] .blue .sh .no{color:#A8BF6E}
+:root[data-theme="light"] .blue .sh .no{color:#4B6420}
+.about-lead{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:24px}
+.about-lead p{font:500 clamp(1.25rem,2vw,1.75rem)/1.4 var(--sans);max-width:44ch}
+.about-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:64px}
+.acard{position:relative;padding:26px 24px 28px;background:var(--b-surf)}
+.acard h3{font:700 1.3rem/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;padding-bottom:12px;margin-bottom:12px;border-bottom:4px solid var(--b-acc)}
+:root[data-theme="dark"] .acard h3{border-color:#A8BF6E}
+.acard p,.acard li{font-size:.95rem;color:var(--b-ink)}
+.acard ul{list-style:none}.acard li{padding:7px 0;border-bottom:1px solid var(--b-line)}
+.acard li small{display:block;color:var(--b-muted);font-size:.84rem}
+.tools-list{display:flex;flex-wrap:wrap;gap:6px}
+.tools-list span{font:600 .8rem/1 var(--sans);padding:7px 10px;background:var(--b-bg);border:1px solid var(--b-line)}
+
+/* ===== PROJETOS ===== */
+.feat{position:relative}
+.feat-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:center}
+.flag{display:inline-block;padding:6px 10px;background:var(--b-tag);color:var(--b-on-tag);transform:rotate(-1deg)}
+.feat-head h3{font:700 clamp(2.4rem,4.6vw,4.2rem)/.95 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-top:16px}
+.feat-head .ov{color:var(--muted);margin-top:16px;max-width:46ch}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.reveal-img{position:relative;overflow:hidden;background:var(--deep)}
+.reveal-img img{width:100%;height:100%;object-fit:cover}
+.feat-cover{aspect-ratio:16/10}
+.chap{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:24px;margin-top:96px}
+.chap>.lbl{color:var(--tape-txt);padding-top:6px}
+.chap h4{font:700 1.6rem/1.05 var(--disp);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.ps{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ps>div{padding:26px;background:var(--surf);position:relative}
+.ps>div:last-child{background:var(--b-bg);color:var(--b-ink)}
+.ps p{font-size:1.05rem}
+.ps ul{list-style:none;margin-top:12px}.ps li{padding:8px 0 8px 22px;position:relative;border-top:1px solid var(--b-line)}
+.ps li::before{content:"";position:absolute;left:0;top:17px;width:12px;height:5px;background:var(--b-acc)}
+:root[data-theme="dark"] .ps li::before{background:#A8BF6E}
+/* sistema interno: palco preso, telas trocam com a rolagem */
+.sys{background:var(--b-deep);color:#E6ECF2;width:100vw;margin:96px 0 0 calc(50% - 50vw);padding:90px var(--pad);--mk:#A8BF6E}
+.sys .in{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:56px;align-items:center;max-width:var(--max);margin:0 auto}
+.sys .lbl{color:#A9B9CB}
+.sys h4{font:700 clamp(1.8rem,2.8vw,2.6rem)/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;margin:12px 0 22px}
+.steps{list-style:none;border-top:1px solid #23395A}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:16px 0;border-bottom:1px solid #23395A;transition:opacity .4s}
+.steps .n{font:700 1.6rem/1 var(--disp);color:#A8BF6E}
+.steps b{display:block;font-weight:700}
+.steps p{color:#C7D3E0;font-size:.94rem}
+.live .steps li{opacity:.38}.live .steps li.on{opacity:1}
+.stage{position:relative;display:block;width:100%;text-align:left;padding:14px;background:#0C2742;cursor:zoom-in}
+.stage .frames{display:block;position:relative;aspect-ratio:16/10;overflow:hidden;background:#000}
+.stage .f{display:block;position:absolute;inset:0}
+.stage .f img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.stage .f.tall img{object-fit:contain;object-position:center;background:#06101c}
+.stage .cap{display:flex;justify-content:space-between;margin-top:10px;color:#A9B9CB}
+.stage .cap span:last-child{background:#1C3150;color:#C9D9EA;padding:3px 8px}
+.m-shots{display:none}
+/* site institucional */
+.site{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:24px;align-items:end}
+.site .desk{aspect-ratio:16/10}
+.site .mob{aspect-ratio:390/844;max-width:240px;justify-self:center;box-shadow:0 0 0 10px var(--deep)}
+.site p{color:var(--muted);margin-top:16px;max-width:56ch}
+/* resultados */
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.num{padding:26px;background:var(--surf);position:relative}
+.num b{display:block;font:700 clamp(3rem,5vw,4.6rem)/.9 var(--disp);color:var(--tape-txt)}
+.num span{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:8px 12px;background:var(--surf);font:600 .86rem/1 var(--sans)}
+.chips span.b{background:var(--b-bg);color:var(--b-ink)}
+/* outros projetos */
+.others{margin-top:120px}
+.others-h{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:18px;margin-bottom:30px}
+.others-h h3{font:700 clamp(1.8rem,3vw,2.6rem)/1 var(--disp);letter-spacing:.06em;text-transform:uppercase}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{height:40px;padding:0 14px;background:var(--surf);font:700 .74rem var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.filters button[aria-pressed="true"]{background:var(--tape);color:var(--on-tape)}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.card{display:flex;flex-direction:column;background:var(--surf);transition:background .3s,opacity .4s,transform .4s}
+.card:hover{background:var(--surf2)}
+.card .cov{position:relative;aspect-ratio:16/10;overflow:hidden;clip-path:inset(4% 4% 0 4%);transition:clip-path .7s var(--ease)}
+.card .cov img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1s var(--out)}
+.card:hover .cov,.card:focus-visible .cov{clip-path:inset(0 0 0 0)}
+.card:hover .cov img{transform:scale(1)}
+.card .body{display:flex;flex-direction:column;gap:10px;padding:22px 22px 24px;flex:1}
+.card .cat{color:var(--tape-txt)}
+.card h4{font:700 1.25rem/1.25 var(--sans)}
+.card p{color:var(--muted);font-size:.95rem;flex:1}
+.card .meta{display:flex;justify-content:space-between;gap:10px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted)}
+.card .go{color:var(--ink);transition:color .25s}
+.card:hover .go{color:var(--b-acc)}
+:root[data-theme="dark"] .card:hover .go{color:#9DB6D3}
+.card[hidden]{display:none}
+.more{display:flex;justify-content:flex-end;margin-top:22px}
+.more a{border-bottom:2px solid var(--tape);padding-bottom:2px}
+
+/* ===== CURRÍCULO (azul) ===== */
+.cv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.cv h3{font:700 1.3rem/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;padding-bottom:12px;border-bottom:4px solid var(--b-acc)}
+:root[data-theme="dark"] .cv h3{border-color:#A8BF6E}
+.cv ul{list-style:none}.cv li{padding:14px 0;border-bottom:1px solid var(--b-line)}
+.cv li b{display:block}.cv li span{color:var(--b-muted);font-size:.92rem}
+.cv li a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.dl{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:40px;padding:26px 28px;background:var(--b-surf)}
+.dl p{flex:1;min-width:240px;font:500 1.15rem/1.35 var(--sans)}
+.dl .btn{background:#A8BF6E;color:#141C0E}
+:root[data-theme="light"] .dl .btn{background:#4B6420;color:#F1F2E6}
+
+/* ===== CONTATO ===== */
+.contact{background:var(--hero-l);color:var(--hero-ink);--mk:var(--hero-tape)}
+.contact .sh .no{color:var(--hero-tape)}.contact .sh p{color:var(--hero-muted)}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding-bottom:18px;border-bottom:2px solid rgba(236,238,223,.2)}
+.mail a{font:500 clamp(1.5rem,3.8vw,3.4rem)/1.1 var(--sans);letter-spacing:-.02em;word-break:break-all;transition:color .25s}
+.mail a:hover{color:var(--hero-tape)}
+.mail a.btn{font:700 .92rem/1 var(--sans);letter-spacing:0;word-break:normal}
+.mail a.btn:hover{color:inherit}
+.mail .btn{color:var(--hero-ink)}
+.mail a.btn:not(.o){background:var(--hero-tape);color:#141C0E}.mail a.btn:not(.o){margin-left:auto}
+.mail a.mail-alt{flex-basis:100%;font:500 .9rem/1.4 var(--sans);letter-spacing:0;opacity:.75;text-decoration:underline;text-underline-offset:3px}
+.chan{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:20px}
+.chan a{display:flex;justify-content:space-between;align-items:center;padding:20px;background:rgba(255,255,255,.07);font-weight:700;transition:background .3s,color .3s}
+.chan a:hover{background:#1C3150;color:#E1EAF4}
+footer{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;padding:30px var(--pad) 38px;color:var(--muted)}
+footer svg{width:40px;height:22px}footer .r{margin-left:auto;display:flex;gap:20px}
+
+/* bancos de luz e abertura */
+.lights{position:fixed;inset:0;z-index:200;display:none;pointer-events:none}.lights i{flex:1}
+.intro{position:fixed;inset:0;z-index:210;display:none;align-items:center;justify-content:center;flex-direction:column;gap:22px;background:#1A2414}
+.intro svg{width:min(40vw,240px);height:auto}
+.intro button{color:#AEB69A;font:700 .7rem var(--sans);letter-spacing:.14em;text-transform:uppercase}
+
+/* índice / menu */
+dialog.idx{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;background:var(--bg);color:var(--ink);padding:22px var(--pad) 48px;overflow:auto}
+.idx-h{display:flex;align-items:center;gap:14px;margin-bottom:34px}.idx-h .tb{margin-left:auto}
+.idx-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.idx-g h2{font:700 1.5rem/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;padding-bottom:10px;border-bottom:4px solid var(--tape);margin-bottom:8px}
+.idx-g ul{list-style:none}.idx-g li{padding:9px 0;border-bottom:1px solid var(--line)}
+.idx-g li small{display:block;color:var(--muted)}
+.idx-g a,.idx-g button{text-decoration:underline;text-decoration-color:var(--tape);text-underline-offset:3px;text-align:left}
+dialog.lb{margin:auto;border:0;padding:0;width:min(1100px,94vw);background:#0A1E33;color:#E6ECF2}
+dialog.lb::backdrop{background:rgba(10,30,51,.88)}
+.lb-h{display:flex;align-items:center;gap:12px;padding:10px 14px}.lb-h button{margin-left:auto;width:44px;height:44px;background:#A8BF6E;color:#141C0E;font-size:1.3rem}
+.lb-s{display:grid;place-items:center;background:#000;height:min(68vh,660px)}.lb-s img,.lb-s video{max-width:100%;max-height:100%;object-fit:contain}
+.lb-f{display:flex;align-items:center;gap:12px;padding:12px 14px}.lb-f p{flex:1;color:#A9B9CB;font-size:.9rem}.lb-f button{width:44px;height:44px;border:2px solid #23395A}
+dialog.single .lb-f button{visibility:hidden}
+.cur{position:fixed;left:0;top:0;z-index:220;pointer-events:none;padding:6px 10px;background:#1C3150;color:#E1EAF4;font:700 .66rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;opacity:0;transform:translate(-100px,-100px);transition:opacity .2s}
+.cur.on{opacity:1}
+
+
+/* ===== v5b: case linear ===== */
+.case-top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:end}
+.case-top h3{font:700 clamp(3rem,6.4vw,6rem)/.92 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-top:16px}
+.case-top .ov{font:500 clamp(1.2rem,1.8vw,1.6rem)/1.35 var(--sans);margin:14px 0 18px;max-width:30ch}
+.nums3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.nums3 .num{padding:20px}.nums3 .num b{font-size:clamp(2.4rem,3.6vw,3.4rem)}.nums3 .num span{font-size:.88rem}
+.cine{position:relative;height:100vh;margin-top:64px;overflow:hidden;width:100vw;margin-left:calc(50% - 50vw)}
+.cine-media{position:absolute;inset:0;display:block;overflow:hidden;background:var(--deep)}
+.cine-media img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.cine-cap{position:absolute;left:var(--pad);right:var(--pad);bottom:24px;display:flex;justify-content:space-between;gap:12px;z-index:2;pointer-events:none}
+.cine-cap span{background:#1C3150;color:#E1EAF4;padding:6px 10px}
+.story{display:grid;gap:96px;margin-top:96px}
+.blk-t{font:700 clamp(1.6rem,2.4vw,2.2rem)/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:14px}
+.blk-t::before{content:"";flex:none;width:34px;height:6px;background:var(--tape)}
+.big{font:500 clamp(1.3rem,2.2vw,2rem)/1.35 var(--sans);max-width:40ch}
+.built{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.bcard{display:flex;flex-direction:column;background:var(--surf)}
+.bcard.dark{background:var(--b-deep);color:#E6ECF2}
+.bimg{display:block;aspect-ratio:16/9;overflow:hidden}
+.bimg img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform 1s var(--out)}
+.bcard:hover .bimg img{transform:scale(1.04)}
+.bbody{padding:24px 24px 26px;display:flex;flex-direction:column;gap:12px;flex:1}
+.bbody .lbl{color:var(--tape-txt)}.bcard.dark .lbl{color:#9DB6D3}
+.bbody h5{font:700 1.55rem/1 var(--disp);letter-spacing:.06em;text-transform:uppercase}
+.bbody ul{list-style:none;flex:1}
+.bbody li{position:relative;padding:10px 0 10px 22px;border-top:1px solid var(--line)}
+.bcard.dark li{border-color:#23395A}
+.bbody li::before{content:"";position:absolute;left:0;top:19px;width:12px;height:5px;background:var(--tape)}
+.bcard.dark li::before{background:#A8BF6E}
+.bcard.dark .btn.blue{background:#A8BF6E;color:#141C0E}
+.bbody .links{margin-top:6px}
+.res{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.res li{padding:22px;background:var(--surf)}
+.res b{display:block;font:700 1.35rem/1.1 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px}
+.res span{color:var(--muted);font-size:.95rem}
+/* galeria horizontal */
+.hgal{background:var(--b-deep);color:#E6ECF2;margin-top:110px;width:100vw;margin-left:calc(50% - 50vw);padding:80px 0 70px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity}
+.live .hgal{overflow:hidden}
+.hgal-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px;padding:0 var(--pad);margin-bottom:34px;position:sticky;left:0}
+.hgal-h .lbl{color:#A9B9CB}.hgal .blk-t::before{background:#A8BF6E}.hgal .blk-t{margin:0}
+.track{display:flex;gap:24px;padding:0 var(--pad);width:max-content;will-change:transform}
+.shot{flex:none;text-align:left;cursor:zoom-in;padding:0;color:inherit;scroll-snap-align:start;transform-origin:50% 60%}
+.si{display:block;height:min(58vh,540px);aspect-ratio:16/10;overflow:hidden;background:#000;outline:1px solid #23395A}
+.shot.tall .si{aspect-ratio:780/1688}
+.si img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.sc{display:block;margin-top:12px;color:#A9B9CB}
+/* hero → sobre */
+.hero-wipe{position:absolute;inset:0;background:var(--b-bg);z-index:3;clip-path:inset(100% 0 0 0);pointer-events:none;display:none}
+.live .hero-wipe{display:block}.live .hero-band{display:none}
+.live .hr{overflow:visible;z-index:2}
+.live #sobre{padding-top:24px}
+.spot{z-index:4}
+/* títulos pintados pela fita */
+.paint{--pc:var(--ink)}.blue .paint{--pc:var(--b-ink)}.contact .paint{--pc:var(--hero-ink)}
+.paintfx .paint{position:relative;display:inline-block;color:transparent;-webkit-text-stroke:1.2px var(--pc)}
+.paintfx .paint::before{content:attr(data-text);position:absolute;left:0;top:0;white-space:nowrap;color:var(--pc);-webkit-text-stroke:0;clip-path:inset(-10% calc(100% - var(--p,0%)) -10% 0);pointer-events:none}
+.paintfx .paint::after{content:"";position:absolute;top:.02em;height:.9em;width:.34em;left:calc(var(--p,0%) - .17em);background:var(--tape);opacity:var(--o,0);transform:rotate(-3deg);pointer-events:none}
+.blue .paint::after{background:#A8BF6E}
+:root[data-theme="light"] .blue .paint::after{background:#4B6420}
+/* capas: duotone + janela real que segue o cursor */
+.cov .base,.cov .real{position:absolute;inset:0;display:block}
+.fine .cov .base img{filter:grayscale(1) contrast(1.08)}
+.fine .cov .base::after{content:"";position:absolute;inset:0;background:#1C3150;mix-blend-mode:color;opacity:.9}
+.fine .cov .real{clip-path:inset(50% 50% 50% 50%);transition:clip-path .45s var(--out)}
+.fine .cov .real.on{transition:clip-path .18s linear}
+:root:not(.fine) .cov .real{display:none}
+
+
+/* ===== case FM: dois cards + modal de vídeo ===== */
+.case-top2{max-width:62ch}
+.case-top2 h3{font:700 clamp(3rem,6vw,5.6rem)/.92 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-top:16px}
+.case-top2 .ov{font:500 clamp(1.2rem,1.8vw,1.55rem)/1.35 var(--sans);margin-top:14px;max-width:34ch}
+.stack-line{color:var(--muted);margin-top:12px;font-size:.98rem}
+.fm-cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.vcard{display:flex;flex-direction:column;background:var(--surf)}
+.vcard.dark{background:var(--b-deep);color:#E6ECF2}
+.vcov{position:relative;display:block;width:100%;aspect-ratio:16/9;overflow:hidden;padding:0;cursor:pointer;background:#000}
+.vcov img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform 1.1s var(--out),filter .6s}
+.vcov::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,30,51,.55));pointer-events:none}
+.vcov:hover img,.vcov:focus-visible img{transform:scale(1.05)}
+.vplay{position:absolute;left:18px;bottom:18px;z-index:2;display:inline-flex;align-items:center;gap:10px;padding:10px 16px;background:#A8BF6E;color:#141C0E;font:700 .8rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;transition:transform .4s var(--ease)}
+.vcov:hover .vplay{transform:translateX(6px)}
+.vbody{display:flex;flex-direction:column;gap:12px;padding:24px 26px 26px;flex:1}
+.vbody .lbl{color:var(--tape-txt)}
+.vcard.dark .vbody .lbl{color:#9DB6D3}
+.ctag{align-self:flex-start;background:#1C3150;color:#C9D9EA!important;padding:5px 9px}
+.vbody h4{font:700 clamp(1.5rem,2.2vw,2rem)/1.05 var(--disp);letter-spacing:.05em;text-transform:uppercase}
+.vbody h4 button{text-align:left;font:inherit;letter-spacing:inherit;text-transform:inherit}
+.vbody h4 button:hover{color:var(--tape-txt)}.vcard.dark .vbody h4 button:hover{color:#A8BF6E}
+.vbody p{color:var(--muted);flex:1;max-width:52ch}.vcard.dark .vbody p{color:#C7D3E0}
+.vlinks{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:6px}
+.vcard.dark .btn{background:#A8BF6E;color:#141C0E}
+.lnk{font-weight:700;border-bottom:2px solid currentColor;padding-bottom:2px}
+.lnk:hover{color:var(--b-acc)}
+/* modal */
+dialog.vmodal{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;padding:0;background:transparent;color:#E6ECF2;overflow:hidden}
+dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
+.vm-in{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:clamp(16px,3vw,40px) clamp(16px,5vw,80px)}
+.vm-h{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+.vm-h .lbl{color:#A8BF6E}
+.vm-h h3{font:700 clamp(1.4rem,2.6vw,2.4rem)/1 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-top:6px}
+.vm-x{height:44px;padding:0 16px;background:#A8BF6E;color:#141C0E;font:700 .8rem var(--sans);letter-spacing:.1em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
+.vm-stage{position:relative;width:100%;max-height:72vh;aspect-ratio:16/9;margin:0 auto;background:#000;box-shadow:0 0 0 1px #23395A}
+.vm-stage video{width:100%;height:100%;display:block;background:#000}
+.vm-f{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;color:#C7D3E0;max-width:100%}
+.vm-f p{max-width:70ch}
+.vm-f .lnk{color:#E6ECF2;flex:none}
+.vm-ghost{position:fixed;z-index:400;display:none;overflow:hidden;pointer-events:none;background:#000}
+.vm-ghost img{width:100%;height:100%;object-fit:cover;object-position:top center}
+@media (max-width:960px){.fm-cards{grid-template-columns:1fr}.vbody{padding:20px}.vm-in{padding:14px}.vm-stage{max-height:none}.vm-f{flex-direction:column}}
+
+@media (max-width:1240px){.brand span{display:none}.nav a{padding:9px 9px}.tb{padding:0 11px}}
+@media (max-width:960px){
+  .nav,.top .idx-btn{display:none}.menu-btn{display:inline-flex}
+  .mv span{display:none}
+  .top{padding:12px 16px;gap:10px}.brand span{display:none}.tools{margin-left:auto}.tb{height:38px;padding:0 10px;font-size:.64rem}.tg{width:120px}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hl{padding:96px 18px 38px}.hl .x{display:none}
+  .name{font-size:clamp(2.5rem,11.5vw,3.4rem)}.value{font-size:1.4rem}
+  .hr{padding:30px 18px 40px;flex-direction:row;flex-wrap:wrap;align-items:flex-end}
+  .spot{width:150px;padding:10px}.facts{flex:1;min-width:170px;grid-template-columns:1fr}
+  .scroll-cue{display:none}
+  .sec{padding:72px 18px 72px}
+  .sh,.about-lead,.feat-head,.chap{grid-template-columns:1fr;gap:10px}
+  .sh{margin-bottom:32px}
+  .about-grid,.ps,.nums,.grid3,.cv,.site{grid-template-columns:1fr}
+  .about-grid{margin-top:36px}
+  .chap{margin-top:56px}
+  .sys{margin:56px 0 0 calc(50% - 50vw);padding:56px 18px}.sys .in{grid-template-columns:1fr;gap:20px}
+  .stage{display:none}.m-shots{display:grid;gap:12px;margin-top:18px}.m-shots img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left;background:#06101c}.m-shots img.tall{object-fit:contain}
+  .site .mob{max-width:180px}
+  .others{margin-top:72px}
+  .case-top,.built,.res{grid-template-columns:1fr}
+  .nums3 .num{padding:14px}.nums3 .num b{font-size:2rem}
+  .cine{height:62vh;margin-top:36px}
+  .story{gap:56px;margin-top:56px}
+  .hgal{margin-top:64px;padding:56px 0 40px}
+  .si{height:44vh}
+  .track{gap:14px;padding:0 18px}
+  .hgal-h{padding:0 18px}
+  .chan{grid-template-columns:1fr 1fr}.mail .btn{margin-left:0}
+  .idx-g{grid-template-columns:1fr}
+  .band{height:60px;min-height:0}
+  footer{padding:26px 18px 34px}footer .r{margin-left:0}
+}
+.rm *,.rm *::before,.rm *::after{transition:none!important;animation:none!important}
+.mv{display:inline-flex;align-items:center;gap:7px;height:40px;padding:0 8px;background:none;color:var(--muted);font:600 .7rem/1 var(--sans);letter-spacing:.04em}
+.mv:hover{color:var(--ink)}.mv i{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.7}.rm .mv i{background:transparent;box-shadow:inset 0 0 0 1.5px currentColor}
+.mv .short{display:none}
+@media (max-width:960px){.mv .long{display:none}.mv .short{display:inline}.mv{padding:0 4px;font-size:.66rem}}
+@media (max-width:430px){.tools a.tb[download]{display:none}.tg{width:108px}}
+</style>
 </head>
 <body>
+<a class="skip" href="#sobre">Pular para o conteúdo</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="mk" viewBox="0 0 120 64"><g style="fill:var(--tape)">
+    <rect x="6" y="5" width="7" height="54" transform="rotate(-1 9 32)"/><rect x="6" y="5" width="34" height="7" transform="rotate(1.5 23 8)"/>
+    <rect x="6" y="28.5" width="28" height="7" transform="rotate(-1 20 32)"/><rect x="6" y="52" width="34" height="7" transform="rotate(.8 23 55)"/>
+    <rect x="76" y="2" width="7" height="62" transform="rotate(21 79.5 33)"/><rect x="88" y="2" width="7" height="62" transform="rotate(-21 91.5 33)"/>
+    <rect x="70" y="38" width="32" height="7" transform="rotate(-1.5 86 41)"/></g></symbol></defs></svg>
 
-<a class="skip-link" href="#inicio">Pular para conteúdo principal</a>
-
-<!-- ===================== NAVBAR ===================== -->
-<header class="navbar" role="banner">
-  <div class="container inner">
-    <a class="brand" href="#inicio" aria-label="Ir para o início">
-      <span class="logo-sig">
-        <span class="logo-text">Eduardo</span>
-        <svg class="logo-flourish" viewBox="0 0 120 18" aria-hidden="true">
-          <path d="M2 9 Q 30 1, 60 9 T 116 7" fill="none" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </span>
-    </a>
-
-    <div class="nav-avatar" aria-hidden="true"><img class="photo" src="img/avatar.jpg" alt=""></div>
-
-    <nav class="nav-links" id="nav-links" aria-label="Navegação Principal">
-      <a href="#inicio"    data-i18n="nav-home"     class="active" aria-current="page">Início</a>
-      <a href="#sobre"     data-i18n="nav-about">Sobre</a>
-      <a href="#projetos"  data-i18n="nav-projects">Projetos</a>
-      <a href="curriculo.html" data-i18n="nav-cv">Currículo</a>
-      <a href="#contato"   data-i18n="nav-contact">Contato</a>
-    </nav>
-
-    <button id="lang-toggle" class="btn secondary" type="button" aria-label="Alternar idioma">EN</button>
-
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar para tema claro">
-      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="4"></circle>
-        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
-      </svg>
-      <svg class="moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-      </svg>
-    </button>
-
-    <button id="nav-toggle" class="nav-toggle" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Abrir menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M3 6h18M3 12h18M3 18h18"></path>
-      </svg>
-    </button>
+<header class="top" id="top">
+  <a class="brand" href="#inicio" data-go="#inicio" aria-label="Eduardo Augusto, início"><svg viewBox="0 0 120 64" aria-hidden="true"><use href="#mk"/></svg><span>Eduardo Augusto</span></a>
+  <nav class="nav" aria-label="Seções">
+    <a href="#inicio" data-go="#inicio">Início</a><a href="#sobre" data-go="#sobre">Sobre</a><a href="#projetos" data-go="#projetos">Projetos</a><a href="#curriculo" data-go="#curriculo">Currículo</a><a href="#contato" data-go="#contato">Contato</a>
+  </nav>
+  <div class="tools">
+    <button class="tb menu-btn" type="button" data-idx aria-haspopup="dialog">Menu</button>
+    <button class="tb idx-btn" type="button" data-idx aria-haspopup="dialog">Ver tudo em lista</button>
+    <button class="mv" id="mv" type="button" aria-pressed="true" title="Ligar ou desligar as animações"><i aria-hidden="true"></i><span class="long">Animações</span><span class="short">Anim.</span></button>
+    <button class="tb tg" id="tg" type="button" aria-label="Alternar tema"><i></i><span class="l">Claro</span><span class="d">Escuro</span></button>
+    <a class="tb" href="curriculo-eduardo-augusto.pdf" download>CV ↓</a>
   </div>
 </header>
 
 <main>
-  <!-- ===================== HERO ===================== -->
-  <section id="inicio" class="hero container" aria-label="Apresentação">
-    <div class="hero-row" id="hero-row">
-      <div class="hero-namepanel" id="hero-namepanel">
-        <span class="hnp-word hnp-eyebrow" id="hnp-eyebrow">Portfólio</span>
-        <span class="hnp-word hnp-fullname" id="hnp-fullname">Eduardo Augusto</span>
-      </div>
-
-      <div class="hero-fill" id="hero-fill">
-        <h1 data-i18n="hero-title">Analista de Tecnologia e Projetos</h1>
-        <p data-i18n="hero-desc">Graduando em <strong>Análise e Desenvolvimento de Sistemas</strong>, com experiência prática em <strong>desenvolvimento web full-stack</strong> e <strong>análise de dados</strong>. Buscando oportunidade como estagiário ou júnior para colocar a mão na massa e continuar aprendendo.</p>
-        <div class="kpis">
-          <span class="kpi" data-i18n="kpi-dev">Desenvolvimento</span>
-          <span class="kpi">SQL</span>
-          <span class="kpi">Power BI</span>
-          <span class="kpi">Cloud (AWS/GCP)</span>
-          <span class="kpi" data-i18n="kpi-ia">IA Generativa</span>
-        </div>
-        <div class="hero-ctas">
-          <a class="btn" href="#contato" data-i18n="hero-btn-talk">Fale Comigo</a>
-          <a class="btn secondary" href="#projetos" data-i18n="hero-btn-cv">Ver Projetos</a>
-        </div>
-      </div>
+<!-- ================= INÍCIO ================= -->
+<section class="hero" id="inicio" aria-label="Início">
+  <div class="hl">
+    <span class="x" style="right:10%;top:22%" aria-hidden="true"></span><span class="x" style="right:30%;top:14%" aria-hidden="true"></span>
+    <p class="lbl h-in">Portfólio · 2026</p>
+    <h1 class="name"><span class="ln"><span>Eduardo</span></span><span class="ln"><span>Augusto</span></span></h1>
+    <p class="pos-line h-in">Desenvolvimento web · Dados</p>
+    <p class="value h-in">Crio sistemas web e análises de dados para problemas reais de operação.</p>
+    <p class="bridge h-in">Antes da tecnologia, vendas e quase dois anos de call center, onde desenvolvi oratória, argumentação e leitura de negociação. Hoje, graduando em ADS e buscando estágio ou júnior.</p>
+    <div class="ctas h-in"><a class="btn mag" href="#projetos" data-go="#projetos">Ver projetos <span class="ar">→</span></a><a class="btn o mag" href="curriculo-eduardo-augusto.pdf" download>Baixar currículo <span class="ar">↓</span></a></div>
+  </div>
+  <div class="hr">
+    <div class="spot h-in">
+      <span class="mark tl"></span><span class="mark tr"></span><span class="mark bl"></span><span class="mark br"></span>
+      <figure class="duo"><img src="img/avatar.jpg" alt="Foto de Eduardo Augusto" width="832" height="832"></figure>
     </div>
+    <div class="facts h-in"><div><b>ADS</b>Cruzeiro do Sul · 2024–atual</div><div><b>Técnico</b>Informática para Internet · FIEB</div><div><b>Python · SQL</b>Power BI · Cloud</div><div><b>Cursos de IA</b>AWS GenAI · Azure AI-103</div></div>
+    <span class="scroll-cue lbl">Rolar ↓</span>
+  </div>
+  <div class="hero-wipe" aria-hidden="true"></div>
+</section>
 
-    <aside class="hero-side" id="hero-side">
-      <div class="card">
-        <ul class="stack-list">
-          <li><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--primary)" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg><span data-i18n="stack-1">Desenvolvimento Web Full-Stack (SQL &amp; EJS)</span></li>
-          <li><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--primary)" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg><span data-i18n="stack-2">Business Intelligence (Power BI, DAX &amp; ETL)</span></li>
-          <li><svg viewBox="0 0 24 24" width="16" height="16" fill="var(--primary)" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg><span data-i18n="stack-3">Python &amp; fundamentos de Cloud (GCP/AWS)</span></li>
-        </ul>
-      </div>
-    </aside>
-  </section>
+<div class="band g2b hero-band" aria-hidden="true"></div>
 
-  <!-- ===================== SOBRE ===================== -->
-  <section id="sobre" class="section" aria-labelledby="sobre-title">
-    <div class="container">
-      <h2 id="sobre-title" class="reveal" data-i18n="about-title">Sobre mim</h2>
-      <p class="sub reveal" data-i18n="about-sub">De vendas e call center para tecnologia — construindo minha trajetória com prática, comunicação e vontade de aprender.</p>
-      <div class="grid cards">
-        <div class="card reveal">
-          <strong data-i18n="about-c1-t">Minha Trajetória</strong>
-          <p data-i18n="about-c1-d">Comecei cedo, conciliando o ensino médio técnico em Informática para Internet com freelas em eventos e apoio à minha mãe. Fui vendedor numa loja de surfe temporariamente onde tive meu primeiro compromisso profissional e depois passei quase dois anos em um call center, onde desenvolvi oratória, argumentação e uma boa leitura de negociações e juros.</p>
-        </div>
-        <div class="card reveal">
-          <strong data-i18n="about-c2-t">Formação Acadêmica</strong>
-          <p data-i18n="about-c2-d">Técnico em Informática para Internet pela FIEB (2021–2023). Atualmente cursando Análise e Desenvolvimento de Sistemas na Universidade Cruzeiro do Sul (2024–atual), com foco em desenvolvimento, programação, gestão de projetos e metodologias ágeis.</p>
-        </div>
-        <div class="card reveal">
-          <strong data-i18n="about-c3-t">Habilidades &amp; Ferramentas</strong>
-          <p data-i18n="about-c3-d">Cloud, IA Generativa, SQL e Python em construção constante.</p>
-          <ul class="skills-list">
-            <li>
-              <span data-i18n="skill-1">Certificação Google Cloud Computing Foundations</span>
-              <span class="skills-year">2025</span>
-              <a href="https://www.skills.google/public_profiles/7eddcbe9-1340-4e33-bcc8-31cb21a17556" target="_blank" rel="noopener" data-i18n="skill-link">Ver certificado</a>
-            </li>
-            <li><span data-i18n="skill-2">Power BI — Senai</span> <span class="skills-year">2025</span></li>
-            <li><span data-i18n="skill-3">Informática — Microcamp</span> <span class="skills-year">2024</span></li>
-            <li>
-              <span data-i18n="skill-4">AWS — Generative AI Foundations (Senai)</span>
-              <span class="skills-year">2026</span>
-              <a href="https://www.credly.com/badges/b56936c3-143b-4568-8aef-1e836a293dcb/public_url" target="_blank" rel="noopener" data-i18n="skill-4-link">Ver badge</a>
-            </li>
-            <li><span data-i18n="skill-5">Desenvolvimento de Agentes com IA — AI-103 (Senai)</span> <span class="skills-year">2026</span></li>
-          </ul>
-        </div>
-      </div>
+<!-- ================= SOBRE ================= -->
+<section class="sec blue" id="sobre" aria-labelledby="sobre-t">
+  <div class="wrap">
+    <div class="sh"><span class="no">01</span><div><h2 id="sobre-t" class="split paint" data-text="Sobre">Sobre</h2><p>Quem sou, de onde vim e com o que trabalho.</p></div></div>
+    <div class="about-lead"><span class="lbl" style="color:var(--b-muted)">Resumo</span>
+      <p class="rv">Estudo Análise e Desenvolvimento de Sistemas na Cruzeiro do Sul e sou técnico em Informática para Internet pela FIEB. Hoje desenvolvo o site e o sistema de gestão da FM Locação em Python e Django, com mais de 200 testes automatizados, e trabalho com SQL e Power BI para análise de dados. Antes da tecnologia, passei por vendas e quase dois anos de call center, onde aprendi a ouvir, negociar e explicar com clareza. Concluí cursos de IA generativa e agentes (AWS Generative AI Foundations e Azure AI-103) e busco minha primeira oportunidade como estagiário ou júnior.</p></div>
+    <div class="about-grid">
+      <article class="acard rv"><h3>Trajetória</h3><p>Comecei cedo, conciliando o técnico com freelas em eventos. Fui vendedor numa loja de surfe, meu primeiro compromisso profissional, e passei quase dois anos em um call center.</p></article>
+      <article class="acard rv"><h3>Formação</h3><ul><li>Análise e Desenvolvimento de Sistemas<small>Universidade Cruzeiro do Sul · 2024–atual</small></li><li>Técnico em Informática para Internet<small>FIEB · 2021–2023</small></li></ul></article>
+      <article class="acard rv"><h3>Experiência</h3><ul><li>FM Locação — site e sistema de gestão<small>Projeto para cliente · em andamento</small></li><li>Call center · EMDIA<small>Set.2024 – Jul.2026 · negociação e regularização financeira</small></li></ul></article>
+      <article class="acard rv"><h3>Ferramentas</h3><div class="tools-list"><span>Python</span><span>Django</span><span>SQL · MySQL</span><span>JavaScript</span><span>Node.js · EJS</span><span>Power BI · DAX · ETL</span><span>Cloud AWS · GCP</span><span>IA generativa · Agentes (AWS, Azure)</span><span>GitHub Actions</span></div></article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== PROJETOS ===================== -->
-  <section id="projetos" class="section" aria-labelledby="projetos-title">
-    <div class="container">
-      <h2 id="projetos-title" class="reveal" data-i18n="proj-title">Projetos em Destaque</h2>
-      <p class="sub reveal" data-i18n="proj-sub">Uma seleção de projetos práticos em desenvolvimento web, dados e design.</p>
+<div class="band b2g" aria-hidden="true"></div>
 
-      <div class="featured-case reveal">
-        <div class="featured-case-head">
-          <span class="featured-tag" data-i18n="featured-tag">Case em destaque</span>
-          <h3 data-i18n="featured-title">FM Locação — Site &amp; Sistema de Gestão</h3>
-          <p data-i18n="featured-intro">Nos últimos meses venho desenvolvendo o ecossistema digital completo de uma locadora de materiais para eventos: o site institucional que apresenta a empresa aos clientes e o sistema de gestão interno que organiza a operação do dia a dia. Os dois nasceram de uma especificação própria, escrita regra por regra ao lado da proprietária do negócio, com sessões de trabalho curtas e cobertura de testes automatizados.</p>
-        </div>
-        <div class="grid featured-grid">
-          <article class="card featured-card">
-            <a class="thumb featured-thumb featured-shot" href="https://fmlocacao.com.br" target="_blank" rel="noopener" aria-label="Abrir o site da FM Locação">
-              <img src="img/projetos/fm-site/capa.webp" alt="" width="960" height="512" loading="lazy">
-            </a>
-            <h3 data-i18n="featured-site-t">Site Institucional</h3>
-            <p data-i18n="featured-site-d">Catálogo com preços e simulador de composição de mesa, mais um assistente que guia o cliente pergunta a pergunta e entrega o pedido pronto no WhatsApp da empresa. O conteúdo é editado num painel próprio, acessível só pela rede privada, e cada publicação passa por verificação automática e testes de invasão.</p>
-            <div class="project-meta">
-              <span class="tag skill indentificador Python">Python</span>
-              <span class="tag skill indentificador JavaScript">JavaScript</span>
-              <span class="tag skill" data-i18n="featured-tag-sec">Segurança</span>
-              <span class="tag skill">GitHub Actions</span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="https://fmlocacao.com.br" target="_blank" rel="noopener" data-i18n="featured-site-btn">Ver site</a>
-              <button type="button" class="btn secondary" data-video-open="painel-video" data-i18n="featured-site-video">Vídeo do painel</button>
-            </div>
-          </article>
+<!-- ================= PROJETOS ================= -->
+<section class="sec" id="projetos" aria-labelledby="pj-t" style="padding-top:60px">
+  <div class="wrap">
+    <div class="sh"><span class="no">02</span><div><h2 id="pj-t" class="split paint" data-text="Projetos">Projetos</h2><p>O projeto principal primeiro. Depois os outros, todos no mesmo formato.</p></div></div>
 
-          <article class="card featured-card">
-            <button type="button" class="thumb featured-thumb featured-shot" data-gallery-open="0" aria-label="Abrir as telas do sistema">
-              <img src="img/projetos/fm-sistema/capa.webp" alt="" width="960" height="512" loading="lazy">
-              <span class="featured-shot-tag" data-i18n="featured-sys-shots">vídeo + 8 telas · dados fictícios</span>
-            </button>
-            <h3 data-i18n="featured-sys-t">Sistema de Gestão (interno)</h3>
-            <p data-i18n="featured-sys-d">Sistema interno de uma locadora de materiais para eventos — mesas, cadeiras, louças e tecidos. Antes, saber o que estava livre numa data dependia da memória, e cada orçamento era redigitado no Word e de novo no contrato. Agora o sistema calcula a disponibilidade por período — descontando reservas, higienização e material sublocado que precisa voltar ao fornecedor —, transforma o orçamento aprovado em contrato sem redigitar nada e controla o acesso por perfil: cada pessoa vê só o que precisa. Mais de 200 testes automatizados cobrem as regras de negócio.</p>
-            <div class="project-meta">
-              <span class="tag skill indentificador Python">Python</span>
-              <span class="tag skill">Django</span>
-              <span class="tag skill" data-i18n="featured-tag-tests">Testes Automatizados</span>
-              <span class="tag skill" data-i18n="featured-tag-access">Controle de Acesso por Perfil</span>
-              <span class="tag skill" data-i18n="featured-tag-pm">Gestão de Projetos</span>
-            </div>
-            <p class="featured-note" data-i18n="featured-sys-note">Uso interno — sem acesso público.</p>
-            <div class="actions">
-              <button type="button" class="btn" data-gallery-open="0" data-i18n="featured-sys-gallery">Veja representações ativas do modelo</button>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <dialog class="gallery" id="painel-video" aria-labelledby="painel-video-title">
-        <div class="gallery-head">
-          <div>
-            <h3 id="painel-video-title" data-i18n="painel-title">Painel do site — demonstração</h3>
-            <p class="gallery-note" data-i18n="painel-note">O que é editado no painel aparece no site em poucos minutos. O painel é de acesso restrito.</p>
-          </div>
-          <button type="button" class="gallery-close" data-gallery-close aria-label="Fechar">&times;</button>
-        </div>
-        <figure class="gallery-stage">
-          <video class="gallery-video" src="img/projetos/fm-site/painel-v2.mp4" poster="img/projetos/fm-site/painel-poster.webp?v=2" width="1280" height="720" controls muted playsinline preload="none"></video>
-        </figure>
-      </dialog>
-
-      <dialog class="gallery" id="fm-gallery" aria-labelledby="fm-gallery-title">
-        <div class="gallery-head">
-          <div>
-            <h3 id="fm-gallery-title" data-i18n="gallery-title">Sistema de Gestão — representações do modelo</h3>
-            <p class="gallery-note" data-i18n="gallery-note">Sistema interno de uma locadora de materiais para eventos. Telas reais, preenchidas com dados fictícios para preservar clientes e valores.</p>
-          </div>
-          <button type="button" class="gallery-close" data-gallery-close aria-label="Fechar">&times;</button>
-        </div>
-        <figure class="gallery-stage">
-          <video class="gallery-video" src="img/projetos/fm-sistema/demo.mp4" poster="img/projetos/fm-sistema/demo-poster.webp" width="1280" height="720" controls muted playsinline preload="none" hidden></video>
-          <img class="gallery-img" src="img/projetos/fm-sistema/01-disponibilidade.webp" alt="" width="1600" height="1000">
-          <figcaption class="gallery-caption"></figcaption>
-        </figure>
-        <div class="gallery-nav">
-          <button type="button" class="btn secondary gallery-prev" aria-label="Tela anterior">&larr;</button>
-          <span class="gallery-count" aria-live="polite">1 / 9</span>
-          <button type="button" class="btn secondary gallery-next" aria-label="Próxima tela">&rarr;</button>
-        </div>
-        <div class="gallery-thumbs" aria-label="Escolher tela"></div>
-        <ul class="gallery-slides" hidden>
-          <li data-video data-src="img/projetos/fm-sistema/demo-poster.webp" data-w="1280" data-h="720"><span data-i18n="gallery-video">Vídeo de demonstração — as principais telas e funções do sistema, ainda em implementação.</span></li>
-          <li data-src="img/projetos/fm-sistema/01-disponibilidade.webp" data-w="1600" data-h="1000"><span data-i18n="gallery-1">Consulta de disponibilidade — unidades livres no período, já descontando reservas, higienização e material sublocado que precisa voltar ao fornecedor.</span></li>
-          <li data-src="img/projetos/fm-sistema/07-disponibilidade-celular.webp" data-w="780" data-h="1688"><span data-i18n="gallery-5">A mesma consulta no celular — a tabela vira uma lista fácil de ler na palma da mão.</span></li>
-          <li data-src="img/projetos/fm-sistema/02-orcamentos.webp" data-w="1600" data-h="1000"><span data-i18n="gallery-2">Orçamentos — todas as propostas com código, versão, responsável, status e validade.</span></li>
-          <li data-src="img/projetos/fm-sistema/03-orcamento-detalhe.webp" data-w="1600" data-h="1287"><span data-i18n="gallery-3">Detalhe do orçamento — itens, diárias, material sublocado, serviços e total. Aprovado, vira contrato sem redigitar nada.</span></li>
-          <li data-src="img/projetos/fm-sistema/08-orcamento-celular.webp" data-w="780" data-h="1688"><span data-i18n="gallery-6">Orçamento no celular — itens em cartões e o total sempre visível no rodapé.</span></li>
-          <li data-src="img/projetos/fm-sistema/05-contrato-detalhe.webp" data-w="1600" data-h="1606"><span data-i18n="gallery-7">Contrato — cliente, evento, itens com valor de reposição e todos os documentos do negócio numa pasta só.</span></li>
-          <li data-src="img/projetos/fm-sistema/04-conferencia-celular.webp" data-w="780" data-h="1688"><span data-i18n="gallery-4">Conferência de saída no celular — o galpão confere item a item, organizado pela localização no estoque, e registra divergências.</span></li>
-          <li data-src="img/projetos/fm-sistema/06-inicio-celular.webp" data-w="780" data-h="1688"><span data-i18n="gallery-8">Tela inicial no celular — lembra os contratos sem assinatura e as sublocações que vencem nos próximos dias.</span></li>
-        </ul>
-      </dialog>
-
-      <div id="project-filters" class="reveal" role="group" aria-label="Filtrar projetos">
-        <button class="btn secondary active" type="button" data-filter="all"    data-i18n="f-all">Todos</button>
-        <button class="btn secondary"        type="button" data-filter="web"    data-i18n="f-web">Web</button>
-        <button class="btn secondary"        type="button" data-filter="data"   data-i18n="f-data">Dados</button>
-        <button class="btn secondary"        type="button" data-filter="design" data-i18n="f-design">Design</button>
-      </div>
-
-      <div class="grid cards">
-        <article class="card project-card reveal" data-project="accex" data-tags="web">
-          <div class="thumb" style="background:linear-gradient(135deg,#1e293b,#0f172a 60%,#312e81)">Accex</div>
-          <h3 data-i18n="p1-t">Accex — Acessibilidade Urbana</h3>
-          <p data-i18n="p1-d">Plataforma web full-stack para classificação de acessibilidade urbana, desenvolvida em grupo como projeto de conclusão de curso técnico.</p>
-          <div class="project-meta">
-            <span class="tag skill indentificador Node">Node.js</span>
-            <span class="tag skill indentificador MySQL">MySQL</span>
-            <span class="tag skill">EJS</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://github.com/oAccex/Accex-main---Copia.git" target="_blank" rel="noopener" data-i18n="btn-repo">Repositório</a>
+    <!-- case principal: dois cards, cada um abre um vídeo -->
+    <article class="feat" aria-labelledby="fm-t">
+      <header class="case-top2">
+        <span class="flag lbl">Projeto principal · trabalho para cliente</span>
+        <h3 id="fm-t" class="split paint" data-text="FM Locação">FM Locação</h3>
+        <p class="ov">Site e sistema de gestão para uma locadora de itens para eventos.</p>
+        <p class="stack-line">Python · Django · JavaScript · GitHub Actions · mais de 200 testes automatizados</p>
+      </header>
+      <div class="fm-cards">
+        <article class="vcard">
+          <button class="vcov" type="button" data-play="site" aria-label="Assistir ao vídeo: site institucional e painel">
+            <img src="img/v5/capa-fm-site.webp" alt="" width="1280" height="720">
+            <span class="vplay"><i aria-hidden="true">▶</i> Assistir</span>
+          </button>
+          <div class="vbody">
+            <span class="lbl">Público · no ar</span>
+            <h4><button type="button" data-play="site">Site institucional + Painel</button></h4>
+            <p>Catálogo com preços, simulador de composição de mesa e pedido enviado pelo WhatsApp. O conteúdo é editado num painel privado e publicado com verificação automática.</p>
+            <div class="vlinks"><button class="btn" type="button" data-play="site"><i aria-hidden="true">▶</i> Assistir</button><a class="lnk" href="https://fmlocacao.com.br" target="_blank" rel="noopener">Ver site ↗</a></div>
           </div>
         </article>
-
-        <article class="card project-card reveal" data-project="dashboard-vendas" data-tags="data">
-          <div class="thumb" style="background:linear-gradient(135deg,#3b0d0d,#1c1917 60%,#7f1d1d)">Dashboard de Vendas</div>
-          <h3 data-i18n="p2-t">Dashboard de Análise de Vendas</h3>
-          <p data-i18n="p2-d">Projeto prático em Power BI com ETL, modelagem de dados e medidas DAX para acompanhar indicadores comerciais e performance de vendas.</p>
-          <div class="project-meta">
-            <span class="tag skill indentificador PowerBI">Power BI</span>
-            <span class="tag skill">DAX</span>
-            <span class="tag skill">ETL</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://app.powerbi.com/view?r=eyJrIjoiZWFlZWM5ZGMtMTE4Zi00NDQwLThkY2EtYmQxMWYzN2IxNjc5IiwidCI6ImIxMDUxYzRiLTNiOTQtNDFhYi05NDQxLWU3M2E3MjM0MmZkZCJ9" target="_blank" rel="noopener" data-i18n="btn-deploy">Acessar Deploy</a>
-          </div>
-        </article>
-
-        <article class="card project-card reveal" data-project="identidade-visual" data-tags="design">
-          <div class="thumb" style="background:linear-gradient(135deg,#3f2d1a,#1c1917 60%,#78350f)">Identidade Visual</div>
-          <h3 data-i18n="p3-t">Identidade Visual — F M Locação</h3>
-          <p data-i18n="p3-d">Consultoria, gestão de projetos e criação de identidade visual para um empreendimento local: logotipo, materiais digitais e gestão contínua do marketing no Instagram, com produção de reels, fotos e vídeos.</p>
-          <div class="project-meta">
-            <span class="tag skill">Branding</span>
-            <span class="tag skill">Design Gráfico</span>
-            <span class="tag skill">Marketing Digital</span>
-            <span class="tag skill">Instagram (Reels, Fotos &amp; Vídeos)</span>
-            <span class="tag skill">Gestão de Projetos</span>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://www.instagram.com/fmlocacao" target="_blank" rel="noopener" data-i18n="btn-insta">Ver Instagram</a>
+        <article class="vcard dark">
+          <button class="vcov" type="button" data-play="sistema" aria-label="Assistir ao vídeo: sistema de gestão">
+            <img src="img/v5/capa-fm-sistema.webp" alt="" width="1600" height="1000">
+            <span class="vplay"><i aria-hidden="true">▶</i> Assistir</span>
+          </button>
+          <div class="vbody">
+            <span class="ctag lbl">Trabalho para cliente · dados fictícios</span>
+            <h4><button type="button" data-play="sistema">Sistema de gestão</button></h4>
+            <p>Uso interno da locadora: mostra o que está livre em cada período, transforma o orçamento aprovado em contrato sem redigitar e controla o que cada pessoa da equipe vê.</p>
+            <div class="vlinks"><button class="btn" type="button" data-play="sistema"><i aria-hidden="true">▶</i> Assistir</button></div>
           </div>
         </article>
       </div>
+    </article>
 
-      <div class="actions project-actions reveal">
-        <a class="btn secondary" href="https://github.com/edaaugusto" target="_blank" rel="noopener" data-i18n="proj-all">Ver mais no GitHub</a>
+    <!-- outros projetos: formato idêntico -->
+    <div class="others" id="outros">
+      <div class="others-h"><h3 class="split paint" data-text="Outros projetos">Outros projetos</h3>
+        <div class="filters" role="group" aria-label="Filtrar por categoria"><button type="button" data-f="all" aria-pressed="true">Todos</button><button type="button" data-f="web" aria-pressed="false">Web</button><button type="button" data-f="dados" aria-pressed="false">Dados</button><button type="button" data-f="design" aria-pressed="false">Design</button></div></div>
+      <div class="grid3">
+        <a class="card rv" data-cat="web" href="https://github.com/oAccex/Accex-main---Copia.git" target="_blank" rel="noopener" data-cur="repositório ↗">
+          <span class="cov"><span class="base"><img src="img/v5/capa-accex.webp" alt="Repositório do Accex no GitHub" loading="lazy" width="1600" height="1000"></span><span class="real" aria-hidden="true"><img src="img/v5/capa-accex.webp" alt="" loading="lazy" width="1600" height="1000"></span></span>
+          <span class="body"><span class="cat lbl">Web</span><h4>Accex — acessibilidade urbana</h4><p>Plataforma full-stack para classificar a acessibilidade urbana. Projeto de conclusão do curso técnico, feito em grupo.</p><span class="meta lbl"><span>Node.js · MySQL · EJS</span><span class="go">Repositório ↗</span></span></span></a>
+        <a class="card rv" data-cat="dados" href="https://app.powerbi.com/view?r=eyJrIjoiZWFlZWM5ZGMtMTE4Zi00NDQwLThkY2EtYmQxMWYzN2IxNjc5IiwidCI6ImIxMDUxYzRiLTNiOTQtNDFhYi05NDQxLWU3M2E3MjM0MmZkZCJ9" target="_blank" rel="noopener" data-cur="abrir relatório ↗">
+          <span class="cov"><span class="base"><img src="img/v5/capa-dashboard.webp" alt="Relatório de vendas publicado no Power BI" loading="lazy" width="1600" height="1000"></span><span class="real" aria-hidden="true"><img src="img/v5/capa-dashboard.webp" alt="" loading="lazy" width="1600" height="1000"></span></span>
+          <span class="body"><span class="cat lbl">Dados</span><h4>Dashboard de análise de vendas</h4><p>Relatório em Power BI com ETL, modelagem de dados e medidas DAX para acompanhar indicadores comerciais.</p><span class="meta lbl"><span>Power BI · DAX · ETL</span><span class="go">Relatório ↗</span></span></span></a>
+        <a class="card rv" data-cat="design" href="https://www.instagram.com/fmlocacao" target="_blank" rel="noopener" data-cur="instagram ↗">
+          <span class="cov"><span class="base"><img src="img/v5/capa-identidade.webp" alt="Logotipo e assinatura da FM Locação aplicados no site" loading="lazy" width="1600" height="1000"></span><span class="real" aria-hidden="true"><img src="img/v5/capa-identidade.webp" alt="" loading="lazy" width="1600" height="1000"></span></span>
+          <span class="body"><span class="cat lbl">Design</span><h4>Identidade visual — FM Locação</h4><p>Logotipo, materiais digitais e marketing contínuo no Instagram, com reels, fotos e vídeos, além da gestão do projeto.</p><span class="meta lbl"><span>Branding · Marketing</span><span class="go">Instagram ↗</span></span></span></a>
       </div>
+      <div class="more"><a class="lbl" href="https://github.com/edaaugusto" target="_blank" rel="noopener">Mais no GitHub ↗</a></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== CONTATO ===================== -->
-  <section id="contato" class="section" aria-labelledby="contato-title">
-    <div class="container">
-      <h2 id="contato-title" class="reveal" data-i18n="contact-title">Contato</h2>
-      <p class="sub reveal" data-i18n="contact-sub">Buscando um estagiário ou desenvolvedor júnior dedicado para o seu time? Vamos conversar.</p>
+<div class="band g2b" aria-hidden="true"></div>
 
-      <div class="contact-grid reveal">
-        <aside class="card contact-card" id="whats-card" data-whatsapp="5511953784814">
-          <div class="content">
-            <h3 data-i18n="wpp-title">Ligação Direta</h3>
-            <p class="desc" data-i18n="wpp-desc">Envie uma mensagem direta pelo WhatsApp para uma resposta imediata.</p>
-            <div class="field">
-              <label for="whats-message" data-i18n="lbl-msg2">Sua Mensagem</label>
-              <textarea id="whats-message" rows="9" placeholder="Olá, vi o seu portfólio e gostaria de agendar uma conversa..."></textarea>
-            </div>
-          </div>
-          <div class="actions">
-            <button class="btn" type="button" id="whats-send">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 12.05 0"></path></svg>
-              <span data-i18n="wpp-btn">Enviar no WhatsApp</span>
-            </button>
-          </div>
-        </aside>
-
-        <form id="contact-form" class="card contact-card" novalidate data-email-to="edaugusto0111@gmail.com" aria-label="Formulário de Contato">
-          <div class="content">
-            <h3 data-i18n="mail-title">Via E-mail</h3>
-            <p class="desc" data-i18n="mail-desc">Prefere a formalidade do e-mail? Preencha os campos abaixo.</p>
-            <div class="field">
-              <label for="name" data-i18n="lbl-name">Nome Completo</label>
-              <input id="name" name="name" type="text" autocomplete="name" required aria-required="true" aria-invalid="false" aria-describedby="contact-error" placeholder="Ex: Maria Silva">
-            </div>
-            <div class="field">
-              <label for="email" data-i18n="lbl-email">Endereço de E-mail</label>
-              <input id="email" name="email" type="email" autocomplete="email" required aria-required="true" aria-invalid="false" aria-describedby="contact-error" placeholder="maria@empresa.com">
-            </div>
-            <div class="field">
-              <label for="message" data-i18n="lbl-msg">Detalhes da Oportunidade</label>
-              <textarea id="message" name="message" rows="3" required aria-required="true" aria-invalid="false" aria-describedby="contact-error" placeholder="Como posso agregar valor à sua equipa?"></textarea>
-            </div>
-          </div>
-          <div class="actions">
-            <button class="btn" type="submit"><span data-i18n="btn-send">Enviar E-mail</span></button>
-            <div class="status">
-              <div class="success" id="contact-success" role="status" aria-live="polite" data-i18n="msg-ok">Excelente! Mensagem encaminhada com sucesso.</div>
-              <div class="error" id="contact-error" role="alert" data-i18n="msg-err">Por favor, verifique se todos os campos estão preenchidos corretamente.</div>
-            </div>
-          </div>
-        </form>
-      </div>
+<!-- ================= CURRÍCULO ================= -->
+<section class="sec blue" id="curriculo" aria-labelledby="cv-t" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sh"><span class="no">03</span><div><h2 id="cv-t" class="split paint" data-text="Currículo">Currículo</h2><p>O resumo. O completo está no PDF.</p></div></div>
+    <div class="cv">
+      <div class="rv"><h3>Experiência</h3><ul><li><b>FM Locação</b><span>Site e sistema de gestão · projeto para cliente · em andamento</span></li><li><b>Call center · EMDIA</b><span>Set.2024 – Jul.2026 · negociações, regularização e detalhamento de situações financeiras</span></li></ul></div>
+      <div class="rv"><h3>Formação</h3><ul><li><b>Análise e Desenvolvimento de Sistemas</b><span>Universidade Cruzeiro do Sul · Ago.2024 – atual</span></li><li><b>Técnico em Informática para Internet</b><span>FIEB · Jan.2021 – Dez.2023</span></li></ul></div>
+      <div class="rv"><h3>Certificações e cursos</h3><ul>
+        <li><b>AWS — Generative AI Foundations</b><span>Senai · 2026 · <a href="https://www.credly.com/badges/b56936c3-143b-4568-8aef-1e836a293dcb/public_url" target="_blank" rel="noopener">ver badge</a></span></li>
+        <li><b>Agentes com IA — AI-103</b><span>Senai · 2026</span></li>
+        <li><b>Google Cloud Computing Foundations</b><span>2025 · <a href="https://www.skills.google/public_profiles/7eddcbe9-1340-4e33-bcc8-31cb21a17556" target="_blank" rel="noopener">ver certificado</a></span></li>
+        <li><b>Power BI</b><span>Senai · 2025</span></li><li><b>Informática</b><span>Microcamp · 2024</span></li></ul></div>
     </div>
-  </section>
+    <div class="dl rv"><p>Currículo completo, numa página, pronto para imprimir.</p><a class="btn mag" href="curriculo-eduardo-augusto.pdf" download>Baixar Currículo <span class="ar">↓</span></a></div>
+  </div>
+</section>
+
+<div class="band" style="background:linear-gradient(180deg,var(--b-bg),var(--hero-l))" aria-hidden="true"></div>
+
+<!-- ================= CONTATO ================= -->
+<section class="sec contact" id="contato" aria-labelledby="ct-t" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sh"><span class="no">04</span><div><h2 id="ct-t" class="split paint" data-text="Contato">Contato</h2><p>Buscando um estagiário ou desenvolvedor júnior para o seu time? Vamos conversar.</p></div></div>
+    <div class="mail rv"><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=edaugusto0111@gmail.com&amp;su=Contato%20pelo%20portf%C3%B3lio" target="_blank" rel="noopener">edaugusto0111@gmail.com</a><a class="btn mag" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=edaugusto0111@gmail.com&amp;su=Contato%20pelo%20portf%C3%B3lio" target="_blank" rel="noopener">Enviar e-mail ↗</a><button class="btn o mag" type="button" data-copy="edaugusto0111@gmail.com">Copiar e-mail</button><a class="mail-alt" href="mailto:edaugusto0111@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio">ou abrir no app de e-mail</a></div>
+    <div class="chan rv"><a href="https://wa.me/5511953784814" target="_blank" rel="noopener">WhatsApp <span>↗</span></a><a href="https://www.linkedin.com/in/edaugusto" target="_blank" rel="noopener">LinkedIn <span>↗</span></a><a href="https://github.com/edaaugusto" target="_blank" rel="noopener">GitHub <span>↗</span></a><a href="curriculo-eduardo-augusto.pdf" download>Currículo PDF <span>↓</span></a></div>
+  </div>
+</section>
 </main>
 
-<!-- ===================== FOOTER ===================== -->
-<footer class="footer" role="contentinfo">
-  <div class="container top">
-    <div class="cta">
-      <span class="logo-sig footer-logo">
-        <span class="logo-text">Eduardo</span>
-        <svg class="logo-flourish" viewBox="0 0 120 18" aria-hidden="true">
-          <path d="M2 9 Q 30 1, 60 9 T 116 7" fill="none" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </span>
-      <h3 data-i18n="footer-title">Vamos construir o futuro juntos?</h3>
-      <p data-i18n="footer-desc">Aberto a oportunidades de estágio ou início de carreira em tecnologia — desenvolvimento, dados ou o que fizer sentido pro time.</p>
-      <div class="actions" style="margin-top:24px;justify-content:flex-start">
-        <a class="btn light" href="curriculo-eduardo-augusto.pdf" download data-i18n="footer-btn">Baixar Currículo</a>
-      </div>
-    </div>
-    <nav class="sitemap" aria-label="Mapa do site">
-      <a href="#sobre"        data-i18n="nav-about">Sobre</a>
-      <a href="#projetos"     data-i18n="nav-projects">Projetos</a>
-      <a href="curriculo.html" data-i18n="nav-cv">Currículo</a>
-      <a href="#contato"      data-i18n="nav-contact">Contato</a>
-    </nav>
-    <div class="social" aria-label="Perfis sociais">
-      <a href="https://github.com/edaaugusto" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.41-1.35-1.79-1.35-1.79-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.26 1.86 1.26 1.08 1.86 2.83 1.32 3.52 1.01.11-.79.42-1.32.76-1.62-2.66-.3-5.46-1.33-5.46-5.9 0-1.3.47-2.36 1.25-3.19-.13-.3-.54-1.52.12-3.16 0 0 1.02-.33 3.34 1.22a11.6 11.6 0 0 1 6.08 0c2.31-1.55 3.33-1.22 3.33-1.22.67 1.64.26 2.86.13 3.16.78.83 1.25 1.89 1.25 3.19 0 4.58-2.81 5.59-5.49 5.89.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"></path></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/edaugusto" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.84v2.18h.05c.54-1.02 1.87-2.18 3.86-2.18 4.13 0 4.89 2.72 4.89 6.27V24h-4v-7.15c0-1.7-.03-3.9-2.38-3.9-2.39 0-2.76 1.86-2.76 3.78V24h-4V8z"></path></svg>
-      </a>
-    </div>
-  </div>
-  <div class="container bottom">
-    <small>© <span data-year>2026</span> Eduardo Augusto — <span data-i18n="footer-copy">Desenvolvido com código limpo (HTML/CSS/JS puros).</span></small>
-    <small id="api-status" class="api-status" data-state="checking">Verificando backend…</small>
-    <small><a href="#inicio" class="back-top" data-i18n="footer-back">Voltar ao topo</a></small>
-  </div>
-</footer>
+<footer><svg viewBox="0 0 120 64" aria-hidden="true"><use href="#mk"/></svg><span>© 2026 Eduardo Augusto</span><span class="r"><button type="button" class="lbl" data-idx>Ver tudo em lista</button><a class="lbl" href="#inicio" data-go="#inicio">Topo ↑</a></span></footer>
 
-<script src="js/script.js?v=30" defer></script>
-<script src="js/api-status.js" defer></script>
+<dialog class="idx" id="idx" aria-labelledby="idx-t">
+  <div class="idx-h"><span class="lbl" id="idx-t">Menu · tudo em lista</span><button class="tb" type="button" id="close-idx">Fechar ×</button></div>
+  <div class="idx-g">
+    <div><h2>Seções</h2><ul><li><a href="#inicio" data-go="#inicio">Início</a></li><li><a href="#sobre" data-go="#sobre">Sobre</a></li><li><a href="#projetos" data-go="#projetos">Projetos</a></li><li><a href="#curriculo" data-go="#curriculo">Currículo</a></li><li><a href="#contato" data-go="#contato">Contato</a></li></ul></div>
+    <div><h2>Projetos</h2><ul><li><a href="https://fmlocacao.com.br" target="_blank" rel="noopener">FM Locação — site</a><small>Python, JavaScript, GitHub Actions</small></li><li><button type="button" data-play="sistema">FM Locação — sistema (vídeo)</button><small>Python, Django, 200+ testes</small></li><li><button type="button" data-play="site">FM Locação — site e painel (vídeo)</button><small>Python, JavaScript, GitHub Actions</small></li><li><a href="https://github.com/oAccex/Accex-main---Copia.git" target="_blank" rel="noopener">Accex</a><small>Web · Node.js, MySQL, EJS</small></li><li><a href="https://app.powerbi.com/view?r=eyJrIjoiZWFlZWM5ZGMtMTE4Zi00NDQwLThkY2EtYmQxMWYzN2IxNjc5IiwidCI6ImIxMDUxYzRiLTNiOTQtNDFhYi05NDQxLWU3M2E3MjM0MmZkZCJ9" target="_blank" rel="noopener">Dashboard de vendas</a><small>Dados · Power BI, DAX, ETL</small></li><li><a href="https://www.instagram.com/fmlocacao" target="_blank" rel="noopener">Identidade visual FM</a><small>Design · branding</small></li></ul></div>
+    <div><h2>Currículo</h2><ul><li>ADS<small>Cruzeiro do Sul · Ago.2024 – atual</small></li><li>Call center · EMDIA<small>Set.2024 – Jul.2026</small></li><li>Técnico em Informática para Internet<small>FIEB · Jan.2021 – Dez.2023</small></li><li>AWS GenAI Foundations · AI-103<small>Senai · 2026</small></li><li>Google Cloud Computing Foundations<small>2025</small></li><li><a href="curriculo-eduardo-augusto.pdf" download>Baixar Currículo (PDF)</a></li></ul></div>
+    <div><h2>Contato</h2><ul><li><a href="mailto:edaugusto0111@gmail.com">edaugusto0111@gmail.com</a></li><li><a href="https://wa.me/5511953784814" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://www.linkedin.com/in/edaugusto" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://github.com/edaaugusto" target="_blank" rel="noopener">GitHub</a></li></ul></div>
+  </div>
+</dialog>
+<dialog class="vmodal" id="vmodal" aria-labelledby="vm-t">
+  <div class="vm-ghost" id="vm-ghost" aria-hidden="true"><img alt=""></div>
+  <div class="vm-in">
+    <div class="vm-h"><div><span class="lbl" id="vm-k">FM Locação</span><h3 id="vm-t">Vídeo</h3></div><button type="button" class="vm-x" aria-label="Fechar o vídeo">Fechar <span aria-hidden="true">×</span></button></div>
+    <div class="vm-stage"><video id="vm-v" controls playsinline preload="metadata"></video></div>
+    <div class="vm-f"><p id="vm-d"></p><a class="lnk" id="vm-link" href="https://fmlocacao.com.br" target="_blank" rel="noopener" hidden>Ver site ↗</a></div>
+  </div>
+</dialog>
+<dialog class="lb" id="lb" aria-labelledby="lb-t"><div class="lb-h"><span class="lbl" id="lb-t">FM Locação · sistema interno</span><span class="lbl lb-n" style="color:#A9B9CB"></span><button type="button" class="lb-x" aria-label="Fechar">×</button></div><div class="lb-s"></div><div class="lb-f"><button type="button" class="lb-p" aria-label="Anterior">←</button><p></p><button type="button" class="lb-nx" aria-label="Próxima">→</button></div></dialog>
+
+<div class="lights" id="lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="intro" id="intro" aria-hidden="true"><svg viewBox="0 0 120 64"><g style="fill:#A8BF6E">
+  <rect x="6" y="5" width="7" height="54" transform="rotate(-1 9 32)"/><rect x="6" y="5" width="34" height="7" transform="rotate(1.5 23 8)"/><rect x="6" y="28.5" width="28" height="7" transform="rotate(-1 20 32)"/><rect x="6" y="52" width="34" height="7" transform="rotate(.8 23 55)"/>
+  <rect x="76" y="2" width="7" height="62" transform="rotate(21 79.5 33)"/><rect x="88" y="2" width="7" height="62" transform="rotate(-21 91.5 33)"/><rect x="70" y="38" width="32" height="7" transform="rotate(-1.5 86 41)"/></g></svg><button type="button" id="skip-intro">Pular</button></div>
+<div class="cur" id="cur" aria-hidden="true"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],root=document.documentElement;
+const reduce=root.classList.contains('rm'),qs=new URLSearchParams(location.search);
+/* botão de animações: mostra o estado e, se o sistema pediu menos movimento, deixa o visitante escolher */
+{const mv=document.getElementById('mv');mv.setAttribute('aria-pressed',String(!reduce));mv.querySelector('.long').textContent=reduce?(root.classList.contains('os-rm')?'Ligar animações':'Animações: desligadas'):'Animações: ligadas';mv.querySelector('.short').textContent=reduce?'Anim.: off':'Anim.: on';
+ mv.addEventListener('click',()=>{try{localStorage.setItem('ea5-motion',reduce?'on':'off')}catch(e){}location.reload()})}
+const hasG=!!(window.gsap&&window.ScrollTrigger),E='cubic-bezier(.76,0,.24,1)',O='cubic-bezier(.16,1,.3,1)';
+const BG={dark:'#1A2414',light:'#E3E6D3'},BLUE={dark:'#0C2742',light:'#C9D9EA'};
+
+/* ---------- SLOTS: um lugar só para trocar as telas do sistema e o vídeo ---------- */
+const A='img/v5/';
+const SYS=[
+  {v:A+'fm-sistema-video.mp4',p:A+'fm-sistema-video-poster.webp',c:'Vídeo de demonstração do sistema interno.'},
+  {i:A+'fm-sistema-01.webp',c:'Consulta de disponibilidade — unidades livres no período, já descontando reservas, higienização e material sublocado.'},
+  {i:A+'fm-sistema-07.webp',c:'A mesma consulta no celular.'},
+  {i:A+'fm-sistema-02.webp',c:'Orçamentos — código, versão, responsável, status e validade.'},
+  {i:A+'fm-sistema-03.webp',c:'Detalhe do orçamento — aprovado, vira contrato sem redigitar.'},
+  {i:A+'fm-sistema-08.webp',c:'Orçamento no celular — o total sempre visível.'},
+  {i:A+'fm-sistema-05.webp',c:'Contrato — cliente, evento, itens e documentos numa pasta só.'},
+  {i:A+'fm-sistema-04.webp',c:'Conferência de saída no galpão, item a item.'},
+  {i:A+'fm-sistema-06.webp',c:'Tela inicial — contratos sem assinatura e sublocações que vencem.'}];
+const PAINEL=[{v:'img/projetos/fm-site/painel-v2.mp4',p:'img/projetos/fm-site/painel-poster.webp',c:'Painel do site — o que é editado aparece no site em poucos minutos. Acesso restrito.'}];
+
+/* ---------- bancos de luz: o 3º banco é azul ---------- */
+const lights=$('#lights'),bars=[...lights.children];
+function bank(theme,mid){if(reduce){mid&&mid();return Promise.resolve()}
+  lights.style.display='flex';bars.forEach((b,i)=>b.style.background=i===2?BLUE[theme]:BG[theme]);
+  const a=bars.map((b,i)=>b.animate([{transform:'scaleY(0)',transformOrigin:'top'},{transform:'scaleY(1)',transformOrigin:'top'}],{duration:420,delay:i*55,easing:E,fill:'forwards'}));
+  return a[a.length-1].finished.then(()=>{mid&&mid();const b2=bars.map((b,i)=>b.animate([{transform:'scaleY(1)',transformOrigin:'bottom'},{transform:'scaleY(0)',transformOrigin:'bottom'}],{duration:460,delay:90+i*55,easing:E,fill:'forwards'}));return b2[b2.length-1].finished}).then(()=>{lights.style.display='none'})}
+$('#tg').addEventListener('click',()=>{const next=root.dataset.theme==='dark'?'light':'dark';bank(next,()=>{root.dataset.theme=next;try{localStorage.setItem('ea5-theme',next)}catch(e){}})});
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{try{if(localStorage.getItem('ea5-theme'))return}catch(x){}root.dataset.theme=e.matches?'dark':'light'});
+
+/* ---------- rolagem ---------- */
+let lenis=null;
+if(hasG){gsap.registerPlugin(ScrollTrigger)}
+if(hasG&&!reduce&&window.Lenis){lenis=new Lenis({lerp:.1});window.__lenis=lenis;lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0)}
+const jump=sel=>{const el=$(sel);if(!el)return;if(lenis)lenis.scrollTo(el,{immediate:true,force:true,offset:sel==='#inicio'?0:-40});else el.scrollIntoView()};
+document.addEventListener('click',e=>{const a=e.target.closest('[data-go]');if(!a)return;e.preventDefault();const sel=a.dataset.go,idx=$('#idx');
+  bank(root.dataset.theme,()=>{if(idx.open)idx.close();jump(sel);history.replaceState(null,'',sel)})});
+
+/* ---------- header ---------- */
+const top=$('#top');const navA=$$('.nav a');
+const chk=()=>{top.classList.toggle('solid',scrollY>innerHeight*.55);
+  const y=innerHeight*.4;let cur='inicio';$$('main section[id]').forEach(s=>{const r=s.getBoundingClientRect();if(r.top<=y&&r.bottom>y)cur=s.id});
+  navA.forEach(a=>a.classList.toggle('on',a.dataset.go==='#'+cur))};
+addEventListener('scroll',chk,{passive:true});chk();
+
+/* ---------- abertura: fitas + luzes (uma vez por sessão, pulável) ---------- */
+let heroDone;const heroReady=new Promise(r=>heroDone=r);
+const heroIn=()=>{if(reduce){heroDone();return}const A=[];const W=(el,k,o)=>{const a=el.animate(k,o);A.push(a);return a};
+  $$('.name .ln>span').forEach((s,i)=>W(s,[{transform:'translateY(105%)'},{transform:'none'}],{duration:1000,delay:i*110,easing:O,fill:'backwards'}));
+  $$('.h-in').forEach((s,i)=>W(s,[{opacity:0,transform:'translateY(16px)'},{opacity:1,transform:'none'}],{duration:800,delay:250+i*70,easing:O,fill:'backwards'}));
+  W($('.spot .duo'),[{clipPath:'inset(100% 0 0 0)'},{clipPath:'inset(0 0 0 0)'}],{duration:1100,delay:200,easing:E,fill:'backwards'});
+  $$('.hero .mark,.hero .x').forEach((m,i)=>W(m,[{opacity:0},{opacity:1}],{duration:400,delay:800+i*60,fill:'backwards'}));
+  Promise.all(A.map(a=>a.finished)).then(()=>{A.forEach(a=>a.cancel());heroDone()})};
+const intro=$('#intro');
+if(!reduce&&!qs.has('nointro')&&!sessionStorage.getItem('ea5-intro')){
+  sessionStorage.setItem('ea5-intro','1');intro.style.display='flex';let done=false,timer;
+  [...intro.querySelectorAll('rect')].forEach((r,i)=>r.animate([{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0 0 0)'}],{duration:260,delay:150+i*130,easing:'cubic-bezier(.3,0,.2,1)',fill:'backwards'}));
+  const reveal=()=>{if(done)return;done=true;clearTimeout(timer);const th=root.dataset.theme;
+    lights.style.display='flex';bars.forEach((b,i)=>b.style.background=i===2?'#0C2742':'#1A2414');intro.style.display='none';
+    const b2=bars.map((b,i)=>b.animate([{transform:'scaleY(1)',transformOrigin:'bottom'},{transform:'scaleY(0)',transformOrigin:'bottom'}],{duration:620,delay:i*70,easing:E,fill:'forwards'}));
+    heroIn();b2[b2.length-1].finished.then(()=>lights.style.display='none')};
+  timer=setTimeout(reveal,1400);$('#skip-intro').addEventListener('click',reveal);addEventListener('keydown',reveal,{once:true});
+}else heroIn();
+
+/* ---------- títulos com split por palavra ---------- */
+const splits=$$('.split');
+if(hasG&&!reduce){splits.forEach(h=>{h.innerHTML=h.textContent.trim().split(/\s+/).map(w=>`<span class="w"><span>${w}</span></span>`).join(' ')})}
+
+/* ---------- contadores ---------- */
+const counters=$$('.count');
+const runCount=el=>{const to=+el.dataset.to;if(reduce||!hasG){el.textContent=to;return}const o={v:0};gsap.to(o,{v:to,duration:1.6,ease:'power2.out',onUpdate:()=>el.textContent=Math.round(o.v)})};
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){runCount(e.target);cio.unobserve(e.target)}}),{threshold:.6});
+counters.forEach(c=>{if(hasG&&!reduce)c.textContent='0';cio.observe(c)});
+
+/* ---------- cenas ---------- */
+if(hasG&&!reduce){
+  /* títulos: palavras sobem por máscara */
+  splits.forEach(h=>gsap.from(h.querySelectorAll('.w>span'),{yPercent:110,duration:1,ease:'power4.out',stagger:.06,scrollTrigger:{trigger:h,start:'top 88%'}}));
+  /* blocos: entrada curta */
+  $$('.rv').forEach(el=>gsap.from(el,{opacity:0,y:28,duration:.9,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 90%'}}));
+  const mm=gsap.matchMedia();
+  mm.add('(min-width: 961px)',ctx=>{
+    root.classList.add('live','paintfx');
+    /* parallax leve fora do hero */
+    $$('[data-speed]').forEach(el=>gsap.to(el,{y:+el.dataset.speed,ease:'none',scrollTrigger:{trigger:el.closest('section')||el,start:'top top',end:'bottom top',scrub:true}}));
+
+    /* 1 · hero → sobre: o nome se abre, a foto vai ao centro e cresce, o azul do Sobre sobe e cobre tudo */
+    heroReady.then(()=>ctx.add(()=>{
+    const spot=$('.spot'),sr=spot.getBoundingClientRect();
+    const dx=innerWidth/2-(sr.left+sr.width/2),dy=innerHeight/2-(sr.top+scrollY+sr.height/2);
+    gsap.timeline({scrollTrigger:{trigger:'#inicio',start:'top top',end:'+=65%',pin:true,scrub:.7,anticipatePin:1,refreshPriority:10}})
+      .fromTo('.hl .h-in,.hl .x,.hr .facts,.scroll-cue',{y:0,opacity:1},{y:-50,opacity:0,stagger:.02,duration:.35,ease:'none',immediateRender:false},0)
+      .fromTo('.name .ln:first-child>span',{xPercent:0,y:0},{xPercent:-45,y:0,duration:.6,ease:'none',immediateRender:false},0)
+      .fromTo('.name .ln:last-child>span',{xPercent:0,y:0},{xPercent:45,y:0,duration:.6,ease:'none',immediateRender:false},0)
+      .to('.hl',{clipPath:'inset(0% 100% 0% 0%)',duration:.6,ease:'none'},.2)
+      .fromTo(spot,{x:0,y:0,scale:1,opacity:1},{x:dx,y:dy,scale:1.55,opacity:1,duration:.8,ease:'none',immediateRender:false},.05)
+      .to('.hero-wipe',{clipPath:'inset(52% 0% 0% 0%)',duration:.4,ease:'none'},.55);
+    ScrollTrigger.sort();ScrollTrigger.refresh();}));
+
+    /* 4 · títulos: as palavras sobem e a fita passa pintando o estêncil */
+    $$('.paint').forEach(h=>{gsap.set(h,{'--p':'0%','--o':0});
+      gsap.timeline({scrollTrigger:{trigger:h,start:'top 86%'}}).to(h,{'--o':1,duration:.01},.45).to(h,{'--p':'100%',duration:1.05,ease:'power2.inOut'},.45).to(h,{'--o':0,duration:.25})});
+    return ()=>root.classList.remove('live','paintfx');
+  });
+  /* botões magnéticos (só CTAs, sutil) */
+  if(matchMedia('(pointer: fine)').matches)$$('.mag').forEach(b=>{const xt=gsap.quickTo(b,'x',{duration:.5,ease:'power3'}),yt=gsap.quickTo(b,'y',{duration:.5,ease:'power3'});
+    b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();xt((e.clientX-r.left-r.width/2)*.18);yt((e.clientY-r.top-r.height/2)*.3)});
+    b.addEventListener('pointerleave',()=>{xt(0);yt(0)})});
+}
+
+/* ---------- filtro de projetos ---------- */
+const fb=$$('.filters button'),cards=$$('.card');
+fb.forEach(b=>b.addEventListener('click',()=>{const f=b.dataset.f;fb.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  cards.forEach(c=>{const show=f==='all'||c.dataset.cat===f;
+    if(show){c.hidden=false;if(!reduce)c.animate([{opacity:0,transform:'translateY(14px)'},{opacity:1,transform:'none'}],{duration:450,easing:O})}else c.hidden=true});
+  if(hasG)ScrollTrigger.refresh()}));
+
+/* ---------- índice / menu ---------- */
+const idx=$('#idx');
+$$('[data-idx]').forEach(b=>b.addEventListener('click',()=>{idx.showModal();lenis&&lenis.stop();if(!reduce)idx.animate([{clipPath:'inset(0 0 100% 0)'},{clipPath:'inset(0 0 0 0)'}],{duration:560,easing:E})}));
+$('#close-idx').addEventListener('click',()=>idx.close());idx.addEventListener('close',()=>lenis&&lenis.start());
+
+/* ---------- lightbox ---------- */
+const lb=$('#lb'),st=lb.querySelector('.lb-s'),cp=lb.querySelector('.lb-f p'),ln=lb.querySelector('.lb-n'),lt=$('#lb-t');let L=SYS,k=0;
+const show=n=>{k=(n+L.length)%L.length;const s=L[k];st.replaceChildren();let el;
+  if(s.v){el=document.createElement('video');el.src=s.v;el.poster=s.p;el.controls=true;el.muted=true;el.playsInline=true;el.preload='metadata'}
+  else{el=new Image();el.src=s.i;el.alt=s.c}st.append(el);cp.textContent=s.c;ln.textContent=L.length>1?(k+1)+' / '+L.length:'';lb.classList.toggle('single',L.length<2)};
+const openLb=(set,i)=>{if(set==='painel'){L=PAINEL;lt.textContent='FM Locação · painel do site'}else if(set==='video'){L=[SYS[0]];lt.textContent='FM Locação · vídeo do sistema'}else{L=SYS;lt.textContent='FM Locação · sistema interno'}
+  show(i||0);if(idx.open)idx.close();lb.showModal();lenis&&lenis.stop()};
+$$('[data-open]').forEach(b=>b.addEventListener('click',()=>openLb(b.dataset.open,+b.dataset.i||0)));
+/* capas dos outros projetos: a versão real aparece numa janela retangular que segue o cursor */
+if(matchMedia('(pointer: fine)').matches&&!reduce){root.classList.add('fine');
+  $$('.cov').forEach(c=>{const r=c.querySelector('.real');let last=[50,50];
+    c.addEventListener('pointermove',e=>{const b=c.getBoundingClientRect();const x=(e.clientX-b.left)/b.width*100,y=(e.clientY-b.top)/b.height*100;last=[x,y];const w=26,h=34;
+      r.classList.add('on');r.style.clipPath=`inset(${Math.max(0,y-h).toFixed(1)}% ${Math.max(0,100-x-w).toFixed(1)}% ${Math.max(0,100-y-h).toFixed(1)}% ${Math.max(0,x-w).toFixed(1)}%)`});
+    c.closest('.card').addEventListener('pointerleave',()=>{r.classList.remove('on');r.style.clipPath=`inset(${last[1]}% ${100-last[0]}% ${100-last[1]}% ${last[0]}%)`})})}
+
+lb.querySelector('.lb-x').onclick=()=>lb.close();lb.querySelector('.lb-p').onclick=()=>show(k-1);lb.querySelector('.lb-nx').onclick=()=>show(k+1);
+lb.addEventListener('close',()=>{st.replaceChildren();lenis&&lenis.start()});lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
+lb.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')show(k-1);if(e.key==='ArrowRight')show(k+1)});
+let x0=null;st.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});st.addEventListener('touchend',e=>{if(x0==null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)show(k+(d<0?1:-1));x0=null});
+
+/* ---------- VÍDEOS DO CASE: troque aqui por vídeos novos (um lugar só) ---------- */
+const VIDEOS={
+  site:{titulo:'Site institucional + Painel',rotulo:'FM Locação · público',
+    src:'img/projetos/fm-site/painel-v2.mp4',poster:'img/projetos/fm-site/painel-poster.webp',
+    desc:'O site público da locadora e o painel privado onde o conteúdo é editado. O que muda no painel aparece no site em poucos minutos.',link:'https://fmlocacao.com.br'},
+  sistema:{titulo:'Sistema de gestão',rotulo:'FM Locação · trabalho para cliente · dados fictícios',
+    src:'img/projetos/fm-sistema/demo.mp4',poster:'img/projetos/fm-sistema/demo-poster.webp',
+    desc:'Sistema interno da locadora, ainda em implementação: disponibilidade por período, orçamento que vira contrato e conferência no galpão. Telas com dados fictícios.',link:null}
+};
+/* modal: a capa do card cresce até virar o player */
+const vm=$('#vmodal'),vv=$('#vm-v'),ghost=$('#vm-ghost'),gimg=ghost.querySelector('img');let fromEl=null;
+const rectOf=el=>el.getBoundingClientRect();
+function openVideo(key,trigger){const d=VIDEOS[key];if(!d)return;
+  fromEl=trigger.closest('.vcard')?.querySelector('.vcov')||null;
+  $('#vm-t').textContent=d.titulo;$('#vm-k').textContent=d.rotulo;$('#vm-d').textContent=d.desc;
+  const ln=$('#vm-link');ln.hidden=!d.link;if(d.link)ln.href=d.link;
+  vv.poster=d.poster;vv.src=d.src;
+  if(idx.open)idx.close();
+  vm.showModal();lenis&&lenis.stop();
+  const stage=vm.querySelector('.vm-stage');
+  if(reduce||!fromEl){vv.play().catch(()=>{});return}
+  const a=rectOf(fromEl),b=rectOf(stage);
+  gimg.src=fromEl.querySelector('img').src;
+  Object.assign(ghost.style,{display:'block',left:a.left+'px',top:a.top+'px',width:a.width+'px',height:a.height+'px'});
+  stage.style.opacity=0;vm.querySelector('.vm-h').style.opacity=0;vm.querySelector('.vm-f').style.opacity=0;
+  const anim=ghost.animate([{left:a.left+'px',top:a.top+'px',width:a.width+'px',height:a.height+'px'},{left:b.left+'px',top:b.top+'px',width:b.width+'px',height:b.height+'px'}],{duration:820,easing:'cubic-bezier(.76,0,.24,1)',fill:'forwards'});
+  vm.animate([{background:'rgba(6,16,28,0)'},{background:'rgba(6,16,28,0)'}],{duration:1});
+  anim.finished.then(()=>{stage.style.opacity=1;ghost.style.display='none';anim.cancel();
+    [vm.querySelector('.vm-h'),vm.querySelector('.vm-f')].forEach((el,i)=>{el.style.opacity=1;el.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'none'}],{duration:500,delay:i*80,easing:'cubic-bezier(.16,1,.3,1)',fill:'backwards'})});
+    vv.play().catch(()=>{})})}
+function closeVideo(){vv.pause();const stage=vm.querySelector('.vm-stage');
+  const done=()=>{vm.close();vv.removeAttribute('src');vv.load();ghost.style.display='none'};
+  if(reduce||!fromEl){done();return}
+  const a=rectOf(stage),b=rectOf(fromEl);gimg.src=fromEl.querySelector('img').src;
+  Object.assign(ghost.style,{display:'block'});stage.style.opacity=0;vm.querySelector('.vm-h').style.opacity=0;vm.querySelector('.vm-f').style.opacity=0;
+  ghost.animate([{left:a.left+'px',top:a.top+'px',width:a.width+'px',height:a.height+'px'},{left:b.left+'px',top:b.top+'px',width:b.width+'px',height:b.height+'px'}],{duration:560,easing:'cubic-bezier(.76,0,.24,1)',fill:'forwards'}).finished.then(a2=>{done();a2.cancel()})}
+$$('[data-play]').forEach(b=>b.addEventListener('click',()=>openVideo(b.dataset.play,b)));
+vm.querySelector('.vm-x').addEventListener('click',closeVideo);
+vm.addEventListener('cancel',e=>{e.preventDefault();closeVideo()});
+vm.addEventListener('click',e=>{if(e.target===vm||e.target.classList.contains('vm-in'))closeVideo()});
+vm.addEventListener('close',()=>{lenis&&lenis.start();vm.querySelectorAll('.vm-stage,.vm-h,.vm-f').forEach(el=>el.style.opacity='')});
+
+/* ---------- copiar ---------- */
+$$('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(b.dataset.copy)}catch(e){const t=document.createElement('textarea');t.value=b.dataset.copy;document.body.append(t);t.select();document.execCommand('copy');t.remove()}
+  b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar e-mail',1800)}));
+
+/* ---------- cursor: etiqueta só sobre mídia e cards ---------- */
+if(matchMedia('(pointer: fine)').matches&&!reduce){const c=$('#cur');let tx=-100,ty=-100,x=-100,y=-100;
+  addEventListener('pointermove',e=>{tx=e.clientX+16;ty=e.clientY+18;const t=e.target.closest('[data-cur]');if(t){c.textContent=t.dataset.cur;c.classList.add('on')}else c.classList.remove('on')},{passive:true});
+  const loop=()=>{x+=(tx-x)*.25;y+=(ty-y)*.25;c.style.transform=`translate(${x}px,${y}px)`;requestAnimationFrame(loop)};loop()}
+if(hasG)addEventListener('load',()=>ScrollTrigger.refresh());
+})();
+</script>
 </body>
 </html>
