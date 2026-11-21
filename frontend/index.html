@@ -75,6 +75,11 @@ img,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}butt
 .tg span{position:relative;z-index:1;width:50%;text-align:center}
 :root[data-theme="light"] .tg .l,:root[data-theme="dark"] .tg .d{color:var(--on-tape)}
 .menu-btn{display:none}
+.tg.lg{width:84px}
+:root[data-theme] .lg i{transform:none}:root[lang="en"][data-theme] .lg i{transform:translateX(100%)}
+:root[data-theme] .lg .l{color:var(--on-tape)}:root[data-theme] .lg .d{color:inherit}:root[lang="en"][data-theme] .lg .l{color:inherit}:root[lang="en"][data-theme] .lg .d{color:var(--on-tape)}
+.idx-h .lg{margin-left:auto}.idx-h .lg+.tb{margin-left:8px}
+@media (max-width:430px){.top .lg{display:none}}
 
 /* faixas de profundidade entre seções */
 .band{height:16vh;min-height:90px}
@@ -451,6 +456,7 @@ dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
     <button class="tb menu-btn" type="button" data-idx aria-haspopup="dialog">Menu</button>
     <button class="tb idx-btn" type="button" data-idx aria-haspopup="dialog">Ver tudo em lista</button>
     <button class="mv" id="mv" type="button" aria-pressed="true" title="Ligar ou desligar as animações"><i aria-hidden="true"></i><span class="long">Animações</span><span class="short">Anim.</span></button>
+    <button class="tb tg lg" type="button" aria-label="Mudar idioma" aria-pressed="false"><i></i><span class="l">PT</span><span class="d">EN</span></button>
     <button class="tb tg" id="tg" type="button" aria-label="Alternar tema"><i></i><span class="l">Claro</span><span class="d">Escuro</span></button>
     <a class="tb" href="curriculo-eduardo-augusto.pdf" download>CV ↓</a>
   </div>
@@ -591,7 +597,7 @@ dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
 <footer><svg viewBox="0 0 120 64" aria-hidden="true"><use href="#mk"/></svg><span>© 2026 Eduardo Augusto</span><span class="r"><button type="button" class="lbl" data-idx>Ver tudo em lista</button><a class="lbl" href="#inicio" data-go="#inicio">Topo ↑</a></span></footer>
 
 <dialog class="idx" id="idx" aria-labelledby="idx-t">
-  <div class="idx-h"><span class="lbl" id="idx-t">Menu · tudo em lista</span><button class="tb" type="button" id="close-idx">Fechar ×</button></div>
+  <div class="idx-h"><span class="lbl" id="idx-t" style="margin-right:auto">Menu · tudo em lista</span><button class="tb tg lg idx-lg" type="button" aria-label="Mudar idioma" aria-pressed="false"><i></i><span class="l">PT</span><span class="d">EN</span></button><button class="tb" type="button" id="close-idx">Fechar ×</button></div>
   <div class="idx-g">
     <div><h2>Seções</h2><ul><li><a href="#inicio" data-go="#inicio">Início</a></li><li><a href="#sobre" data-go="#sobre">Sobre</a></li><li><a href="#projetos" data-go="#projetos">Projetos</a></li><li><a href="#curriculo" data-go="#curriculo">Currículo</a></li><li><a href="#contato" data-go="#contato">Contato</a></li></ul></div>
     <div><h2>Projetos</h2><ul><li><a href="https://fmlocacao.com.br" target="_blank" rel="noopener">FM Locação — site</a><small>Python, JavaScript, GitHub Actions</small></li><li><button type="button" data-play="sistema">FM Locação — sistema (vídeo)</button><small>Python, Django, 200+ testes</small></li><li><button type="button" data-play="site">FM Locação — site e painel (vídeo)</button><small>Python, JavaScript, GitHub Actions</small></li><li><a href="https://github.com/oAccex/Accex-main---Copia.git" target="_blank" rel="noopener">Accex</a><small>Web · Node.js, MySQL, EJS</small></li><li><a href="https://app.powerbi.com/view?r=eyJrIjoiZWFlZWM5ZGMtMTE4Zi00NDQwLThkY2EtYmQxMWYzN2IxNjc5IiwidCI6ImIxMDUxYzRiLTNiOTQtNDFhYi05NDQxLWU3M2E3MjM0MmZkZCJ9" target="_blank" rel="noopener">Dashboard de vendas</a><small>Dados · Power BI, DAX, ETL</small></li><li><a href="https://www.instagram.com/fmlocacao" target="_blank" rel="noopener">Identidade visual FM</a><small>Design · branding</small></li></ul></div>
@@ -620,8 +626,110 @@ dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
 (()=>{
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],root=document.documentElement;
 const reduce=root.classList.contains('rm'),qs=new URLSearchParams(location.search);
+/* ---------- IDIOMA: dicionário único (português → inglês). Para editar uma tradução, mude só aqui. ---------- */
+const D={
+'Pular para o conteúdo':'Skip to content','Eduardo Augusto, início':'Eduardo Augusto, home','Seções':'Sections',
+'Início':'Home','Sobre':'About','Projetos':'Projects','Currículo':'Résumé','Contato':'Contact','Menu':'Menu',
+'Ver tudo em lista':'View all as a list','Ligar ou desligar as animações':'Turn animations on or off','Animações':'Animations',
+'Ligar animações':'Turn animations on','Animações: desligadas':'Animations: off','Animações: ligadas':'Animations: on',
+'Alternar tema':'Toggle theme','Claro':'Light','Escuro':'Dark','Mudar idioma':'Change language',
+'Portfólio · 2026':'Portfolio · 2026','Desenvolvimento web · Dados':'Web development · Data',
+'Crio sistemas web e análises de dados para problemas reais de operação.':'Building web systems and data analysis for real operational problems.',
+'Antes da tecnologia, vendas e quase dois anos de call center, onde desenvolvi oratória, argumentação e leitura de negociação. Hoje, graduando em ADS e buscando estágio ou júnior.':
+  "Before tech, I worked in sales and spent almost two years in a call center, where I built public speaking, persuasion and negotiation skills. Now I'm studying Systems Analysis and Development and looking for an internship or junior role.",
+'Ver projetos':'See projects','Agentes com IA — AI-103':'Developing AI Apps and Agents — AI-103','Informática':'Computer Skills','Baixar currículo':'Download résumé','Baixar Currículo':'Download résumé','Baixar Currículo (PDF)':'Download résumé (PDF)','Currículo PDF':'Résumé PDF',
+'Foto de Eduardo Augusto em serigrafia de quatro cores':'Photo of Eduardo Augusto as a four-color screen print',
+'ADS':'Associate degree','Cruzeiro do Sul · 2024–atual':'Cruzeiro do Sul · 2024–present','Técnico':'Technical diploma','Informática para Internet · FIEB':'Web Development · FIEB',
+'Cursos de IA':'AI courses','Rolar ↓':'Scroll ↓',
+'Quem sou, de onde vim e com o que trabalho.':'Who I am, where I come from and what I work with.','Resumo':'Summary',
+'Estudo Análise e Desenvolvimento de Sistemas na Cruzeiro do Sul e sou técnico em Informática para Internet pela FIEB. Hoje desenvolvo o site e o sistema de gestão da FM Locação em Python e Django, com mais de 200 testes automatizados, e trabalho com SQL e Power BI para análise de dados. Antes da tecnologia, passei por vendas e quase dois anos de call center, onde aprendi a ouvir, negociar e explicar com clareza. Concluí cursos de IA generativa e agentes (AWS Generative AI Foundations e Azure AI-103) e busco minha primeira oportunidade como estagiário ou júnior.':
+  "I'm studying Systems Analysis and Development (associate degree) at Cruzeiro do Sul and graduated from a technical high school in Web Development at FIEB. I'm currently building the website and management system for FM Locação with Python and Django, covered by more than 200 automated tests, and I use SQL and Power BI for data analysis. Before tech, I worked in sales and spent almost two years in a call center, where I learned to listen, negotiate and explain things clearly. I've completed courses in generative AI and agents (AWS Generative AI Foundations and Azure AI-103) and I'm looking for my first internship or junior role.",
+'Trajetória':'Background',
+'Comecei cedo, conciliando o técnico com freelas em eventos. Fui vendedor numa loja de surfe, meu primeiro compromisso profissional, e passei quase dois anos em um call center.':
+  'I started early, balancing technical school with freelance work at events. My first job was in sales at a surf shop, and then I spent almost two years in a call center.',
+'Formação':'Education','Análise e Desenvolvimento de Sistemas':'Systems Analysis and Development (associate degree)',
+'Universidade Cruzeiro do Sul · 2024–atual':'Universidade Cruzeiro do Sul · 2024–present','Técnico em Informática para Internet':'Technical High School in Web Development',
+'Experiência':'Experience','FM Locação — site e sistema de gestão':'FM Locação — website and management system','Projeto para cliente · em andamento':'Client project · ongoing',
+'Call center · EMDIA':'Call center — debt negotiation · EMDIA','Set.2024 – Jul.2026 · negociação e regularização financeira':'Sep 2024 – Jul 2026 · negotiation and debt settlement',
+'Ferramentas':'Tools','IA generativa · Agentes (AWS, Azure)':'Generative AI · Agents (AWS, Azure)',
+'O projeto principal primeiro. Depois os outros, todos no mesmo formato.':'The main project first, then the others, all in the same format.',
+'Projeto principal · trabalho para cliente':'Main project · client work','Site e sistema de gestão para uma locadora de itens para eventos.':'A website and management system for an event-rental company.',
+'Python · Django · JavaScript · GitHub Actions · mais de 200 testes automatizados':'Python · Django · JavaScript · GitHub Actions · 200+ automated tests',
+'Assistir ao vídeo: site institucional e painel':'Watch the video: website and admin panel','Assistir':'Watch','Público · no ar':'Public · live',
+'Site institucional + Painel':'Website + Admin panel',
+'Catálogo com preços, simulador de composição de mesa e pedido enviado pelo WhatsApp. O conteúdo é editado num painel privado e publicado com verificação automática.':
+  'Catalog with prices, a table-setting simulator and orders sent through WhatsApp. Content is edited in a private admin panel and published with automated checks.',
+'Ver site ↗':'Visit site ↗','Assistir ao vídeo: sistema de gestão':'Watch the video: management system','Trabalho para cliente · dados fictícios':'Client work · sample data',
+'Sistema de gestão':'Management system',
+'Uso interno da locadora: mostra o que está livre em cada período, transforma o orçamento aprovado em contrato sem redigitar e controla o que cada pessoa da equipe vê.':
+  "Internal tool for the rental company: shows what's available in each period, turns an approved quote into a contract without retyping, and controls what each team member can see.",
+'Outros projetos':'Other projects','Filtrar por categoria':'Filter by category','Todos':'All','Dados':'Data',
+'repositório ↗':'repository ↗','Repositório do Accex no GitHub':'Accex repository on GitHub','Accex — acessibilidade urbana':'Accex — urban accessibility',
+'Plataforma full-stack para classificar a acessibilidade urbana. Projeto de conclusão do curso técnico, feito em grupo.':'Full-stack platform for rating urban accessibility. Technical school capstone project, built as a team.',
+'Repositório ↗':'Repository ↗','abrir relatório ↗':'open report ↗','Relatório de vendas publicado no Power BI':'Sales report published on Power BI',
+'Dashboard de análise de vendas':'Sales analysis dashboard','Relatório em Power BI com ETL, modelagem de dados e medidas DAX para acompanhar indicadores comerciais.':'Power BI report with ETL, data modeling and DAX measures to track sales KPIs.',
+'Relatório ↗':'Report ↗','Logotipo e assinatura da FM Locação aplicados no site':'FM Locação logo and tagline as used on the website','Identidade visual — FM Locação':'Visual identity — FM Locação',
+'Logotipo, materiais digitais e marketing contínuo no Instagram, com reels, fotos e vídeos, além da gestão do projeto.':'Logo, digital materials and ongoing Instagram marketing with reels, photos and videos, plus project management.',
+'Mais no GitHub ↗':'More on GitHub ↗','O resumo. O completo está no PDF.':'The short version. The full résumé is in the PDF.',
+'Site e sistema de gestão · projeto para cliente · em andamento':'Website and management system · client project · ongoing',
+'Set.2024 – Jul.2026 · negociações, regularização e detalhamento de situações financeiras':'Sep 2024 – Jul 2026 · negotiations, debt settlement and account reviews',
+'Universidade Cruzeiro do Sul · Ago.2024 – atual':'Universidade Cruzeiro do Sul · Aug 2024 – present','FIEB · Jan.2021 – Dez.2023':'FIEB · Jan 2021 – Dec 2023',
+'Certificações e cursos':'Certifications and courses','ver badge':'view badge','ver certificado':'view certificate',
+'Currículo completo, numa página, pronto para imprimir.':'Full résumé on one page, ready to print.',
+'Buscando um estagiário ou desenvolvedor júnior para o seu time? Vamos conversar.':"Looking for an intern or junior developer for your team? Let's talk.",
+'Enviar e-mail ↗':'Send email ↗','Copiar e-mail':'Copy email','Copiado':'Copied','ou abrir no app de e-mail':'or open it in your email app','Topo ↑':'Top ↑',
+'Menu · tudo em lista':'Menu · everything as a list','Fechar ×':'Close ×','FM Locação — site':'FM Locação — website','FM Locação — sistema (vídeo)':'FM Locação — system (video)',
+'Python, Django, 200+ testes':'Python, Django, 200+ tests','FM Locação — site e painel (vídeo)':'FM Locação — website and panel (video)',
+'Dashboard de vendas':'Sales dashboard','Dados · Power BI, DAX, ETL':'Data · Power BI, DAX, ETL','Identidade visual FM':'FM visual identity',
+'Cruzeiro do Sul · Ago.2024 – atual':'Cruzeiro do Sul · Aug 2024 – present','Set.2024 – Jul.2026':'Sep 2024 – Jul 2026',
+'Vídeo':'Video','Fechar o vídeo':'Close the video','Fechar':'Close','FM Locação · sistema interno':'FM Locação · internal system','Anterior':'Previous','Próxima':'Next','Pular':'Skip',
+/* textos gerados pelo script */
+'FM Locação · público':'FM Locação · public','FM Locação · trabalho para cliente · dados fictícios':'FM Locação · client work · sample data',
+'O site público da locadora e o painel privado onde o conteúdo é editado. O que muda no painel aparece no site em poucos minutos.':"The rental company's public website and the private panel where content is edited. Changes made in the panel show up on the site within minutes.",
+'Sistema interno da locadora, ainda em implementação: disponibilidade por período, orçamento que vira contrato e conferência no galpão. Telas com dados fictícios.':'Internal system for the rental company, still being implemented: availability by period, quotes that become contracts and warehouse check-out. Screens use sample data.',
+'FM Locação · painel do site':'FM Locação · site panel','FM Locação · vídeo do sistema':'FM Locação · system video',
+'Vídeo de demonstração do sistema interno.':'Demo video of the internal system.',
+'Consulta de disponibilidade — unidades livres no período, já descontando reservas, higienização e material sublocado.':'Availability check — units free in the period, already accounting for bookings, cleaning and sub-rented items.',
+'A mesma consulta no celular.':'The same check on a phone.','Orçamentos — código, versão, responsável, status e validade.':'Quotes — code, version, owner, status and expiry.',
+'Detalhe do orçamento — aprovado, vira contrato sem redigitar.':'Quote detail — once approved, it becomes a contract without retyping.','Orçamento no celular — o total sempre visível.':'Quote on a phone — the total always visible.',
+'Contrato — cliente, evento, itens e documentos numa pasta só.':'Contract — client, event, items and documents in one place.','Conferência de saída no galpão, item a item.':'Warehouse check-out, item by item.',
+'Tela inicial — contratos sem assinatura e sublocações que vencem.':'Home screen — unsigned contracts and sub-rentals coming due.',
+'Painel do site — o que é editado aparece no site em poucos minutos. Acesso restrito.':'Site panel — what is edited shows up on the site within minutes. Restricted access.',
+'Eduardo Augusto — Desenvolvimento web e dados':'Eduardo Augusto — Web development and data',
+'Eduardo Augusto — desenvolvimento web e dados. Graduando em Análise e Desenvolvimento de Sistemas, buscando estágio ou júnior.':'Eduardo Augusto — web development and data. Systems Analysis and Development student looking for an internship or junior role.'
+};
+const REV={};for(const k in D)REV[D[k]]=k;
+let lang=(()=>{let s=null;try{s=localStorage.getItem('ea5-lang')}catch(e){}if(s==='pt'||s==='en')return s;
+  if(qs.get('lang')==='en'||qs.get('lang')==='pt')return qs.get('lang');return /^en/i.test(navigator.language||'')?'en':'pt'})();
+const t=s=>lang==='en'?(D[s]??s):s;
+const ATTRS=['aria-label','title','alt','placeholder','data-cur'];
+const TXT=new Map(),ATT=new Map();
+const origOf=v=>{const k=v.trim();return REV[k]?v.replace(k,REV[k]):v};
+const PT_PDF='curriculo-eduardo-augusto.pdf',EN_PDF='resume-eduardo-augusto.pdf';
+const i18nHooks=[];
+function applyLang(l){lang=l;root.lang=l==='en'?'en':'pt-BR';
+  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>{const p=n.parentElement;
+    if(!p||p.closest('script,style,svg,.split,#dec,[data-noi18n]'))return NodeFilter.FILTER_REJECT;return /\S/.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT}});
+  for(let n;(n=w.nextNode());){if(!TXT.has(n))TXT.set(n,origOf(n.nodeValue));const o=TXT.get(n),k=o.trim();n.nodeValue=l==='en'&&D[k]?o.replace(k,D[k]):o}
+  document.querySelectorAll(ATTRS.map(a=>'['+a+']').join(',')).forEach(el=>{if(el.closest('svg'))return;let m=ATT.get(el);if(!m){m={};ATTRS.forEach(a=>{if(el.hasAttribute(a))m[a]=origOf(el.getAttribute(a))});ATT.set(el,m)}
+    for(const a in m)el.setAttribute(a,l==='en'&&D[m[a]]?D[m[a]]:m[a])});
+  /* títulos com split por palavra e títulos "pintados" */
+  document.querySelectorAll('.split').forEach(el=>{if(!el.dataset.pt)el.dataset.pt=origOf(el.textContent.trim());const txt=t(el.dataset.pt);
+    if(el.dataset.text!==undefined)el.dataset.text=txt;el.textContent=txt;if(window.__splitWords)window.__splitWords(el)});
+  /* currículo: PDF em português ou em inglês */
+  document.querySelectorAll('a[href$="curriculo-eduardo-augusto.pdf"],a[href$="resume-eduardo-augusto.pdf"]').forEach(a=>a.setAttribute('href',l==='en'?EN_PDF:PT_PDF));
+  /* assunto do e-mail (Gmail e app de e-mail) */
+  document.querySelectorAll('a[href*="mail"]').forEach(a=>{a.href=a.href.replace(/Contato%20pelo%20portf%C3%B3lio|Contact%20via%20portfolio/g,l==='en'?'Contact%20via%20portfolio':'Contato%20pelo%20portf%C3%B3lio')});
+  document.title=t('Eduardo Augusto — Desenvolvimento web e dados');
+  const md=document.querySelector('meta[name="description"]');if(md)md.content=t('Eduardo Augusto — desenvolvimento web e dados. Graduando em Análise e Desenvolvimento de Sistemas, buscando estágio ou júnior.');
+  const og=(p,v)=>{let m=document.querySelector(`meta[property="${p}"]`);if(!m){m=document.createElement('meta');m.setAttribute('property',p);document.head.append(m)}m.content=v};
+  og('og:title',document.title);og('og:description',md?md.content:'');og('og:locale',l==='en'?'en_US':'pt_BR');og('og:type','website');
+  document.querySelectorAll('.lg').forEach(b=>b.setAttribute('aria-pressed',String(l==='en')));
+  i18nHooks.forEach(f=>f())}
+applyLang(lang);
+
 /* botão de animações: mostra o estado e, se o sistema pediu menos movimento, deixa o visitante escolher */
-{const mv=document.getElementById('mv');mv.setAttribute('aria-pressed',String(!reduce));mv.querySelector('.long').textContent=reduce?(root.classList.contains('os-rm')?'Ligar animações':'Animações: desligadas'):'Animações: ligadas';mv.querySelector('.short').textContent=reduce?'Anim.: off':'Anim.: on';
+{const mv=document.getElementById('mv');mv.setAttribute('aria-pressed',String(!reduce));mv.querySelectorAll('span').forEach(x=>x.setAttribute('data-noi18n',''));const mvL=()=>{mv.querySelector('.long').textContent=t(reduce?(root.classList.contains('os-rm')?'Ligar animações':'Animações: desligadas'):'Animações: ligadas');mv.querySelector('.short').textContent=reduce?'Anim.: off':'Anim.: on'};mvL();i18nHooks.push(mvL);
  mv.addEventListener('click',()=>{try{localStorage.setItem('ea5-motion',reduce?'on':'off')}catch(e){}location.reload()})}
 const hasG=!!(window.gsap&&window.ScrollTrigger),E='cubic-bezier(.76,0,.24,1)',O='cubic-bezier(.16,1,.3,1)';
 const BG={dark:'#1A2414',light:'#E3E6D3'},BLUE={dark:'#0C2742',light:'#C9D9EA'};
@@ -646,6 +754,7 @@ function bank(theme,mid){if(reduce){mid&&mid();return Promise.resolve()}
   lights.style.display='flex';bars.forEach((b,i)=>b.style.background=i===2?BLUE[theme]:BG[theme]);
   const a=bars.map((b,i)=>b.animate([{transform:'scaleY(0)',transformOrigin:'top'},{transform:'scaleY(1)',transformOrigin:'top'}],{duration:420,delay:i*55,easing:E,fill:'forwards'}));
   return a[a.length-1].finished.then(()=>{mid&&mid();const b2=bars.map((b,i)=>b.animate([{transform:'scaleY(1)',transformOrigin:'bottom'},{transform:'scaleY(0)',transformOrigin:'bottom'}],{duration:460,delay:90+i*55,easing:E,fill:'forwards'}));return b2[b2.length-1].finished}).then(()=>{lights.style.display='none'})}
+document.querySelectorAll('.lg').forEach(b=>b.addEventListener('click',()=>{const next=lang==='en'?'pt':'en';try{localStorage.setItem('ea5-lang',next)}catch(e){}bank(root.dataset.theme,()=>{applyLang(next);if(window.ScrollTrigger)ScrollTrigger.refresh()})}));
 $('#tg').addEventListener('click',()=>{const next=root.dataset.theme==='dark'?'light':'dark';bank(next,()=>{root.dataset.theme=next;try{localStorage.setItem('ea5-theme',next)}catch(e){}})});
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{try{if(localStorage.getItem('ea5-theme'))return}catch(x){}root.dataset.theme=e.matches?'dark':'light'});
 
@@ -723,7 +832,7 @@ if(!reduce&&!qs.has('nointro')){
 
 /* ---------- títulos com split por palavra ---------- */
 const splits=$$('.split');
-if(hasG&&!reduce){splits.forEach(h=>{h.innerHTML=h.textContent.trim().split(/\s+/).map(w=>`<span class="w"><span>${w}</span></span>`).join(' ')})}
+if(hasG&&!reduce){window.__splitWords=h=>{h.innerHTML=h.textContent.trim().split(/\s+/).map(w=>`<span class="w"><span>${w}</span></span>`).join(' ')};splits.forEach(window.__splitWords)}
 
 /* ---------- contadores ---------- */
 const counters=$$('.count');
@@ -781,8 +890,8 @@ $('#close-idx').addEventListener('click',()=>idx.close());idx.addEventListener('
 const lb=$('#lb'),st=lb.querySelector('.lb-s'),cp=lb.querySelector('.lb-f p'),ln=lb.querySelector('.lb-n'),lt=$('#lb-t');let L=SYS,k=0;
 const show=n=>{k=(n+L.length)%L.length;const s=L[k];st.replaceChildren();let el;
   if(s.v){el=document.createElement('video');el.src=s.v;el.poster=s.p;el.controls=true;el.muted=true;el.playsInline=true;el.preload='metadata'}
-  else{el=new Image();el.src=s.i;el.alt=s.c}st.append(el);cp.textContent=s.c;ln.textContent=L.length>1?(k+1)+' / '+L.length:'';lb.classList.toggle('single',L.length<2)};
-const openLb=(set,i)=>{if(set==='painel'){L=PAINEL;lt.textContent='FM Locação · painel do site'}else if(set==='video'){L=[SYS[0]];lt.textContent='FM Locação · vídeo do sistema'}else{L=SYS;lt.textContent='FM Locação · sistema interno'}
+  else{el=new Image();el.src=s.i;el.alt=t(s.c)}st.append(el);cp.textContent=t(s.c);ln.textContent=L.length>1?(k+1)+' / '+L.length:'';lb.classList.toggle('single',L.length<2)};
+const openLb=(set,i)=>{if(set==='painel'){L=PAINEL;lt.textContent=t('FM Locação · painel do site')}else if(set==='video'){L=[SYS[0]];lt.textContent=t('FM Locação · vídeo do sistema')}else{L=SYS;lt.textContent=t('FM Locação · sistema interno')}
   show(i||0);if(idx.open)idx.close();lb.showModal();lenis&&lenis.stop()};
 $$('[data-open]').forEach(b=>b.addEventListener('click',()=>openLb(b.dataset.open,+b.dataset.i||0)));
 /* capas dos outros projetos: a versão real aparece numa janela retangular que segue o cursor */
@@ -811,7 +920,7 @@ const vm=$('#vmodal'),vv=$('#vm-v'),ghost=$('#vm-ghost'),gimg=ghost.querySelecto
 const rectOf=el=>el.getBoundingClientRect();
 function openVideo(key,trigger){const d=VIDEOS[key];if(!d)return;
   fromEl=trigger.closest('.vcard')?.querySelector('.vcov')||null;
-  $('#vm-t').textContent=d.titulo;$('#vm-k').textContent=d.rotulo;$('#vm-d').textContent=d.desc;
+  $('#vm-t').textContent=t(d.titulo);$('#vm-k').textContent=t(d.rotulo);$('#vm-d').textContent=t(d.desc);
   const ln=$('#vm-link');ln.hidden=!d.link;if(d.link)ln.href=d.link;
   vv.poster=d.poster;vv.src=d.src;
   if(idx.open)idx.close();
@@ -841,7 +950,7 @@ vm.addEventListener('close',()=>{lenis&&lenis.start();vm.querySelectorAll('.vm-s
 
 /* ---------- copiar ---------- */
 $$('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(b.dataset.copy)}catch(e){const t=document.createElement('textarea');t.value=b.dataset.copy;document.body.append(t);t.select();document.execCommand('copy');t.remove()}
-  b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar e-mail',1800)}));
+  b.textContent=t('Copiado');setTimeout(()=>b.textContent=t('Copiar e-mail'),1800)}));
 
 /* ---------- cursor: etiqueta só sobre mídia e cards ---------- */
 if(matchMedia('(pointer: fine)').matches&&!reduce){const c=$('#cur');let tx=-100,ty=-100,x=-100,y=-100;
