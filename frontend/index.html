@@ -239,9 +239,12 @@ footer svg{width:40px;height:22px}footer .r{margin-left:auto;display:flex;gap:20
 
 /* bancos de luz e abertura */
 .lights{position:fixed;inset:0;z-index:200;display:none;pointer-events:none}.lights i{flex:1}
-.intro{position:fixed;inset:0;z-index:210;display:none;align-items:center;justify-content:center;flex-direction:column;gap:22px;background:#1A2414}
-.intro svg{width:min(40vw,240px);height:auto}
-.intro button{color:#AEB69A;font:700 .7rem var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.intro{position:fixed;inset:0;z-index:210;display:none;align-items:center;justify-content:center;flex-direction:column;gap:14px;background:linear-gradient(160deg,#1A2414 45%,#0C2742);color:#ECEEDF;cursor:pointer}
+.dec-k{font:700 .74rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#9DB6D3}
+.dec{font:700 clamp(2.4rem,7.4vw,6.4rem)/1 var(--disp);letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;color:#9DB6D3}
+.dec span{display:inline-block;text-align:center}.dec span.ok{color:#ECEEDF}.dec span.ok.g{color:#A8BF6E}
+.dec-bar{display:block;width:min(70vw,640px);height:6px;background:#A8BF6E;transform:scaleX(0);transform-origin:left}
+.intro button{position:absolute;bottom:28px;color:#AEB69A;font:700 .7rem var(--sans);letter-spacing:.14em;text-transform:uppercase}
 
 /* índice / menu */
 dialog.idx{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;background:var(--bg);color:var(--ink);padding:22px var(--pad) 48px;overflow:auto}
@@ -309,9 +312,9 @@ dialog.single .lb-f button{visibility:hidden}
 .sc{display:block;margin-top:12px;color:#A9B9CB}
 /* hero → sobre */
 .hero-wipe{position:absolute;inset:0;background:var(--b-bg);z-index:3;clip-path:inset(100% 0 0 0);pointer-events:none;display:none}
-.live .hero-wipe{display:block}.live .hero-band{display:none}
+
 .live .hr{overflow:visible;z-index:2}
-.live #sobre{padding-top:24px}
+
 .spot{z-index:4}
 /* títulos pintados pela fita */
 .paint{--pc:var(--ink)}.blue .paint{--pc:var(--b-ink)}.contact .paint{--pc:var(--hero-ink)}
@@ -457,8 +460,7 @@ dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
     <div class="facts h-in"><div><b>ADS</b>Cruzeiro do Sul · 2024–atual</div><div><b>Técnico</b>Informática para Internet · FIEB</div><div><b>Python · SQL</b>Power BI · Cloud</div><div><b>Cursos de IA</b>AWS GenAI · Azure AI-103</div></div>
     <span class="scroll-cue lbl">Rolar ↓</span>
   </div>
-  <div class="hero-wipe" aria-hidden="true"></div>
-</section>
+  </section>
 
 <div class="band g2b hero-band" aria-hidden="true"></div>
 
@@ -593,9 +595,7 @@ dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
 <dialog class="lb" id="lb" aria-labelledby="lb-t"><div class="lb-h"><span class="lbl" id="lb-t">FM Locação · sistema interno</span><span class="lbl lb-n" style="color:#A9B9CB"></span><button type="button" class="lb-x" aria-label="Fechar">×</button></div><div class="lb-s"></div><div class="lb-f"><button type="button" class="lb-p" aria-label="Anterior">←</button><p></p><button type="button" class="lb-nx" aria-label="Próxima">→</button></div></dialog>
 
 <div class="lights" id="lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-<div class="intro" id="intro" aria-hidden="true"><svg viewBox="0 0 120 64"><g style="fill:#A8BF6E">
-  <rect x="6" y="5" width="7" height="54" transform="rotate(-1 9 32)"/><rect x="6" y="5" width="34" height="7" transform="rotate(1.5 23 8)"/><rect x="6" y="28.5" width="28" height="7" transform="rotate(-1 20 32)"/><rect x="6" y="52" width="34" height="7" transform="rotate(.8 23 55)"/>
-  <rect x="76" y="2" width="7" height="62" transform="rotate(21 79.5 33)"/><rect x="88" y="2" width="7" height="62" transform="rotate(-21 91.5 33)"/><rect x="70" y="38" width="32" height="7" transform="rotate(-1.5 86 41)"/></g></svg><button type="button" id="skip-intro">Pular</button></div>
+<div class="intro" id="intro" aria-hidden="true"><p class="dec-k">Portfólio · 2026</p><p class="dec" id="dec">EDUARDO AUGUSTO</p><span class="dec-bar" id="dec-bar"></span><button type="button" id="skip-intro">Pular</button></div>
 <div class="cur" id="cur" aria-hidden="true"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -644,7 +644,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('[data-go]');if(!
 
 /* ---------- header ---------- */
 const top=$('#top');const navA=$$('.nav a');
-const chk=()=>{top.classList.toggle('solid',scrollY>innerHeight*.55);
+const chk=()=>{top.classList.toggle('solid',scrollY>8);
   const y=innerHeight*.4;let cur='inicio';$$('main section[id]').forEach(s=>{const r=s.getBoundingClientRect();if(r.top<=y&&r.bottom>y)cur=s.id});
   navA.forEach(a=>a.classList.toggle('on',a.dataset.go==='#'+cur))};
 addEventListener('scroll',chk,{passive:true});chk();
@@ -657,16 +657,36 @@ const heroIn=()=>{if(reduce){heroDone();return}const A=[];const W=(el,k,o)=>{con
   W($('.spot .duo'),[{clipPath:'inset(100% 0 0 0)'},{clipPath:'inset(0 0 0 0)'}],{duration:1100,delay:200,easing:E,fill:'backwards'});
   $$('.hero .mark,.hero .x').forEach((m,i)=>W(m,[{opacity:0},{opacity:1}],{duration:400,delay:800+i*60,fill:'backwards'}));
   Promise.all(A.map(a=>a.finished)).then(()=>{A.forEach(a=>a.cancel());heroDone()})};
+/* abertura: o nome em estêncil se decodifica (como no site anterior), a fita passa e os bancos de luz sobem.
+   Roda a cada carregamento, dura ~2 s, é pulável (clique, tecla, roda, toque) e nunca mexe na rolagem. */
 const intro=$('#intro');
-if(!reduce&&!qs.has('nointro')&&!sessionStorage.getItem('ea5-intro')){
-  sessionStorage.setItem('ea5-intro','1');intro.style.display='flex';let done=false,timer;
-  [...intro.querySelectorAll('rect')].forEach((r,i)=>r.animate([{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0 0 0)'}],{duration:260,delay:150+i*130,easing:'cubic-bezier(.3,0,.2,1)',fill:'backwards'}));
-  const reveal=()=>{if(done)return;done=true;clearTimeout(timer);const th=root.dataset.theme;
-    lights.style.display='flex';bars.forEach((b,i)=>b.style.background=i===2?'#0C2742':'#1A2414');intro.style.display='none';
-    const b2=bars.map((b,i)=>b.animate([{transform:'scaleY(1)',transformOrigin:'bottom'},{transform:'scaleY(0)',transformOrigin:'bottom'}],{duration:620,delay:i*70,easing:E,fill:'forwards'}));
-    heroIn();b2[b2.length-1].finished.then(()=>lights.style.display='none')};
-  timer=setTimeout(reveal,1400);$('#skip-intro').addEventListener('click',reveal);addEventListener('keydown',reveal,{once:true});
+if(!reduce&&!qs.has('nointro')){
+  intro.style.display='flex';
+  const dec=$('#dec'),bar=$('#dec-bar'),TEXT='EDUARDO AUGUSTO',POOL='ABCDEFGHJKNOPRSTUVXYZ#$&*0123456789';
+  let done=false,raf=0,spans=[];
+  const finish=()=>{if(done)return;done=true;cancelAnimationFrame(raf);
+    ['click','keydown','wheel','touchstart'].forEach(t=>removeEventListener(t,finish));
+    spans.forEach((s,i)=>{s.textContent=TEXT[i]===' '?' ':TEXT[i];s.classList.add('ok')});
+    const b=bar.animate([{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:280,easing:E,fill:'forwards'});
+    b.finished.then(()=>{lights.style.display='flex';bars.forEach((x,i)=>x.style.background=i===2?'#0C2742':'#1A2414');intro.style.display='none';
+      const up=bars.map((x,i)=>x.animate([{transform:'scaleY(1)',transformOrigin:'top'},{transform:'scaleY(0)',transformOrigin:'top'}],{duration:520,delay:i*55,easing:E,fill:'forwards'}));
+      heroIn();up[up.length-1].finished.then(()=>{lights.style.display='none';up.forEach(a=>a.cancel())})})};
+  const start=()=>{
+    dec.innerHTML=TEXT.split('').map((c,i)=>`<span class="${i>7?'g':''}">${c===' '?'&nbsp;':c}</span>`).join('');
+    spans=[...dec.children];
+    spans.forEach(s=>{s.style.width=s.getBoundingClientRect().width+'px'});   // cada letra fica na largura final: a linha não pula
+    const t0=performance.now(),D=1250;let last=-1;
+    const tick=now=>{if(done)return;const p=(now-t0)/D,step=Math.floor((now-t0)/55);
+      if(step!==last){last=step;spans.forEach((s,i)=>{if(TEXT[i]===' ')return;
+        if(p>=.18+i/TEXT.length*.72){s.textContent=TEXT[i];s.classList.add('ok')}else s.textContent=POOL[(Math.random()*POOL.length)|0]})}
+      if(p<1)raf=requestAnimationFrame(tick);else finish()};
+    raf=requestAnimationFrame(tick)};
+  /* espera a fonte de estêncil (no máximo 400 ms) para medir as larguras certas */
+  Promise.race([document.fonts.load('700 64px "Big Shoulders Stencil Display"'),new Promise(r=>setTimeout(r,400))]).then(start);
+  ['click','keydown','wheel','touchstart'].forEach(t=>addEventListener(t,finish,{passive:true}));
+  setTimeout(finish,2100);   // trava de segurança: nunca passa disso
 }else heroIn();
+
 
 /* ---------- títulos com split por palavra ---------- */
 const splits=$$('.split');
@@ -690,18 +710,16 @@ if(hasG&&!reduce){
     /* parallax leve fora do hero */
     $$('[data-speed]').forEach(el=>gsap.to(el,{y:+el.dataset.speed,ease:'none',scrollTrigger:{trigger:el.closest('section')||el,start:'top top',end:'bottom top',scrub:true}}));
 
-    /* 1 · hero → sobre: o nome se abre, a foto vai ao centro e cresce, o azul do Sobre sobe e cobre tudo */
+    /* 1 · hero → sobre: sem prender a tela. Enquanto o hero sai, o nome se abre de leve e a foto anda mais devagar;
+       o azul do Sobre sobe com o título já visível. Nenhum estado intermediário fica exposto. */
     heroReady.then(()=>ctx.add(()=>{
-    const spot=$('.spot'),sr=spot.getBoundingClientRect();
-    const dx=innerWidth/2-(sr.left+sr.width/2),dy=innerHeight/2-(sr.top+scrollY+sr.height/2);
-    gsap.timeline({scrollTrigger:{trigger:'#inicio',start:'top top',end:'+=65%',pin:true,scrub:.7,anticipatePin:1,refreshPriority:10}})
-      .fromTo('.hl .h-in,.hl .x,.hr .facts,.scroll-cue',{y:0,opacity:1},{y:-50,opacity:0,stagger:.02,duration:.35,ease:'none',immediateRender:false},0)
-      .fromTo('.name .ln:first-child>span',{xPercent:0,y:0},{xPercent:-45,y:0,duration:.6,ease:'none',immediateRender:false},0)
-      .fromTo('.name .ln:last-child>span',{xPercent:0,y:0},{xPercent:45,y:0,duration:.6,ease:'none',immediateRender:false},0)
-      .to('.hl',{clipPath:'inset(0% 100% 0% 0%)',duration:.6,ease:'none'},.2)
-      .fromTo(spot,{x:0,y:0,scale:1,opacity:1},{x:dx,y:dy,scale:1.55,opacity:1,duration:.8,ease:'none',immediateRender:false},.05)
-      .to('.hero-wipe',{clipPath:'inset(52% 0% 0% 0%)',duration:.4,ease:'none'},.55);
-    ScrollTrigger.sort();ScrollTrigger.refresh();}));
+      const st={trigger:'#inicio',start:'top top',end:'bottom top',scrub:.5};
+      gsap.fromTo('.name .ln:first-child>span',{xPercent:0},{xPercent:-14,ease:'none',immediateRender:false,scrollTrigger:st});
+      gsap.fromTo('.name .ln:last-child>span',{xPercent:0},{xPercent:14,ease:'none',immediateRender:false,scrollTrigger:st});
+      gsap.fromTo('.spot',{y:0,scale:1},{y:140,scale:1.06,ease:'none',immediateRender:false,scrollTrigger:st});
+      gsap.fromTo('.hr .facts',{y:0},{y:60,ease:'none',immediateRender:false,scrollTrigger:st});
+      gsap.fromTo('.hl .x',{y:0},{y:-90,ease:'none',immediateRender:false,scrollTrigger:st});
+      ScrollTrigger.refresh();}));
 
     /* 4 · títulos: as palavras sobem e a fita passa pintando o estêncil */
     $$('.paint').forEach(h=>{gsap.set(h,{'--p':'0%','--o':0});
