@@ -1,241 +1,739 @@
 <!doctype html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Currículo — Eduardo Augusto</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Dancing+Script:wght@600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=25">
+<title>Eduardo Augusto — Currículo</title>
+<meta name="description" content="Currículo de Eduardo Augusto: desenvolvimento de sistemas e análise de dados, estágio ou júnior, disponibilidade imediata.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231A2414'/%3E%3Cg fill='%23A8BF6E'%3E%3Crect x='10' y='12' width='6' height='40'/%3E%3Crect x='10' y='12' width='20' height='6'/%3E%3Crect x='10' y='29' width='16' height='6'/%3E%3Crect x='10' y='46' width='20' height='6'/%3E%3Crect x='40' y='10' width='6' height='44' transform='rotate(18 43 32)'/%3E%3Crect x='46' y='10' width='6' height='44' transform='rotate(-18 49 32)'/%3E%3C/g%3E%3C/svg%3E">
+<script>(function(){var t=null;try{t=localStorage.getItem('ea5-theme')}catch(e){}var q=new URLSearchParams(location.search).get('theme');
+document.documentElement.dataset.theme=q||t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.classList.add('js');var m=null;try{m=localStorage.getItem('ea5-motion')}catch(e){}var qm=new URLSearchParams(location.search).get('motion');if(qm)m=qm;var os=matchMedia('(prefers-reduced-motion: reduce)').matches;if(m==='off'||(m!=='on'&&os))document.documentElement.classList.add('rm');if(os&&!m)document.documentElement.classList.add('os-rm')})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@600..800&family=Hanken+Grotesk:ital,wght@0,400..700;1,400..600&display=swap">
+<style>
+/* =====================================================================
+   v5 — identidade Bastidores (musgo/oliva dominante, azul-tinta com presença)
+   Verde da marca: #A8BF6E (escuro) / #4B6420 (claro), matiz ~80°, distinto do verde da FM.
+   Azul: #0C2742 / #0A1E33 / #1C3150 (escuro) · #C9D9EA / #B8CCE1 (claro).
+   Estêncil só em nome, títulos de seção e números. Corpo em Hanken Grotesk.
+   ===================================================================== */
+:root{--disp:'Big Shoulders Stencil Display',Impact,sans-serif;--sans:'Hanken Grotesk',system-ui,sans-serif;
+  --ease:cubic-bezier(.76,0,.24,1);--out:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,4.5vw,72px);--max:1320px}
+:root[data-theme="dark"]{
+  --bg:#1A2414;--deep:#121A0E;--surf:#232F1B;--surf2:#2C3A23;--ink:#ECEEDF;--muted:#AEB69A;--line:#33422A;--tape:#A8BF6E;--tape-txt:#A8BF6E;--on-tape:#141C0E;
+  --hero-l:#121A0E;--hero-ink:#ECEEDF;--hero-muted:#AEB69A;--hero-tape:#A8BF6E;
+  --b-bg:#0C2742;--b-deep:#0A1E33;--b-surf:#13304F;--b-ink:#E6ECF2;--b-muted:#A9B9CB;--b-line:#23395A;--b-acc:#9DB6D3;--b-tag:#1C3150;--b-on-tag:#C9D9EA;
+  --duo-d:#0A1E33;--duo-l:#A8BF6E;--focus:#9DB6D3}
+:root[data-theme="light"]{
+  --bg:#E3E6D3;--deep:#3E5220;--surf:#D7DCC2;--surf2:#CDD3B5;--ink:#1A2414;--muted:#4F5A3E;--line:#BFC6A6;--tape:#4B6420;--tape-txt:#4B6420;--on-tape:#F1F2E6;
+  --hero-l:#3E5220;--hero-ink:#F1F2E6;--hero-muted:#D3D9BE;--hero-tape:#DDE7B8;
+  --b-bg:#C9D9EA;--b-deep:#0C2742;--b-surf:#B8CCE1;--b-ink:#0C2742;--b-muted:#3B4F66;--b-line:#A9BDD3;--b-acc:#1C3150;--b-tag:#1C3150;--b-on-tag:#E1EAF4;
+  --duo-d:#1C3150;--duo-l:#DDE7B8;--focus:#1C3150}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 1.03rem/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+::selection{background:var(--tape);color:var(--on-tape)}
+.lbl{font:700 .72rem/1.25 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.wrap{max-width:var(--max);margin:0 auto}
+.skip{position:absolute;left:-999px;top:8px;z-index:400;background:var(--tape);color:var(--on-tape);padding:8px 14px}.skip:focus{left:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* fita de marcação */
+.mark{position:absolute;width:24px;height:24px;pointer-events:none}
+.mark::before,.mark::after{content:"";position:absolute;background:var(--mk,var(--tape))}
+.mark::before{left:0;top:0;width:100%;height:5px}.mark::after{left:0;top:0;width:5px;height:100%}
+.mark.tl{left:0;top:0}.mark.tr{right:0;top:0;transform:scaleX(-1)}.mark.bl{left:0;bottom:0;transform:scaleY(-1)}.mark.br{right:0;bottom:0;transform:scale(-1,-1)}
+.x{position:absolute;width:20px;height:20px;pointer-events:none}
+.x::before,.x::after{content:"";position:absolute;left:0;top:7.5px;width:100%;height:5px;background:var(--mk,var(--tape));transform:rotate(45deg)}.x::after{transform:rotate(-45deg)}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 22px;background:var(--tape);color:var(--on-tape);font:700 .92rem/1 var(--sans);position:relative;will-change:transform}
+.btn .ar{transition:transform .35s var(--ease)}.btn:hover .ar{transform:translateX(4px)}
+.btn.o{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.blue{background:var(--b-tag);color:var(--b-on-tag)}
+
+/* header */
+.top{position:fixed;inset:0 0 auto;z-index:80;display:flex;align-items:center;gap:22px;padding:14px var(--pad);transition:background .35s,box-shadow .35s}
+.top.solid{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:var(--hero-ink);--tape:var(--hero-tape)}
+.top.solid .brand,.top.on-light .brand{color:var(--ink);--tape:var(--tape-txt)}
+.brand svg{width:48px;height:27px}
+.brand span{font:700 1.15rem/1 var(--disp);letter-spacing:.07em;text-transform:uppercase}
+.nav{display:flex;gap:2px;margin-left:auto;background:var(--surf);padding:3px}
+.nav a{position:relative;padding:9px 12px;font:600 .9rem/1 var(--sans);color:var(--ink);opacity:.82}
+.nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:4px;background:var(--tape);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.nav a:hover,.nav a.on{opacity:1}.nav a:hover::after,.nav a.on::after{transform:scaleX(1)}
+.tools{display:flex;gap:6px}
+.tb{height:40px;padding:0 14px;display:inline-flex;align-items:center;font:700 .72rem var(--sans);letter-spacing:.12em;text-transform:uppercase;background:var(--surf);color:var(--ink)}
+.tb:hover{background:var(--surf2)}
+.tg{position:relative;width:150px;padding:0 4px}
+.tg i{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);background:var(--tape);transition:transform .55s var(--ease)}
+:root[data-theme="dark"] .tg i{transform:translateX(100%)}
+.tg span{position:relative;z-index:1;width:50%;text-align:center}
+:root[data-theme="light"] .tg .l,:root[data-theme="dark"] .tg .d{color:var(--on-tape)}
+.menu-btn{display:none}
+.tg.lg{width:84px}
+:root[data-theme] .lg i{transform:none}:root[lang="en"][data-theme] .lg i{transform:translateX(100%)}
+:root[data-theme] .lg .l{color:var(--on-tape)}:root[data-theme] .lg .d{color:inherit}:root[lang="en"][data-theme] .lg .l{color:inherit}:root[lang="en"][data-theme] .lg .d{color:var(--on-tape)}
+.idx-h .lg{margin-left:auto}.idx-h .lg+.tb{margin-left:8px}
+@media (max-width:430px){.top .lg{display:none}}
+
+/* faixas de profundidade entre seções */
+.band{height:16vh;min-height:90px}
+.band.g2b{background:linear-gradient(180deg,var(--bg),var(--b-bg))}
+.band.b2g{background:linear-gradient(180deg,var(--b-bg),var(--bg))}
+.band.g2d{background:linear-gradient(180deg,var(--bg),var(--hero-l))}
+
+/* ===== INÍCIO ===== */
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);min-height:min(100svh,940px);background:var(--bg)}
+.hl{position:relative;background:var(--hero-l);color:var(--hero-ink);padding:140px var(--pad) 64px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;--mk:var(--hero-tape)}
+:root[data-theme="dark"] .hl{background:linear-gradient(165deg,#121A0E 55%,#0E1C26)}
+.hl .lbl{color:var(--hero-muted)}
+.name{font:700 clamp(2.8rem,5.4vw,5.2rem)/.92 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-top:16px}
+.name .ln{display:block;overflow:hidden}.name .ln>span{display:inline-block}
+.name .ln:last-child{color:var(--hero-tape)}
+.pos-line{font:600 clamp(1.05rem,1.5vw,1.3rem)/1.3 var(--sans);margin-top:22px;color:var(--hero-tape);letter-spacing:.01em}
+.value{font:500 clamp(1.5rem,2.5vw,2.35rem)/1.2 var(--sans);letter-spacing:-.015em;margin-top:14px;max-width:24ch}
+.bridge{color:var(--hero-muted);margin-top:16px;max-width:52ch}
+.hl .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.hl .btn{background:var(--hero-tape);color:#141C0E}
+.hl .btn.o{background:transparent;color:var(--hero-ink)}
+.hr{position:relative;padding:104px var(--pad) 40px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:24px}
+@media (min-width:961px){.hr .spot{width:min(100%,44vw,calc((100svh - 150px) * .8));padding:16px}.hr .facts{display:none}}
+.spot{position:relative;width:min(100%,300px);padding:14px}
+.duo{position:relative;background:var(--duo-l);overflow:hidden}
+.duo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.15);mix-blend-mode:multiply}
+.duo::after{content:"";position:absolute;inset:0;background:var(--duo-d);mix-blend-mode:lighten}
+.spot .duo{aspect-ratio:4/5}.spot img{object-position:46% 28%}
+/* serigrafia em estêncil: três cores da identidade em camadas, com registro */
+.print{position:relative;aspect-ratio:4/5;background:#121A0E;margin:0}
+:root[data-theme="light"] .print{background:#EEF0E6}
+.print .pl{position:absolute;inset:0;display:block}.print img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;will-change:transform;backface-visibility:hidden}
+:root[data-theme="dark"] .print .t-light,:root[data-theme="light"] .print .t-dark{display:none}
+.print .sq{position:absolute;top:-4%;bottom:-4%;left:0;width:8px;background:var(--tape);opacity:0;pointer-events:none;transform:rotate(2deg)}
+.print .reg{position:absolute;width:16px;height:16px;border:2px solid #9DB6D3;border-radius:50%;pointer-events:none}
+:root[data-theme="light"] .print .reg{border-color:#1C3150}
+.print .reg::before,.print .reg::after{content:"";position:absolute;background:inherit;border-color:inherit}
+.print .reg::before{left:50%;top:-6px;bottom:-6px;width:2px;margin-left:-1px;background:#9DB6D3}.print .reg::after{top:50%;left:-6px;right:-6px;height:2px;margin-top:-1px;background:#9DB6D3}
+:root[data-theme="light"] .print .reg::before,:root[data-theme="light"] .print .reg::after{background:#1C3150}
+/* nome com a segunda cor fora de registro, como na impressão */
+.name{text-shadow:var(--nx,3px) var(--ny,2px) 0 #1C3150}
+:root[data-theme="dark"] .name{text-shadow:var(--nx,3px) var(--ny,2px) 0 #2B4466}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;color:var(--muted);font-size:.9rem;max-width:380px}
+.facts b{display:block;color:var(--ink);font:700 1.15rem/1.1 var(--disp);letter-spacing:.06em;text-transform:uppercase}
+.scroll-cue{position:absolute;right:var(--pad);bottom:28px;color:var(--muted)}
+
+/* ===== títulos de seção ===== */
+.sec{padding:110px var(--pad) 110px;position:relative}
+.sh{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:24px;align-items:end;margin-bottom:56px}
+.sh .no{font:700 clamp(3rem,4.8vw,4.4rem)/.9 var(--disp);color:var(--tape-txt)}
+.sh h2{font:700 clamp(2.2rem,4vw,3.6rem)/1 var(--disp);letter-spacing:.05em;text-transform:uppercase}
+.sh p{color:var(--muted);max-width:62ch;margin-top:12px;font-size:1.05rem}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.06em}.w>span{display:inline-block}
+
+/* ===== SOBRE (azul) ===== */
+#sobre.blue{background:linear-gradient(180deg,var(--bg) 0,var(--b-bg) 110px)}
+.blue{background:var(--b-bg);color:var(--b-ink);--tape-txt:var(--b-acc);--muted:var(--b-muted);--line:var(--b-line);--mk:var(--b-acc)}
+:root[data-theme="dark"] .blue .sh .no{color:#A8BF6E}
+:root[data-theme="light"] .blue .sh .no{color:#4B6420}
+.about-lead{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:24px}
+.about-lead p{font:500 clamp(1.25rem,2vw,1.75rem)/1.4 var(--sans);max-width:44ch}
+.about-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:64px}
+.acard{position:relative;padding:26px 24px 28px;background:var(--b-surf)}
+.acard h3{font:700 1.3rem/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;padding-bottom:12px;margin-bottom:12px;border-bottom:4px solid var(--b-acc)}
+:root[data-theme="dark"] .acard h3{border-color:#A8BF6E}
+.acard p,.acard li{font-size:.95rem;color:var(--b-ink)}
+.acard ul{list-style:none}.acard li{padding:7px 0;border-bottom:1px solid var(--b-line)}
+.acard li small{display:block;color:var(--b-muted);font-size:.84rem}
+.tools-list{display:flex;flex-wrap:wrap;gap:6px}
+.tools-list span{font:600 .8rem/1 var(--sans);padding:7px 10px;background:var(--b-bg);border:1px solid var(--b-line)}
+
+/* ===== PROJETOS ===== */
+.feat{position:relative}
+.feat-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:center}
+.flag{display:inline-block;padding:6px 10px;background:var(--b-tag);color:var(--b-on-tag);transform:rotate(-1deg)}
+.feat-head h3{font:700 clamp(2.4rem,4.6vw,4.2rem)/.95 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-top:16px}
+.feat-head .ov{color:var(--muted);margin-top:16px;max-width:46ch}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.reveal-img{position:relative;overflow:hidden;background:var(--deep)}
+.reveal-img img{width:100%;height:100%;object-fit:cover}
+.feat-cover{aspect-ratio:16/10}
+.chap{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:24px;margin-top:96px}
+.chap>.lbl{color:var(--tape-txt);padding-top:6px}
+.chap h4{font:700 1.6rem/1.05 var(--disp);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.ps{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ps>div{padding:26px;background:var(--surf);position:relative}
+.ps>div:last-child{background:var(--b-bg);color:var(--b-ink)}
+.ps p{font-size:1.05rem}
+.ps ul{list-style:none;margin-top:12px}.ps li{padding:8px 0 8px 22px;position:relative;border-top:1px solid var(--b-line)}
+.ps li::before{content:"";position:absolute;left:0;top:17px;width:12px;height:5px;background:var(--b-acc)}
+:root[data-theme="dark"] .ps li::before{background:#A8BF6E}
+/* sistema interno: palco preso, telas trocam com a rolagem */
+.sys{background:var(--b-deep);color:#E6ECF2;width:100vw;margin:96px 0 0 calc(50% - 50vw);padding:90px var(--pad);--mk:#A8BF6E}
+.sys .in{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:56px;align-items:center;max-width:var(--max);margin:0 auto}
+.sys .lbl{color:#A9B9CB}
+.sys h4{font:700 clamp(1.8rem,2.8vw,2.6rem)/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;margin:12px 0 22px}
+.steps{list-style:none;border-top:1px solid #23395A}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:16px 0;border-bottom:1px solid #23395A;transition:opacity .4s}
+.steps .n{font:700 1.6rem/1 var(--disp);color:#A8BF6E}
+.steps b{display:block;font-weight:700}
+.steps p{color:#C7D3E0;font-size:.94rem}
+.live .steps li{opacity:.38}.live .steps li.on{opacity:1}
+.stage{position:relative;display:block;width:100%;text-align:left;padding:14px;background:#0C2742;cursor:zoom-in}
+.stage .frames{display:block;position:relative;aspect-ratio:16/10;overflow:hidden;background:#000}
+.stage .f{display:block;position:absolute;inset:0}
+.stage .f img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.stage .f.tall img{object-fit:contain;object-position:center;background:#06101c}
+.stage .cap{display:flex;justify-content:space-between;margin-top:10px;color:#A9B9CB}
+.stage .cap span:last-child{background:#1C3150;color:#C9D9EA;padding:3px 8px}
+.m-shots{display:none}
+/* site institucional */
+.site{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:24px;align-items:end}
+.site .desk{aspect-ratio:16/10}
+.site .mob{aspect-ratio:390/844;max-width:240px;justify-self:center;box-shadow:0 0 0 10px var(--deep)}
+.site p{color:var(--muted);margin-top:16px;max-width:56ch}
+/* resultados */
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.num{padding:26px;background:var(--surf);position:relative}
+.num b{display:block;font:700 clamp(3rem,5vw,4.6rem)/.9 var(--disp);color:var(--tape-txt)}
+.num span{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:8px 12px;background:var(--surf);font:600 .86rem/1 var(--sans)}
+.chips span.b{background:var(--b-bg);color:var(--b-ink)}
+/* outros projetos */
+.others{margin-top:120px}
+.others-h{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:18px;margin-bottom:30px}
+.others-h h3{font:700 clamp(1.8rem,3vw,2.6rem)/1 var(--disp);letter-spacing:.06em;text-transform:uppercase}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{height:40px;padding:0 14px;background:var(--surf);font:700 .74rem var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.filters button[aria-pressed="true"]{background:var(--tape);color:var(--on-tape)}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.card{display:flex;flex-direction:column;background:var(--surf);transition:background .3s,opacity .4s,transform .4s}
+.card:hover{background:var(--surf2)}
+.card .cov{position:relative;aspect-ratio:16/10;overflow:hidden;clip-path:inset(4% 4% 0 4%);transition:clip-path .7s var(--ease)}
+.card .cov img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1s var(--out)}
+.card:hover .cov,.card:focus-visible .cov{clip-path:inset(0 0 0 0)}
+.card:hover .cov img{transform:scale(1)}
+.card .body{display:flex;flex-direction:column;gap:10px;padding:22px 22px 24px;flex:1}
+.card .cat{color:var(--tape-txt)}
+.card h4{font:700 1.25rem/1.25 var(--sans)}
+.card p{color:var(--muted);font-size:.95rem;flex:1}
+.card .meta{display:flex;justify-content:space-between;gap:10px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted)}
+.card .go{color:var(--ink);transition:color .25s}
+.card:hover .go{color:var(--b-acc)}
+:root[data-theme="dark"] .card:hover .go{color:#9DB6D3}
+.card[hidden]{display:none}
+.more{display:flex;justify-content:flex-end;margin-top:22px}
+.more a{border-bottom:2px solid var(--tape);padding-bottom:2px}
+
+/* ===== CURRÍCULO (azul) ===== */
+.cv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.cv h3{font:700 1.3rem/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;padding-bottom:12px;border-bottom:4px solid var(--b-acc)}
+:root[data-theme="dark"] .cv h3{border-color:#A8BF6E}
+.cv ul{list-style:none}.cv li{padding:14px 0;border-bottom:1px solid var(--b-line)}
+.cv li b{display:block}.cv li span{color:var(--b-muted);font-size:.92rem}
+.cv li a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.dl{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:40px;padding:26px 28px;background:var(--b-surf)}
+.dl p{flex:1;min-width:240px;font:500 1.15rem/1.35 var(--sans)}
+.dl .btn{background:#A8BF6E;color:#141C0E}
+:root[data-theme="light"] .dl .btn{background:#4B6420;color:#F1F2E6}
+
+/* ===== CONTATO ===== */
+.contact{background:var(--hero-l);color:var(--hero-ink);--mk:var(--hero-tape)}
+.contact .sh .no{color:var(--hero-tape)}.contact .sh p{color:var(--hero-muted)}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding-bottom:18px;border-bottom:2px solid rgba(236,238,223,.2)}
+.mail a{font:500 clamp(1.5rem,3.8vw,3.4rem)/1.1 var(--sans);letter-spacing:-.02em;word-break:break-all;transition:color .25s}
+.mail a:hover{color:var(--hero-tape)}
+.mail a.btn{font:700 .92rem/1 var(--sans);letter-spacing:0;word-break:normal}
+.mail a.btn:hover{color:inherit}
+.mail .btn{color:var(--hero-ink)}
+.mail a.btn:not(.o){background:var(--hero-tape);color:#141C0E}.mail a.btn:not(.o){margin-left:auto}
+.mail a.mail-alt{flex-basis:100%;font:500 .9rem/1.4 var(--sans);letter-spacing:0;opacity:.75;text-decoration:underline;text-underline-offset:3px}
+.chan{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:20px}
+.chan a{display:flex;justify-content:space-between;align-items:center;padding:20px;background:rgba(255,255,255,.07);font-weight:700;transition:background .3s,color .3s}
+.chan a:hover{background:#1C3150;color:#E1EAF4}
+footer{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;padding:30px var(--pad) 38px;color:var(--muted)}
+footer svg{width:40px;height:22px}footer .r{margin-left:auto;display:flex;gap:20px}
+
+/* bancos de luz e abertura */
+.lights{position:fixed;inset:0;z-index:200;display:none;pointer-events:none}.lights i{flex:1}
+.intro{position:fixed;inset:0;z-index:210;display:none;align-items:center;justify-content:center;flex-direction:column;gap:14px;background:linear-gradient(160deg,#1A2414 45%,#0C2742);color:#ECEEDF;cursor:pointer}
+.dec-k{font:700 .74rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#9DB6D3}
+.dec{font:700 clamp(2.4rem,7.4vw,6.4rem)/1 var(--disp);letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;color:#9DB6D3}
+.dec span{display:inline-block;text-align:center}.dec span.ok{color:#ECEEDF}.dec span.ok.g{color:#A8BF6E}
+.dec-bar{display:block;width:min(70vw,640px);height:6px;background:#A8BF6E;transform:scaleX(0);transform-origin:left}
+.intro button{position:absolute;bottom:28px;color:#AEB69A;font:700 .7rem var(--sans);letter-spacing:.14em;text-transform:uppercase}
+
+/* índice / menu */
+dialog.idx{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;background:var(--bg);color:var(--ink);padding:22px var(--pad) 48px;overflow:auto}
+.idx-h{display:flex;align-items:center;gap:14px;margin-bottom:34px}.idx-h .tb{margin-left:auto}
+.idx-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.idx-g h2{font:700 1.5rem/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;padding-bottom:10px;border-bottom:4px solid var(--tape);margin-bottom:8px}
+.idx-g ul{list-style:none}.idx-g li{padding:9px 0;border-bottom:1px solid var(--line)}
+.idx-g li small{display:block;color:var(--muted)}
+.idx-g a,.idx-g button{text-decoration:underline;text-decoration-color:var(--tape);text-underline-offset:3px;text-align:left}
+dialog.lb{margin:auto;border:0;padding:0;width:min(1100px,94vw);background:#0A1E33;color:#E6ECF2}
+dialog.lb::backdrop{background:rgba(10,30,51,.88)}
+.lb-h{display:flex;align-items:center;gap:12px;padding:10px 14px}.lb-h button{margin-left:auto;width:44px;height:44px;background:#A8BF6E;color:#141C0E;font-size:1.3rem}
+.lb-s{display:grid;place-items:center;background:#000;height:min(68vh,660px)}.lb-s img,.lb-s video{max-width:100%;max-height:100%;object-fit:contain}
+.lb-f{display:flex;align-items:center;gap:12px;padding:12px 14px}.lb-f p{flex:1;color:#A9B9CB;font-size:.9rem}.lb-f button{width:44px;height:44px;border:2px solid #23395A}
+dialog.single .lb-f button{visibility:hidden}
+.cur{position:fixed;left:0;top:0;z-index:220;pointer-events:none;padding:6px 10px;background:#1C3150;color:#E1EAF4;font:700 .66rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;opacity:0;transform:translate(-100px,-100px);transition:opacity .2s}
+.cur.on{opacity:1}
+
+
+/* ===== v5b: case linear ===== */
+.case-top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:end}
+.case-top h3{font:700 clamp(3rem,6.4vw,6rem)/.92 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-top:16px}
+.case-top .ov{font:500 clamp(1.2rem,1.8vw,1.6rem)/1.35 var(--sans);margin:14px 0 18px;max-width:30ch}
+.nums3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.nums3 .num{padding:20px}.nums3 .num b{font-size:clamp(2.4rem,3.6vw,3.4rem)}.nums3 .num span{font-size:.88rem}
+.cine{position:relative;height:100vh;margin-top:64px;overflow:hidden;width:100vw;margin-left:calc(50% - 50vw)}
+.cine-media{position:absolute;inset:0;display:block;overflow:hidden;background:var(--deep)}
+.cine-media img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.cine-cap{position:absolute;left:var(--pad);right:var(--pad);bottom:24px;display:flex;justify-content:space-between;gap:12px;z-index:2;pointer-events:none}
+.cine-cap span{background:#1C3150;color:#E1EAF4;padding:6px 10px}
+.story{display:grid;gap:96px;margin-top:96px}
+.blk-t{font:700 clamp(1.6rem,2.4vw,2.2rem)/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:14px}
+.blk-t::before{content:"";flex:none;width:34px;height:6px;background:var(--tape)}
+.big{font:500 clamp(1.3rem,2.2vw,2rem)/1.35 var(--sans);max-width:40ch}
+.built{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.bcard{display:flex;flex-direction:column;background:var(--surf)}
+.bcard.dark{background:var(--b-deep);color:#E6ECF2}
+.bimg{display:block;aspect-ratio:16/9;overflow:hidden}
+.bimg img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform 1s var(--out)}
+.bcard:hover .bimg img{transform:scale(1.04)}
+.bbody{padding:24px 24px 26px;display:flex;flex-direction:column;gap:12px;flex:1}
+.bbody .lbl{color:var(--tape-txt)}.bcard.dark .lbl{color:#9DB6D3}
+.bbody h5{font:700 1.55rem/1 var(--disp);letter-spacing:.06em;text-transform:uppercase}
+.bbody ul{list-style:none;flex:1}
+.bbody li{position:relative;padding:10px 0 10px 22px;border-top:1px solid var(--line)}
+.bcard.dark li{border-color:#23395A}
+.bbody li::before{content:"";position:absolute;left:0;top:19px;width:12px;height:5px;background:var(--tape)}
+.bcard.dark li::before{background:#A8BF6E}
+.bcard.dark .btn.blue{background:#A8BF6E;color:#141C0E}
+.bbody .links{margin-top:6px}
+.res{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.res li{padding:22px;background:var(--surf)}
+.res b{display:block;font:700 1.35rem/1.1 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px}
+.res span{color:var(--muted);font-size:.95rem}
+/* galeria horizontal */
+.hgal{background:var(--b-deep);color:#E6ECF2;margin-top:110px;width:100vw;margin-left:calc(50% - 50vw);padding:80px 0 70px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity}
+.live .hgal{overflow:hidden}
+.hgal-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px;padding:0 var(--pad);margin-bottom:34px;position:sticky;left:0}
+.hgal-h .lbl{color:#A9B9CB}.hgal .blk-t::before{background:#A8BF6E}.hgal .blk-t{margin:0}
+.track{display:flex;gap:24px;padding:0 var(--pad);width:max-content;will-change:transform}
+.shot{flex:none;text-align:left;cursor:zoom-in;padding:0;color:inherit;scroll-snap-align:start;transform-origin:50% 60%}
+.si{display:block;height:min(58vh,540px);aspect-ratio:16/10;overflow:hidden;background:#000;outline:1px solid #23395A}
+.shot.tall .si{aspect-ratio:780/1688}
+.si img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.sc{display:block;margin-top:12px;color:#A9B9CB}
+/* hero → sobre */
+.hero-wipe{position:absolute;inset:0;background:var(--b-bg);z-index:3;clip-path:inset(100% 0 0 0);pointer-events:none;display:none}
+
+.live .hr{overflow:visible;z-index:2}
+
+.spot{z-index:4}
+/* títulos pintados pela fita */
+.paint{--pc:var(--ink)}.blue .paint{--pc:var(--b-ink)}.contact .paint{--pc:var(--hero-ink)}
+.paintfx .paint{position:relative;display:inline-block;color:transparent;-webkit-text-stroke:1.2px var(--pc)}
+.paintfx .paint::before{content:attr(data-text);position:absolute;left:0;top:0;white-space:nowrap;color:var(--pc);-webkit-text-stroke:0;clip-path:inset(-10% calc(100% - var(--p,0%)) -10% 0);pointer-events:none}
+.paintfx .paint::after{content:"";position:absolute;top:.02em;height:.9em;width:.34em;left:calc(var(--p,0%) - .17em);background:var(--tape);opacity:var(--o,0);transform:rotate(-3deg);pointer-events:none}
+.blue .paint::after{background:#A8BF6E}
+:root[data-theme="light"] .blue .paint::after{background:#4B6420}
+/* capas: duotone + janela real que segue o cursor */
+.cov .base,.cov .real{position:absolute;inset:0;display:block}
+.fine .cov .base img{filter:grayscale(1) contrast(1.08)}
+.fine .cov .base::after{content:"";position:absolute;inset:0;background:#1C3150;mix-blend-mode:color;opacity:.9}
+.fine .cov .real{clip-path:inset(50% 50% 50% 50%);transition:clip-path .45s var(--out)}
+.fine .cov .real.on{transition:clip-path .18s linear}
+:root:not(.fine) .cov .real{display:none}
+
+
+/* ===== case FM: dois cards + modal de vídeo ===== */
+.case-top2{max-width:62ch}
+.case-top2 h3{font:700 clamp(3rem,6vw,5.6rem)/.92 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-top:16px}
+.case-top2 .ov{font:500 clamp(1.2rem,1.8vw,1.55rem)/1.35 var(--sans);margin-top:14px;max-width:34ch}
+.stack-line{color:var(--muted);margin-top:12px;font-size:.98rem}
+.fm-cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.vcard{display:flex;flex-direction:column;background:var(--surf)}
+.vcard.dark{background:var(--b-deep);color:#E6ECF2}
+.vcov{position:relative;display:block;width:100%;aspect-ratio:16/9;overflow:hidden;padding:0;cursor:pointer;background:#000}
+.vcov img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform 1.1s var(--out),filter .6s}
+.vcov::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,30,51,.55));pointer-events:none}
+.vcov:hover img,.vcov:focus-visible img{transform:scale(1.05)}
+.vplay{position:absolute;left:18px;bottom:18px;z-index:2;display:inline-flex;align-items:center;gap:10px;padding:10px 16px;background:#A8BF6E;color:#141C0E;font:700 .8rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;transition:transform .4s var(--ease)}
+.vcov:hover .vplay{transform:translateX(6px)}
+.vbody{display:flex;flex-direction:column;gap:12px;padding:24px 26px 26px;flex:1}
+.vbody .lbl{color:var(--tape-txt)}
+.vcard.dark .vbody .lbl{color:#9DB6D3}
+.ctag{align-self:flex-start;background:#1C3150;color:#C9D9EA!important;padding:5px 9px}
+.vbody h4{font:700 clamp(1.5rem,2.2vw,2rem)/1.05 var(--disp);letter-spacing:.05em;text-transform:uppercase}
+.vbody h4 button{text-align:left;font:inherit;letter-spacing:inherit;text-transform:inherit}
+.vbody h4 button:hover{color:var(--tape-txt)}.vcard.dark .vbody h4 button:hover{color:#A8BF6E}
+.vbody p{color:var(--muted);flex:1;max-width:52ch}.vcard.dark .vbody p{color:#C7D3E0}
+.vlinks{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:6px}
+.vcard.dark .btn{background:#A8BF6E;color:#141C0E}
+.lnk{font-weight:700;border-bottom:2px solid currentColor;padding-bottom:2px}
+.lnk:hover{color:var(--b-acc)}
+/* modal */
+dialog.vmodal{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;padding:0;background:transparent;color:#E6ECF2;overflow:hidden}
+dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
+.vm-in{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:clamp(16px,3vw,40px) clamp(16px,5vw,80px)}
+.vm-h{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+.vm-h .lbl{color:#A8BF6E}
+.vm-h h3{font:700 clamp(1.4rem,2.6vw,2.4rem)/1 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-top:6px}
+.vm-x{height:44px;padding:0 16px;background:#A8BF6E;color:#141C0E;font:700 .8rem var(--sans);letter-spacing:.1em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
+.vm-stage{position:relative;width:100%;max-height:72vh;aspect-ratio:16/9;margin:0 auto;background:#000;box-shadow:0 0 0 1px #23395A}
+.vm-stage video{width:100%;height:100%;display:block;background:#000}
+.vm-f{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;color:#C7D3E0;max-width:100%}
+.vm-f p{max-width:70ch}
+.vm-f .lnk{color:#E6ECF2;flex:none}
+.vm-ghost{position:fixed;z-index:400;display:none;overflow:hidden;pointer-events:none;background:#000}
+.vm-ghost img{width:100%;height:100%;object-fit:cover;object-position:top center}
+@media (max-width:960px){.fm-cards{grid-template-columns:1fr}.vbody{padding:20px}.vm-in{padding:14px}.vm-stage{max-height:none}.vm-f{flex-direction:column}}
+
+@media (max-width:1240px){.brand span{display:none}.nav a{padding:9px 9px}.tb{padding:0 11px}}
+@media (max-width:960px){
+  .nav,.top .idx-btn{display:none}.menu-btn{display:inline-flex}
+  .mv span{display:none}
+  .top{padding:12px 16px;gap:10px}.brand span{display:none}.tools{margin-left:auto}.tb{height:38px;padding:0 10px;font-size:.64rem}.tg{width:120px}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hl{padding:96px 18px 38px}.hl .x{display:none}
+  .name{font-size:clamp(2.5rem,11.5vw,3.4rem)}.value{font-size:1.4rem}
+  .hr{padding:30px 18px 40px;flex-direction:row;flex-wrap:wrap;align-items:flex-end}
+  .spot{width:min(86vw,360px);padding:12px}.facts{flex:1;min-width:170px;grid-template-columns:1fr 1fr}
+  .scroll-cue{display:none}
+  .sec{padding:72px 18px 72px}
+  .sh,.about-lead,.feat-head,.chap{grid-template-columns:1fr;gap:10px}
+  .sh{margin-bottom:32px}
+  .about-grid,.ps,.nums,.grid3,.cv,.site{grid-template-columns:1fr}
+  .about-grid{margin-top:36px}
+  .chap{margin-top:56px}
+  .sys{margin:56px 0 0 calc(50% - 50vw);padding:56px 18px}.sys .in{grid-template-columns:1fr;gap:20px}
+  .stage{display:none}.m-shots{display:grid;gap:12px;margin-top:18px}.m-shots img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left;background:#06101c}.m-shots img.tall{object-fit:contain}
+  .site .mob{max-width:180px}
+  .others{margin-top:72px}
+  .case-top,.built,.res{grid-template-columns:1fr}
+  .nums3 .num{padding:14px}.nums3 .num b{font-size:2rem}
+  .cine{height:62vh;margin-top:36px}
+  .story{gap:56px;margin-top:56px}
+  .hgal{margin-top:64px;padding:56px 0 40px}
+  .si{height:44vh}
+  .track{gap:14px;padding:0 18px}
+  .hgal-h{padding:0 18px}
+  .chan{grid-template-columns:1fr 1fr}.mail .btn{margin-left:0}
+  .idx-g{grid-template-columns:1fr}
+  .band{height:60px;min-height:0}
+  footer{padding:26px 18px 34px}footer .r{margin-left:0}
+}
+.rm *,.rm *::before,.rm *::after{transition:none!important;animation:none!important}
+.mv{display:inline-flex;align-items:center;gap:7px;height:40px;padding:0 8px;background:none;color:var(--muted);font:600 .7rem/1 var(--sans);letter-spacing:.04em}
+.mv:hover{color:var(--ink)}.mv i{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.7}.rm .mv i{background:transparent;box-shadow:inset 0 0 0 1.5px currentColor}
+.mv .short{display:none}
+@media (max-width:960px){.mv .long{display:none}.mv .short{display:inline}.mv{padding:0 4px;font-size:.66rem}}
+@media (max-width:430px){.tools a.tb[download]{display:none}.tg{width:108px}}
+
+/* ===== página de currículo ===== */
+.cv-top{padding:118px var(--pad) 52px;background:var(--hero-l);color:var(--hero-ink);--mk:var(--hero-tape)}
+:root[data-theme="dark"] .cv-top{background:linear-gradient(165deg,#121A0E 55%,#0E1C26)}
+.cv-top .lbl{color:var(--hero-muted)}
+.cv-name{font:700 clamp(2.6rem,5.2vw,4.8rem)/.95 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-top:12px;text-shadow:3px 2px 0 #1C3150}
+:root[data-theme="dark"] .cv-name{text-shadow:3px 2px 0 #2B4466}
+.cv-name span{color:var(--hero-tape)}
+.chips2{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chips2 span{padding:8px 12px;background:rgba(255,255,255,.08);font:600 .92rem/1.2 var(--sans)}
+.chips2 span:first-child{background:var(--hero-tape);color:#141C0E}
+.cv-links{margin-top:16px;color:var(--hero-muted)}.cv-links a{color:var(--hero-ink);border-bottom:1px solid currentColor}
+.cv-actions{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-top:26px}
+.cv-actions .btn{background:var(--hero-tape);color:#141C0E}
+.cv-actions .lnk{color:var(--hero-ink)}
+.cv-wrap{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:56px;padding:64px var(--pad) 90px;max-width:var(--max);margin:0 auto;box-sizing:content-box}
+.cv-sec{margin-bottom:60px}
+.cv-sec h2,.cv-side h2{font:700 clamp(1.6rem,2.4vw,2.2rem)/1 var(--disp);letter-spacing:.05em;text-transform:uppercase;margin-bottom:22px}
+.cv-lead{font:500 clamp(1.08rem,1.4vw,1.25rem)/1.55 var(--sans);max-width:66ch}
+.tl2{list-style:none;position:relative;padding-left:40px}
+.tl2::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:4px;background:var(--line)}
+.tl2>li{position:relative;padding-bottom:30px}
+.tl2>li>.x{left:-40px;top:3px}
+.tl2 h3,.item2 h3{font:700 1.15rem/1.3 var(--sans)}
+.org{color:var(--tape-txt);font:600 .92rem/1.4 var(--sans);margin-top:3px}
+.tl2 ul{margin:12px 0 0 0;list-style:none}
+.tl2 ul li{position:relative;padding:6px 0 6px 22px;color:var(--ink)}
+.tl2 ul li::before{content:"";position:absolute;left:0;top:15px;width:12px;height:5px;background:var(--tape)}
+.tl2 p{margin-top:8px}
+.items{display:grid;gap:0}
+.items.grid2{grid-template-columns:1fr 1fr;column-gap:28px}
+.item2{padding:16px 0;border-top:1px solid var(--line)}
+.item2 p{margin-top:6px;color:var(--muted)}
+.cv-main a,.cv-side a{font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--tape)}
+.cv-side{align-self:start;position:sticky;top:90px}
+.box{background:var(--b-bg);color:var(--b-ink);padding:24px 24px 26px;margin-bottom:18px}
+.box h2{font-size:1.45rem!important;margin-bottom:14px!important}
+.clist{list-style:none}.clist li{display:flex;flex-direction:column;padding:9px 0;border-top:1px solid var(--b-line)}
+.clist .lbl{color:var(--b-muted)}
+.skl dt{font-weight:700;margin-top:12px}.skl dt:first-child{margin-top:0}.skl dd{color:var(--b-muted);margin-top:2px}
+@media (max-width:1200px){.top .tb{white-space:nowrap}.top .mv .long{display:none}.top .mv .short{display:inline}}
+@media (max-width:960px){.cv-top{padding:92px 18px 36px}.cv-wrap{grid-template-columns:1fr;gap:20px;padding:40px 18px 60px}.cv-side{position:static}.items.grid2{grid-template-columns:1fr}}
+@media print{
+  @page{size:A4;margin:12mm 14mm}
+  .top,footer,.lights,.intro,dialog,.cv-actions,.skip{display:none!important}
+  body{background:#fff!important;color:#111!important;font-size:10.5pt}
+  .cv-top{background:#fff!important;color:#111!important;padding:0 0 10px}
+  .cv-top .lbl,.cv-links{color:#444!important}.cv-links a{color:#111!important}
+  .cv-name{color:#111!important;text-shadow:none!important;font-size:30pt}.cv-name span{color:#2b5c8a!important}
+  .chips2 span{background:none!important;color:#111!important;padding:0 10px 0 0;font-weight:700}
+  .cv-wrap{grid-template-columns:1fr!important;gap:6px;padding:0;max-width:none}
+  .cv-side{position:static}
+  .box{background:#fff!important;color:#111!important;padding:8px 0;border-top:1.5px solid #16324f}
+  .clist .lbl,.skl dd,.item2 p{color:#333!important}
+  .cv-sec{margin-bottom:14px;break-inside:auto}.tl2>li,.item2{break-inside:avoid}
+  .cv-sec h2,.cv-side h2{font-size:14pt!important;color:#16324f!important;border-bottom:1.5px solid #16324f;padding-bottom:3px}
+  .paint{color:#16324f!important;-webkit-text-stroke:0!important}.paint::before,.paint::after{display:none!important}
+  .rv{opacity:1!important;transform:none!important}
+  .tl2::before{background:#bbb!important}.x::before,.x::after,.tl2 ul li::before{background:#16324f!important}
+  .org{color:#2b5c8a!important}a{color:#111!important}
+}
+</style>
 </head>
 <body>
+<a class="skip" href="#cv">Pular para o conteúdo</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="mk" viewBox="0 0 120 64"><g style="fill:var(--tape)">
+    <rect x="6" y="5" width="7" height="54" transform="rotate(-1 9 32)"/><rect x="6" y="5" width="34" height="7" transform="rotate(1.5 23 8)"/>
+    <rect x="6" y="28.5" width="28" height="7" transform="rotate(-1 20 32)"/><rect x="6" y="52" width="34" height="7" transform="rotate(.8 23 55)"/>
+    <rect x="76" y="2" width="7" height="62" transform="rotate(21 79.5 33)"/><rect x="88" y="2" width="7" height="62" transform="rotate(-21 91.5 33)"/>
+    <rect x="70" y="38" width="32" height="7" transform="rotate(-1.5 86 41)"/></g></symbol></defs></svg>
 
-<a class="skip-link" href="#curriculo">Pular para conteúdo principal</a>
-
-<!-- ===================== NAVBAR ===================== -->
-<header class="navbar" role="banner">
-  <div class="container inner">
-    <a class="brand" href="index.html#inicio" aria-label="Ir para o início">
-      <span class="logo-sig">
-        <span class="logo-text">Eduardo</span>
-        <svg class="logo-flourish" viewBox="0 0 120 18" aria-hidden="true">
-          <path d="M2 9 Q 30 1, 60 9 T 116 7" fill="none" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </span>
-    </a>
-
-    <div class="nav-avatar" aria-hidden="true"><img class="photo" src="img/avatar.jpg" alt=""></div>
-
-    <nav class="nav-links" id="nav-links" aria-label="Navegação Principal">
-      <a href="index.html#inicio"   data-i18n="nav-home">Início</a>
-      <a href="index.html#sobre"    data-i18n="nav-about">Sobre</a>
-      <a href="index.html#projetos" data-i18n="nav-projects">Projetos</a>
-      <a href="#curriculo" data-i18n="nav-cv" class="active" aria-current="page">Currículo</a>
-      <a href="index.html#contato"  data-i18n="nav-contact">Contato</a>
-    </nav>
-
-    <button id="lang-toggle" class="btn secondary" type="button" aria-label="Alternar idioma">EN</button>
-
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar para tema claro">
-      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="4"></circle>
-        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
-      </svg>
-      <svg class="moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-      </svg>
-    </button>
-
-    <button id="nav-toggle" class="nav-toggle" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Abrir menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M3 6h18M3 12h18M3 18h18"></path>
-      </svg>
-    </button>
+<header class="top" id="top">
+  <a class="brand" href="index.html#inicio" aria-label="Eduardo Augusto, início"><svg viewBox="0 0 120 64" aria-hidden="true"><use href="#mk"/></svg><span>Eduardo Augusto</span></a>
+  <nav class="nav" aria-label="Seções">
+    <a href="index.html#inicio">Início</a><a href="index.html#sobre">Sobre</a><a href="index.html#projetos">Projetos</a><a href="#cv" class="on" aria-current="page">Currículo</a><a href="index.html#contato">Contato</a>
+  </nav>
+  <div class="tools">
+    <button class="tb menu-btn" type="button" data-idx aria-haspopup="dialog">Menu</button>
+    <button class="tb idx-btn" type="button" data-idx aria-haspopup="dialog">Ver tudo em lista</button>
+    <button class="mv" id="mv" type="button" aria-pressed="true" title="Ligar ou desligar as animações"><i aria-hidden="true"></i><span class="long">Animações</span><span class="short">Anim.</span></button>
+    <button class="tb tg lg" type="button" aria-label="Mudar idioma" aria-pressed="false"><i></i><span class="l">PT</span><span class="d">EN</span></button>
+    <button class="tb tg" id="tg" type="button" aria-label="Alternar tema"><i></i><span class="l">Claro</span><span class="d">Escuro</span></button>
+    <a class="tb" href="curriculo-eduardo-augusto.pdf" download>CV ↓</a>
   </div>
 </header>
 
-<main>
-  <!-- ===================== CURRÍCULO ===================== -->
-  <section id="curriculo" class="section" aria-labelledby="curriculo-title">
-    <div class="container">
-      <h2 id="curriculo-title" class="reveal" data-i18n="cv-title">Currículo</h2>
-      <p class="sub reveal" data-i18n="cv-sub">Minha trajetória profissional resumida em um só lugar.</p>
-      <div class="cv-photo-wrap reveal">
-        <div class="avatar" aria-hidden="true"><img class="photo" src="img/avatar.jpg" alt=""></div>
-      </div>
-      <div class="actions reveal" style="margin-top:24px;justify-content:center">
-        <a class="btn" href="curriculo-eduardo-augusto.pdf" download data-i18n="footer-btn">Baixar Currículo</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== RESUMO ===================== -->
-  <section id="cv-resumo" class="section" aria-labelledby="cv-resumo-title">
-    <div class="container">
-      <h2 id="cv-resumo-title" class="reveal" data-i18n="cv-resumo-title">Resumo</h2>
-      <p class="reveal cv-resumo-text" data-i18n="cv-resumo-text">Graduando em Análise e Desenvolvimento de Sistemas, cheguei à tecnologia depois de uma trajetória que passou por vendas e quase dois anos de call center — experiências que me deram oratória, argumentação e uma leitura afiada de negociações. Tenho conhecimentos aplicados em SQL e desenvolvimento web full-stack, comprovados no projeto acadêmico Accex, além de passagem por Java, competência em análise de dados com Power BI (Dashboards e DAX) e certificação Google Cloud Computing Foundations. Sou também entusiasta de Inteligência Artificial, estudando soluções de IA Generativa com serviços AWS. Busco oportunidade como Estagiário ou Júnior, oferecendo adaptabilidade, boa comunicação e vontade genuína de aprender.</p>
-    </div>
-  </section>
-
-  <!-- ===================== EXPERIÊNCIA ===================== -->
-  <section id="cv-experiencia" class="section" aria-labelledby="cv-experiencia-title">
-    <div class="container">
-      <h2 id="cv-experiencia-title" class="reveal" data-i18n="cv-experiencia-title">Experiência</h2>
-      <div class="cv-list">
-        <div class="cv-item reveal">
-          <div class="cv-item-head">
-            <strong data-i18n="cv-exp-1-t">Call Center</strong>
-            <span class="cv-item-meta" data-i18n="cv-exp-1-p">Set.2024 – Jul.2026</span>
-          </div>
-          <p class="cv-item-org" data-i18n="cv-exp-1-y">EMDIA Serviços Especializados em Cobranças LTDA</p>
-          <p data-i18n="cv-exp-1-d">Foco em auxiliar o cliente, atuando no setor de negociações, regularização e detalhamento de situações financeiras.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== PROJETOS ===================== -->
-  <section id="cv-projetos" class="section" aria-labelledby="cv-projetos-title">
-    <div class="container">
-      <h2 id="cv-projetos-title" class="reveal" data-i18n="cv-projetos-title">Projetos</h2>
-      <div class="cv-list">
-        <div class="cv-item reveal">
-          <strong data-i18n="cv-proj-1-t">Accex — Acessibilidade Urbana</strong>
-          <p data-i18n="cv-proj-1-d">Plataforma web full-stack (Node.js, MySQL, EJS) para classificação de acessibilidade urbana — projeto de conclusão de curso técnico.</p>
-          <a class="cv-link" href="https://github.com/oAccex/Accex-main---Copia.git" target="_blank" rel="noopener" data-i18n="btn-repo">Repositório</a>
-        </div>
-        <div class="cv-item reveal">
-          <strong data-i18n="cv-proj-2-t">Dashboard de Análise de Vendas</strong>
-          <p data-i18n="cv-proj-2-d">Projeto prático em Power BI com ETL, modelagem de dados e medidas DAX para acompanhar indicadores comerciais e performance de vendas.</p>
-          <a class="cv-link" href="https://app.powerbi.com/view?r=eyJrIjoiZWFlZWM5ZGMtMTE4Zi00NDQwLThkY2EtYmQxMWYzN2IxNjc5IiwidCI6ImIxMDUxYzRiLTNiOTQtNDFhYi05NDQxLWU3M2E3MjM0MmZkZCJ9" target="_blank" rel="noopener" data-i18n="btn-deploy">Acessar Deploy</a>
-        </div>
-        <div class="cv-item reveal">
-          <strong data-i18n="cv-proj-3-t">Identidade Visual — F M Locação</strong>
-          <p data-i18n="cv-proj-3-d">Gestão de projetos, branding, materiais digitais e gestão contínua do marketing no Instagram (reels, fotos e vídeos).</p>
-          <a class="cv-link" href="https://www.instagram.com/fmlocacao" target="_blank" rel="noopener" data-i18n="btn-insta">Ver Instagram</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FORMAÇÃO ===================== -->
-  <section id="cv-formacao" class="section" aria-labelledby="cv-formacao-title">
-    <div class="container">
-      <h2 id="cv-formacao-title" class="reveal" data-i18n="cv-formacao-title">Formação</h2>
-      <div class="cv-list">
-        <div class="cv-item reveal">
-          <div class="cv-item-head">
-            <strong data-i18n="cv-form-1-t">Análise e Desenvolvimento de Sistemas</strong>
-            <span class="cv-item-meta" data-i18n="cv-form-1-y">Ago.2024 – Atualmente</span>
-          </div>
-          <p data-i18n="cv-form-1-d">Universidade Cruzeiro do Sul</p>
-        </div>
-        <div class="cv-item reveal">
-          <div class="cv-item-head">
-            <strong data-i18n="cv-form-2-t">Ensino Médio Técnico em Informática para Internet</strong>
-            <span class="cv-item-meta" data-i18n="cv-form-2-y">Jan.2021 – Dez.2023</span>
-          </div>
-          <p data-i18n="cv-form-2-d">FIEB — Fundação Instituto de Educação de Barueri</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CERTIFICAÇÕES ===================== -->
-  <section id="cv-certificacoes" class="section" aria-labelledby="cv-certificacoes-title">
-    <div class="container">
-      <h2 id="cv-certificacoes-title" class="reveal" data-i18n="cv-certificacoes-title">Certificações</h2>
-      <div class="cv-list">
-        <div class="cv-item reveal">
-          <div class="cv-item-head">
-            <strong data-i18n="cv-cert-1-t">Google Cloud Computing Foundations</strong>
-            <span class="cv-item-meta">2025</span>
-          </div>
-          <a class="cv-link" href="https://www.skills.google/public_profiles/7eddcbe9-1340-4e33-bcc8-31cb21a17556" target="_blank" rel="noopener" data-i18n="cv-cert-1-link">Ver certificado</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CURSOS ===================== -->
-  <section id="cv-cursos" class="section" aria-labelledby="cv-cursos-title">
-    <div class="container">
-      <h2 id="cv-cursos-title" class="reveal" data-i18n="cv-cursos-title">Cursos</h2>
-      <div class="cv-list">
-        <div class="cv-item reveal">
-          <div class="cv-item-head">
-            <strong data-i18n="cv-curso-1-t">Power BI</strong>
-            <span class="cv-item-meta">2025 · Senai</span>
-          </div>
-          <p data-i18n="cv-curso-1-d">Business Intelligence com Microsoft Power BI, manipulação e tratamento de dados, desenvolvimento de dashboards e relatórios.</p>
-        </div>
-        <div class="cv-item reveal">
-          <div class="cv-item-head">
-            <strong data-i18n="cv-curso-2-t">Informática</strong>
-            <span class="cv-item-meta">2024 · Microcamp</span>
-          </div>
-          <p data-i18n="cv-curso-2-d">Noções gerais de tecnologia, Pacote Office (Word, Excel, PowerPoint), edição de imagens com Adobe Photoshop.</p>
-        </div>
-        <div class="cv-item reveal">
-          <div class="cv-item-head">
-            <strong data-i18n="cv-curso-3-t">AWS — Generative AI Foundations</strong>
-            <span class="cv-item-meta">2026 · Senai</span>
-          </div>
-          <p data-i18n="cv-curso-3-d">Treinamento Generative AI Foundations da AWS, com badge de conclusão (Credly), estudando a aplicação prática de soluções de IA Generativa.</p>
-          <a class="cv-link" href="https://www.credly.com/badges/b56936c3-143b-4568-8aef-1e836a293dcb/public_url" target="_blank" rel="noopener" data-i18n="cv-curso-3-link">Ver badge</a>
-        </div>
-        <div class="cv-item reveal">
-          <div class="cv-item-head">
-            <strong data-i18n="cv-curso-4-t">Desenvolvimento de Agentes com IA — AI-103</strong>
-            <span class="cv-item-meta">2026 · Senai</span>
-          </div>
-          <p data-i18n="cv-curso-4-d">AI-103: Desenvolvendo aplicativos e agentes de IA na Microsoft Azure — Azure AI Foundry, orquestração de agentes e integração com serviços de linguagem.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<main id="cv">
+<section class="cv-top" aria-label="Currículo">
+  <div class="wrap">
+    <p class="lbl">Currículo</p>
+    <h1 class="cv-name">Eduardo <span>Augusto</span></h1>
+    <p class="chips2"><span>Desenvolvimento de Sistemas e Análise de Dados</span><span>Estágio ou Júnior</span><span>Disponibilidade imediata</span></p>
+    <p class="cv-links"><span>Barueri, SP</span> · <a href="mailto:edaugusto0111@gmail.com">edaugusto0111@gmail.com</a> · <a href="https://www.linkedin.com/in/edaugusto" target="_blank" rel="noopener">linkedin.com/in/edaugusto</a></p>
+    <div class="cv-actions"><a class="btn mag" href="curriculo-eduardo-augusto.pdf" download>Baixar currículo (PDF) <span class="ar">↓</span></a><button class="lnk" type="button" id="print-btn">Imprimir esta página</button></div>
+  </div>
+</section>
+<div class="cv-wrap">
+  <div class="cv-main">
+    <section class="cv-sec rv"><h2 class="split paint" data-text="Resumo Profissional">Resumo Profissional</h2>
+      <p class="cv-lead">Graduando em Análise e Desenvolvimento de Sistemas e técnico em Informática para Internet. Como freelancer, desenvolvo o site institucional e o sistema de gestão interno da FM Locação em Python e Django, com mais de 200 testes automatizados. Também trabalho com SQL e análise de dados em Power BI (DAX) e concluí cursos de IA generativa e agentes (AWS e Azure). Antes da tecnologia, passei por vendas e quase dois anos de call center, que me deram oratória, argumentação e leitura de negociações. Busco oportunidade como Estagiário ou Júnior.</p></section>
+    <section class="cv-sec"><h2 class="split paint" data-text="Experiência Profissional">Experiência Profissional</h2>
+      <ol class="tl2">
+        <li class="rv"><span class="x" aria-hidden="true"></span><h3>Desenvolvedor Web (Freelancer)</h3><p class="org">FM Locação | 2026 – Atualmente</p>
+          <ul><li>Site institucional (<a href="https://fmlocacao.com.br" target="_blank" rel="noopener">fmlocacao.com.br</a>) com catálogo, simulador de composição de mesa e assistente que envia o pedido pronto pelo WhatsApp; conteúdo editado em painel próprio de acesso restrito.</li>
+          <li>Sistema de gestão interno em Python e Django: disponibilidade por período (reservas, higienização e sublocação), orçamento aprovado que vira contrato e controle de acesso por perfil.</li>
+          <li>Mais de 200 testes automatizados cobrindo as regras de negócio, com verificação automática via GitHub Actions.</li></ul></li>
+        <li class="rv"><span class="x" aria-hidden="true"></span><h3>Call Center</h3><p class="org">EMDIA Serviços Especializados em Cobranças LTDA | Set.2024 – Jul.2026</p>
+          <p>Foco em auxiliar o cliente, atuando no setor de negociações, regularização e detalhamento de situações financeiras.</p></li>
+      </ol></section>
+    <section class="cv-sec"><h2 class="split paint" data-text="Projetos">Projetos</h2>
+      <div class="items">
+        <article class="item2 rv"><h3>Accex — Acessibilidade Urbana</h3><p>Plataforma web full-stack (Node.js, MySQL, EJS) para classificação de acessibilidade urbana — projeto de conclusão de curso técnico. <a href="https://github.com/oAccex/Accex-main---Copia.git" target="_blank" rel="noopener">Repositório</a></p></article>
+        <article class="item2 rv"><h3>Dashboard de Análise de Vendas</h3><p>Projeto prático em Power BI com ETL, modelagem de dados e medidas DAX para acompanhar indicadores comerciais e performance de vendas. <a href="https://app.powerbi.com/view?r=eyJrIjoiZWFlZWM5ZGMtMTE4Zi00NDQwLThkY2EtYmQxMWYzN2IxNjc5IiwidCI6ImIxMDUxYzRiLTNiOTQtNDFhYi05NDQxLWU3M2E3MjM0MmZkZCJ9" target="_blank" rel="noopener">Ver dashboard</a></p></article>
+        <article class="item2 rv"><h3>Identidade Visual — F M Locação</h3><p>Gestão de projetos, branding, materiais digitais e gestão contínua do marketing no Instagram (reels, fotos e vídeos). <a href="https://www.instagram.com/fmlocacao" target="_blank" rel="noopener">Instagram</a></p></article>
+      </div></section>
+    <section class="cv-sec"><h2 class="split paint" data-text="Formação Acadêmica">Formação Acadêmica</h2>
+      <ol class="tl2">
+        <li class="rv"><span class="x" aria-hidden="true"></span><h3>Análise e Desenvolvimento de Sistemas</h3><p class="org">Universidade Cruzeiro do Sul | Ago.2024 – Atualmente</p></li>
+        <li class="rv"><span class="x" aria-hidden="true"></span><h3>Ensino Médio Técnico em Informática para Internet</h3><p class="org">FIEB — Fundação Instituto de Educação de Barueri | Jan.2021 – Dez.2023</p></li>
+      </ol></section>
+    <section class="cv-sec"><h2 class="split paint" data-text="Certificações">Certificações</h2>
+      <div class="items"><article class="item2 rv"><h3>Google Cloud Computing Foundations</h3><p class="org">Google Cloud | 2025 | <a href="https://www.skills.google/public_profiles/7eddcbe9-1340-4e33-bcc8-31cb21a17556" target="_blank" rel="noopener">Ver certificado</a></p></article></div></section>
+    <section class="cv-sec"><h2 class="split paint" data-text="Cursos">Cursos</h2>
+      <div class="items grid2">
+        <article class="item2 rv"><h3>Desenvolvimento de Agentes com IA — AI-103</h3><p class="org">Senai | 2026</p></article>
+        <article class="item2 rv"><h3>AWS — Generative AI Foundations</h3><p class="org">Senai | 2026 | <a href="https://www.credly.com/badges/b56936c3-143b-4568-8aef-1e836a293dcb/public_url" target="_blank" rel="noopener">Ver badge</a></p></article>
+        <article class="item2 rv"><h3>Power BI</h3><p class="org">Senai | 2025</p></article>
+        <article class="item2 rv"><h3>Informática</h3><p class="org">Microcamp | 2024</p></article>
+      </div></section>
+  </div>
+  <aside class="cv-side">
+    <section class="box rv"><h2>Contato</h2>
+      <ul class="clist"><li><span class="lbl">E-mail</span><a href="mailto:edaugusto0111@gmail.com">edaugusto0111@gmail.com</a></li>
+        <li><span class="lbl">LinkedIn</span><a href="https://www.linkedin.com/in/edaugusto" target="_blank" rel="noopener">linkedin.com/in/edaugusto</a></li>
+        <li><span class="lbl">Localização</span><span>Barueri, SP</span></li>
+        <li><span class="lbl">Portfólio</span><a href="index.html">edaaugusto.github.io/portfolio</a></li>
+        <li><span class="lbl" data-en="Repositories">Repositório</span><a href="https://github.com/edaaugusto" target="_blank" rel="noopener">github.com/edaaugusto</a></li></ul></section>
+    <section class="box rv"><h2>Competências</h2>
+      <dl class="skl"><dt>Desenvolvimento e automação:</dt><dd>Python, Django, HTML, CSS, JavaScript, Node.js, EJS, Java, testes automatizados, GitHub Actions</dd>
+        <dt>Banco de dados:</dt><dd>SQL, MySQL</dd><dt>Análise de dados:</dt><dd>Power BI, DAX, ETL, modelagem de dados, dashboards</dd>
+        <dt>Nuvem e IA:</dt><dd>Google Cloud, AWS, Microsoft Azure, Azure AI Foundry, IA Generativa, agentes de IA</dd>
+        <dt>Ferramentas:</dt><dd>Git, GitHub, Pacote Office (Word, Excel, PowerPoint), Adobe Illustrator</dd>
+        <dt>Comportamentais:</dt><dd>comunicação, oratória, negociação, adaptabilidade, atendimento ao cliente</dd></dl></section>
+    <section class="box rv"><h2>Idiomas</h2><p>Português (nativo), Inglês (básico a intermediário)</p></section>
+  </aside>
+</div>
 </main>
 
-<!-- ===================== FOOTER ===================== -->
-<footer class="footer" role="contentinfo">
-  <div class="container top">
-    <div class="cta">
-      <span class="logo-sig footer-logo">
-        <span class="logo-text">Eduardo</span>
-        <svg class="logo-flourish" viewBox="0 0 120 18" aria-hidden="true">
-          <path d="M2 9 Q 30 1, 60 9 T 116 7" fill="none" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </span>
-      <h3 data-i18n="footer-title">Vamos construir o futuro juntos?</h3>
-      <p data-i18n="footer-desc">Aberto a oportunidades de estágio ou início de carreira em tecnologia — desenvolvimento, dados ou o que fizer sentido pro time.</p>
-      <div class="actions" style="margin-top:24px;justify-content:flex-start">
-        <a class="btn light" href="index.html#contato" data-i18n="hero-btn-talk">Fale Comigo</a>
-      </div>
-    </div>
-    <nav class="sitemap" aria-label="Mapa do site">
-      <a href="index.html#inicio"   data-i18n="nav-home">Início</a>
-      <a href="index.html#sobre"    data-i18n="nav-about">Sobre</a>
-      <a href="index.html#projetos" data-i18n="nav-projects">Projetos</a>
-      <a href="index.html#contato"  data-i18n="nav-contact">Contato</a>
-    </nav>
-    <div class="social" aria-label="Perfis sociais">
-      <a href="https://github.com/edaaugusto" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.41-1.35-1.79-1.35-1.79-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.26 1.86 1.26 1.08 1.86 2.83 1.32 3.52 1.01.11-.79.42-1.32.76-1.62-2.66-.3-5.46-1.33-5.46-5.9 0-1.3.47-2.36 1.25-3.19-.13-.3-.54-1.52.12-3.16 0 0 1.02-.33 3.34 1.22a11.6 11.6 0 0 1 6.08 0c2.31-1.55 3.33-1.22 3.33-1.22.67 1.64.26 2.86.13 3.16.78.83 1.25 1.89 1.25 3.19 0 4.58-2.81 5.59-5.49 5.89.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"></path></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/edaugusto" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.84v2.18h.05c.54-1.02 1.87-2.18 3.86-2.18 4.13 0 4.89 2.72 4.89 6.27V24h-4v-7.15c0-1.7-.03-3.9-2.38-3.9-2.39 0-2.76 1.86-2.76 3.78V24h-4V8z"></path></svg>
-      </a>
-    </div>
-  </div>
-  <div class="container bottom">
-    <small>© <span data-year>2026</span> Eduardo Augusto — <span data-i18n="footer-copy">Desenvolvido com código limpo (HTML/CSS/JS puros).</span></small>
-    <small id="api-status" class="api-status" data-state="checking">Verificando backend…</small>
-    <small><a href="#curriculo" class="back-top" data-i18n="footer-back">Voltar ao topo</a></small>
-  </div>
-</footer>
+<footer><svg viewBox="0 0 120 64" aria-hidden="true"><use href="#mk"/></svg><span>© 2026 Eduardo Augusto</span><span class="r"><button type="button" class="lbl" data-idx>Ver tudo em lista</button><a class="lbl" href="#cv">Topo ↑</a></span></footer>
 
-<script src="js/script.js?v=30" defer></script>
-<script src="js/api-status.js" defer></script>
+<dialog class="idx" id="idx" aria-labelledby="idx-t">
+  <div class="idx-h"><span class="lbl" id="idx-t" style="margin-right:auto">Menu · tudo em lista</span><button class="tb tg lg idx-lg" type="button" aria-label="Mudar idioma" aria-pressed="false"><i></i><span class="l">PT</span><span class="d">EN</span></button><button class="tb" type="button" id="close-idx">Fechar ×</button></div>
+  <div class="idx-g">
+    <div><h2>Seções</h2><ul><li><a href="index.html#inicio">Início</a></li><li><a href="index.html#sobre">Sobre</a></li><li><a href="index.html#projetos">Projetos</a></li><li><a href="#cv">Currículo</a></li><li><a href="index.html#contato">Contato</a></li></ul></div>
+    <div><h2>Projetos</h2><ul><li><a href="https://fmlocacao.com.br" target="_blank" rel="noopener">FM Locação — site</a><small>Python, JavaScript, GitHub Actions</small></li><li><a href="index.html#projetos">FM Locação — sistema (vídeo)</a><small>Python, Django, 200+ testes</small></li><li><a href="index.html#projetos">FM Locação — site e painel (vídeo)</a><small>Python, JavaScript, GitHub Actions</small></li><li><a href="https://github.com/oAccex/Accex-main---Copia.git" target="_blank" rel="noopener">Accex</a><small>Web · Node.js, MySQL, EJS</small></li><li><a href="https://app.powerbi.com/view?r=eyJrIjoiZWFlZWM5ZGMtMTE4Zi00NDQwLThkY2EtYmQxMWYzN2IxNjc5IiwidCI6ImIxMDUxYzRiLTNiOTQtNDFhYi05NDQxLWU3M2E3MjM0MmZkZCJ9" target="_blank" rel="noopener">Dashboard de vendas</a><small>Dados · Power BI, DAX, ETL</small></li><li><a href="https://www.instagram.com/fmlocacao" target="_blank" rel="noopener">Identidade visual FM</a><small>Design · branding</small></li></ul></div>
+    <div><h2>Currículo</h2><ul><li>ADS<small>Cruzeiro do Sul · Ago.2024 – atual</small></li><li>Call center · EMDIA<small>Set.2024 – Jul.2026</small></li><li>Técnico em Informática para Internet<small>FIEB · Jan.2021 – Dez.2023</small></li><li>AWS GenAI Foundations · AI-103<small>Senai · 2026</small></li><li>Google Cloud Computing Foundations<small>2025</small></li><li><a href="curriculo-eduardo-augusto.pdf" download>Baixar Currículo (PDF)</a></li></ul></div>
+    <div><h2>Contato</h2><ul><li><a href="mailto:edaugusto0111@gmail.com">edaugusto0111@gmail.com</a></li><li><a href="https://wa.me/5511953784814" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://www.linkedin.com/in/edaugusto" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://github.com/edaaugusto" target="_blank" rel="noopener">GitHub</a></li></ul></div>
+  </div>
+</dialog>
+<div class="lights" id="lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],root=document.documentElement;
+const reduce=root.classList.contains('rm'),qs=new URLSearchParams(location.search);
+const D={
+'Pular para o conteúdo':'Skip to content','Eduardo Augusto, início':'Eduardo Augusto, home','Seções':'Sections',
+'Início':'Home','Sobre':'About','Projetos':'Projects','Currículo':'Résumé','Contato':'Contact','Menu':'Menu',
+'Ver tudo em lista':'View all as a list','Ligar ou desligar as animações':'Turn animations on or off','Animações':'Animations',
+'Ligar animações':'Turn animations on','Animações: desligadas':'Animations: off','Animações: ligadas':'Animations: on',
+'Alternar tema':'Toggle theme','Claro':'Light','Escuro':'Dark','Mudar idioma':'Change language',
+'Portfólio':'Portfolio','Desenvolvimento web · Dados':'Web development · Data',
+'Crio sistemas web e análises de dados para problemas reais de operação.':'Building web systems and data analysis for real operational problems.',
+'Antes da tecnologia, vendas e quase dois anos de call center, onde desenvolvi oratória, argumentação e leitura de negociação. Hoje, graduando em ADS e buscando estágio ou júnior.':
+  "Before tech, I worked in sales and spent almost two years in a call center, where I built public speaking, persuasion and negotiation skills. Now I'm studying Systems Analysis and Development and looking for an internship or junior role.",
+'Ver projetos':'See projects','Agentes com IA — AI-103':'Developing AI Apps and Agents — AI-103','Informática':'Computer Skills','Baixar currículo':'Download résumé','Baixar Currículo':'Download résumé','Baixar Currículo (PDF)':'Download résumé (PDF)','Currículo PDF':'Résumé PDF',
+'Foto de Eduardo Augusto em serigrafia de quatro cores':'Photo of Eduardo Augusto as a four-color screen print',
+'ADS':'Associate degree','Cruzeiro do Sul · 2024–atual':'Cruzeiro do Sul · 2024–present','Técnico':'Technical diploma','Informática para Internet · FIEB':'Web Development · FIEB',
+'Cursos de IA':'AI courses','Rolar ↓':'Scroll ↓',
+'Quem sou, de onde vim e com o que trabalho.':'Who I am, where I come from and what I work with.','Resumo':'Summary',
+'Estudo Análise e Desenvolvimento de Sistemas na Cruzeiro do Sul e sou técnico em Informática para Internet pela FIEB. Hoje desenvolvo o site e o sistema de gestão da FM Locação em Python e Django, com mais de 200 testes automatizados, e trabalho com SQL e Power BI para análise de dados. Antes da tecnologia, passei por vendas e quase dois anos de call center, onde aprendi a ouvir, negociar e explicar com clareza. Concluí cursos de IA generativa e agentes (AWS Generative AI Foundations e Azure AI-103) e busco minha primeira oportunidade como estagiário ou júnior.':
+  "I'm studying Systems Analysis and Development (associate degree) at Cruzeiro do Sul and graduated from a technical high school in Web Development at FIEB. I'm currently building the website and management system for FM Locação with Python and Django, covered by more than 200 automated tests, and I use SQL and Power BI for data analysis. Before tech, I worked in sales and spent almost two years in a call center, where I learned to listen, negotiate and explain things clearly. I've completed courses in generative AI and agents (AWS Generative AI Foundations and Azure AI-103) and I'm looking for my first internship or junior role.",
+'Trajetória':'Background',
+'Comecei cedo, conciliando o técnico com freelas em eventos. Fui vendedor numa loja de surfe, meu primeiro compromisso profissional, e passei quase dois anos em um call center.':
+  'I started early, balancing technical school with freelance work at events. My first job was in sales at a surf shop, and then I spent almost two years in a call center.',
+'Formação':'Education','Análise e Desenvolvimento de Sistemas':'Systems Analysis and Development (associate degree)',
+'Universidade Cruzeiro do Sul · 2024–atual':'Universidade Cruzeiro do Sul · 2024–present','Técnico em Informática para Internet':'Technical High School in Web Development',
+'Experiência':'Experience','FM Locação — site e sistema de gestão':'FM Locação — website and management system','Projeto para cliente · em andamento':'Client project · ongoing',
+'Call center · EMDIA':'Call center — debt negotiation · EMDIA','Set.2024 – Jul.2026 · negociação e regularização financeira':'Sep 2024 – Jul 2026 · negotiation and debt settlement',
+'Ferramentas':'Tools','IA generativa · Agentes (AWS, Azure)':'Generative AI · Agents (AWS, Azure)',
+'O projeto principal primeiro. Depois os outros, todos no mesmo formato.':'The main project first, then the others, all in the same format.',
+'Projeto principal · trabalho para cliente':'Main project · client work','Site e sistema de gestão para uma locadora de itens para eventos.':'A website and management system for an event-rental company.',
+'Python · Django · JavaScript · GitHub Actions · mais de 200 testes automatizados':'Python · Django · JavaScript · GitHub Actions · 200+ automated tests',
+'Assistir ao vídeo: site institucional e painel':'Watch the video: website and admin panel','Assistir':'Watch','Público · no ar':'Public · live',
+'Site institucional + Painel':'Website + Admin panel',
+'Catálogo com preços, simulador de composição de mesa e pedido enviado pelo WhatsApp. O conteúdo é editado num painel privado e publicado com verificação automática.':
+  'Catalog with prices, a table-setting simulator and orders sent through WhatsApp. Content is edited in a private admin panel and published with automated checks.',
+'Ver site ↗':'Visit site ↗','Assistir ao vídeo: sistema de gestão':'Watch the video: management system','Trabalho para cliente · dados fictícios':'Client work · sample data',
+'Sistema de gestão':'Management system',
+'Uso interno da locadora: mostra o que está livre em cada período, transforma o orçamento aprovado em contrato sem redigitar e controla o que cada pessoa da equipe vê.':
+  "Internal tool for the rental company: shows what's available in each period, turns an approved quote into a contract without retyping, and controls what each team member can see.",
+'Outros projetos':'Other projects','Filtrar por categoria':'Filter by category','Todos':'All','Dados':'Data',
+'repositório ↗':'repository ↗','Repositório do Accex no GitHub':'Accex repository on GitHub','Accex — acessibilidade urbana':'Accex — urban accessibility',
+'Plataforma full-stack para classificar a acessibilidade urbana. Projeto de conclusão do curso técnico, feito em grupo.':'Full-stack platform for rating urban accessibility. Technical school capstone project, built as a team.',
+'Repositório ↗':'Repository ↗','abrir relatório ↗':'open report ↗','Relatório de vendas publicado no Power BI':'Sales report published on Power BI',
+'Dashboard de análise de vendas':'Sales analysis dashboard','Relatório em Power BI com ETL, modelagem de dados e medidas DAX para acompanhar indicadores comerciais.':'Power BI report with ETL, data modeling and DAX measures to track sales KPIs.',
+'Relatório ↗':'Report ↗','Logotipo e assinatura da FM Locação aplicados no site':'FM Locação logo and tagline as used on the website','Identidade visual — FM Locação':'Visual identity — FM Locação',
+'Logotipo, materiais digitais e marketing contínuo no Instagram, com reels, fotos e vídeos, além da gestão do projeto.':'Logo, digital materials and ongoing Instagram marketing with reels, photos and videos, plus project management.',
+'Mais no GitHub ↗':'More on GitHub ↗','O resumo. O completo está no PDF.':'The short version. The full résumé is in the PDF.',
+'Site e sistema de gestão · projeto para cliente · em andamento':'Website and management system · client project · ongoing',
+'Set.2024 – Jul.2026 · negociações, regularização e detalhamento de situações financeiras':'Sep 2024 – Jul 2026 · negotiations, debt settlement and account reviews',
+'Universidade Cruzeiro do Sul · Ago.2024 – atual':'Universidade Cruzeiro do Sul · Aug 2024 – present','FIEB · Jan.2021 – Dez.2023':'FIEB · Jan 2021 – Dec 2023',
+'Certificações e cursos':'Certifications and courses','ver badge':'view badge','ver certificado':'view certificate',
+'Currículo completo, numa página, pronto para imprimir.':'Full résumé on one page, ready to print.',
+'Buscando um estagiário ou desenvolvedor júnior para o seu time? Vamos conversar.':"Looking for an intern or junior developer for your team? Let's talk.",
+'Enviar e-mail ↗':'Send email ↗','Copiar e-mail':'Copy email','Copiado':'Copied','ou abrir no app de e-mail':'or open it in your email app','Topo ↑':'Top ↑',
+'Menu · tudo em lista':'Menu · everything as a list','Fechar ×':'Close ×','FM Locação — site':'FM Locação — website','FM Locação — sistema (vídeo)':'FM Locação — system (video)',
+'Python, Django, 200+ testes':'Python, Django, 200+ tests','FM Locação — site e painel (vídeo)':'FM Locação — website and panel (video)',
+'Dashboard de vendas':'Sales dashboard','Dados · Power BI, DAX, ETL':'Data · Power BI, DAX, ETL','Identidade visual FM':'FM visual identity',
+'Cruzeiro do Sul · Ago.2024 – atual':'Cruzeiro do Sul · Aug 2024 – present','Set.2024 – Jul.2026':'Sep 2024 – Jul 2026',
+'Vídeo':'Video','Fechar o vídeo':'Close the video','Fechar':'Close','FM Locação · sistema interno':'FM Locação · internal system','Anterior':'Previous','Próxima':'Next','Pular':'Skip',
+/* textos gerados pelo script */
+'FM Locação · público':'FM Locação · public','FM Locação · trabalho para cliente · dados fictícios':'FM Locação · client work · sample data',
+'O site público da locadora e o painel privado onde o conteúdo é editado. O que muda no painel aparece no site em poucos minutos.':"The rental company's public website and the private panel where content is edited. Changes made in the panel show up on the site within minutes.",
+'Sistema interno da locadora, ainda em implementação: disponibilidade por período, orçamento que vira contrato e conferência no galpão. Telas com dados fictícios.':'Internal system for the rental company, still being implemented: availability by period, quotes that become contracts and warehouse check-out. Screens use sample data.',
+'FM Locação · painel do site':'FM Locação · site panel','FM Locação · vídeo do sistema':'FM Locação · system video',
+'Vídeo de demonstração do sistema interno.':'Demo video of the internal system.',
+'Consulta de disponibilidade — unidades livres no período, já descontando reservas, higienização e material sublocado.':'Availability check — units free in the period, already accounting for bookings, cleaning and sub-rented items.',
+'A mesma consulta no celular.':'The same check on a phone.','Orçamentos — código, versão, responsável, status e validade.':'Quotes — code, version, owner, status and expiry.',
+'Detalhe do orçamento — aprovado, vira contrato sem redigitar.':'Quote detail — once approved, it becomes a contract without retyping.','Orçamento no celular — o total sempre visível.':'Quote on a phone — the total always visible.',
+'Contrato — cliente, evento, itens e documentos numa pasta só.':'Contract — client, event, items and documents in one place.','Conferência de saída no galpão, item a item.':'Warehouse check-out, item by item.',
+'Tela inicial — contratos sem assinatura e sublocações que vencem.':'Home screen — unsigned contracts and sub-rentals coming due.',
+'Painel do site — o que é editado aparece no site em poucos minutos. Acesso restrito.':'Site panel — what is edited shows up on the site within minutes. Restricted access.',
+'Eduardo Augusto — Desenvolvimento web e dados':'Eduardo Augusto — Web development and data',
+'Eduardo Augusto — desenvolvimento web e dados. Graduando em Análise e Desenvolvimento de Sistemas, buscando estágio ou júnior.':'Eduardo Augusto — web development and data. Systems Analysis and Development student looking for an internship or junior role.'
+};
+Object.assign(D,{"Eduardo Augusto — Currículo": "Eduardo Augusto — Résumé", "Currículo de Eduardo Augusto: desenvolvimento de sistemas e análise de dados, estágio ou júnior, disponibilidade imediata.": "Eduardo Augusto's résumé: software development and data analysis, internship or junior, available immediately.", "Desenvolvimento de Sistemas e Análise de Dados": "Software Development and Data Analysis", "Estágio ou Júnior": "Internship or Junior", "Disponibilidade imediata": "Available immediately", "Barueri, SP": "Barueri, SP, Brazil", "Baixar currículo (PDF)": "Download résumé (PDF)", "Imprimir esta página": "Print this page", "Contato": "Contact", "Localização": "Location", "Resumo Profissional": "Professional Summary", "Graduando em Análise e Desenvolvimento de Sistemas e técnico em Informática para Internet. Como freelancer, desenvolvo o site institucional e o sistema de gestão interno da FM Locação em Python e Django, com mais de 200 testes automatizados. Também trabalho com SQL e análise de dados em Power BI (DAX) e concluí cursos de IA generativa e agentes (AWS e Azure). Antes da tecnologia, passei por vendas e quase dois anos de call center, que me deram oratória, argumentação e leitura de negociações. Busco oportunidade como Estagiário ou Júnior.": "Systems Analysis and Development student with a technical high school diploma in Web Development. As a freelancer, I build the public website and the internal management system for FM Locação, an event rental company, using Python and Django, backed by more than 200 automated tests. I also work with SQL and data analysis in Power BI (DAX), and I have completed courses on generative AI and AI agents (AWS and Azure). Before tech, I worked in sales and spent almost two years in a call center, which sharpened my communication, persuasion and negotiation skills. Looking for an internship or junior position.", "Competências": "Skills", "Desenvolvimento e automação:": "Development and automation:", "Python, Django, HTML, CSS, JavaScript, Node.js, EJS, Java, testes automatizados, GitHub Actions": "Python, Django, HTML, CSS, JavaScript, Node.js, EJS, Java, automated testing, GitHub Actions", "Banco de dados:": "Databases:", "Análise de dados:": "Data analysis:", "Power BI, DAX, ETL, modelagem de dados, dashboards": "Power BI, DAX, ETL, data modeling, dashboards", "Nuvem e IA:": "Cloud and AI:", "Google Cloud, AWS, Microsoft Azure, Azure AI Foundry, IA Generativa, agentes de IA": "Google Cloud, AWS, Microsoft Azure, Azure AI Foundry, Generative AI, AI agents", "Ferramentas:": "Tools:", "Git, GitHub, Pacote Office (Word, Excel, PowerPoint), Adobe Illustrator": "Git, GitHub, Microsoft Office (Word, Excel, PowerPoint), Adobe Illustrator", "Comportamentais:": "Soft skills:", "comunicação, oratória, negociação, adaptabilidade, atendimento ao cliente": "communication, public speaking, negotiation, adaptability, customer service", "Idiomas": "Languages", "Português (nativo), Inglês (básico a intermediário)": "Portuguese (native), English (basic to intermediate)", "Experiência Profissional": "Professional Experience", "Desenvolvedor Web (Freelancer)": "Web Developer (Freelance)", "FM Locação | 2026 – Atualmente": "FM Locação | 2026 – Present", "Site institucional (": "Public website (", ") com catálogo, simulador de composição de mesa e assistente que envia o pedido pronto pelo WhatsApp; conteúdo editado em painel próprio de acesso restrito.": ") with a product catalog, a table-setting simulator and an assistant that sends the finished order via WhatsApp; content is managed through a private admin panel.", "Sistema de gestão interno em Python e Django: disponibilidade por período (reservas, higienização e sublocação), orçamento aprovado que vira contrato e controle de acesso por perfil.": "Internal management system in Python and Django: availability by date range (reservations, cleaning and subrented items), approved quotes that turn into contracts, and role-based access control.", "Mais de 200 testes automatizados cobrindo as regras de negócio, com verificação automática via GitHub Actions.": "200+ automated tests covering the business rules, with automated checks via GitHub Actions.", "Call Center": "Call Center Agent", "EMDIA Serviços Especializados em Cobranças LTDA | Set.2024 – Jul.2026": "EMDIA Serviços Especializados em Cobranças LTDA | Sep 2024 – Jul 2026", "Foco em auxiliar o cliente, atuando no setor de negociações, regularização e detalhamento de situações financeiras.": "Customer support focused on debt negotiation, account regularization and explaining financial situations.", "Projetos": "Projects", "Accex — Acessibilidade Urbana": "Accex — Urban Accessibility", "Plataforma web full-stack (Node.js, MySQL, EJS) para classificação de acessibilidade urbana — projeto de conclusão de curso técnico.": "Full-stack web platform (Node.js, MySQL, EJS) for rating urban accessibility — technical school capstone project.", "Repositório": "Repository", "Dashboard de Análise de Vendas": "Sales Analytics Dashboard", "Projeto prático em Power BI com ETL, modelagem de dados e medidas DAX para acompanhar indicadores comerciais e performance de vendas.": "Hands-on Power BI project with ETL, data modeling and DAX measures to track sales performance and business indicators.", "Ver dashboard": "View dashboard", "Identidade Visual — F M Locação": "Visual Identity — F M Locação", "Gestão de projetos, branding, materiais digitais e gestão contínua do marketing no Instagram (reels, fotos e vídeos).": "Project management, branding, digital materials and ongoing Instagram marketing (reels, photos and videos).", "Formação Acadêmica": "Education", "Análise e Desenvolvimento de Sistemas": "Associate Degree in Systems Analysis and Development", "Universidade Cruzeiro do Sul | Ago.2024 – Atualmente": "Universidade Cruzeiro do Sul | Aug 2024 – Present", "Ensino Médio Técnico em Informática para Internet": "Technical High School Diploma in Web Development", "FIEB — Fundação Instituto de Educação de Barueri | Jan.2021 – Dez.2023": "FIEB — Fundação Instituto de Educação de Barueri | Jan 2021 – Dec 2023", "Certificações": "Certifications", "Ver certificado": "View certificate", "Cursos": "Courses", "Desenvolvimento de Agentes com IA — AI-103": "Developing AI Apps and Agents — AI-103", "Ver badge": "View badge", "Informática": "Computer Skills", "Portfólio Pessoal": "Portfolio", "Portfólio": "Portfolio", "Topo ↑": "Top ↑"});
+const REV={};for(const k in D)REV[D[k]]=k;
+let lang=(()=>{let s=null;try{s=localStorage.getItem('ea5-lang')}catch(e){}if(s==='pt'||s==='en')return s;
+  if(qs.get('lang')==='en'||qs.get('lang')==='pt')return qs.get('lang');return /^en/i.test(navigator.language||'')?'en':'pt'})();
+const t=s=>lang==='en'?(D[s]??s):s;
+const ATTRS=['aria-label','title','alt','placeholder','data-cur'];
+const TXT=new Map(),ATT=new Map();
+const origOf=v=>{const k=v.trim();return REV[k]?v.replace(k,REV[k]):v};
+const PT_PDF='curriculo-eduardo-augusto.pdf',EN_PDF='resume-eduardo-augusto.pdf';
+const i18nHooks=[];
+function applyLang(l){lang=l;root.lang=l==='en'?'en':'pt-BR';
+  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>{const p=n.parentElement;
+    if(!p||p.closest('script,style,svg,.split,#dec,[data-noi18n],[data-en]'))return NodeFilter.FILTER_REJECT;return /\S/.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT}});
+  for(let n;(n=w.nextNode());){if(!TXT.has(n))TXT.set(n,origOf(n.nodeValue));const o=TXT.get(n),k=o.trim();n.nodeValue=l==='en'&&D[k]?o.replace(k,D[k]):o}
+  document.querySelectorAll(ATTRS.map(a=>'['+a+']').join(',')).forEach(el=>{if(el.closest('svg'))return;let m=ATT.get(el);if(!m){m={};ATTRS.forEach(a=>{if(el.hasAttribute(a))m[a]=origOf(el.getAttribute(a))});ATT.set(el,m)}
+    for(const a in m)el.setAttribute(a,l==='en'&&D[m[a]]?D[m[a]]:m[a])});
+  /* títulos com split por palavra e títulos "pintados" */
+  document.querySelectorAll('.split').forEach(el=>{if(!el.dataset.pt)el.dataset.pt=origOf(el.textContent.trim());const txt=t(el.dataset.pt);
+    if(el.dataset.text!==undefined)el.dataset.text=txt;el.textContent=txt;if(window.__splitWords)window.__splitWords(el)});
+  /* currículo: PDF em português ou em inglês */
+  document.querySelectorAll('a[href$="curriculo-eduardo-augusto.pdf"],a[href$="resume-eduardo-augusto.pdf"]').forEach(a=>a.setAttribute('href',l==='en'?EN_PDF:PT_PDF));
+  /* assunto do e-mail (Gmail e app de e-mail) */
+  document.querySelectorAll('a[href*="mail"]').forEach(a=>{a.href=a.href.replace(/Contato%20pelo%20portf%C3%B3lio|Contact%20via%20portfolio/g,l==='en'?'Contact%20via%20portfolio':'Contato%20pelo%20portf%C3%B3lio')});
+  document.title=t('Eduardo Augusto — Currículo');
+  const md=document.querySelector('meta[name="description"]');if(md)md.content=t('Currículo de Eduardo Augusto: desenvolvimento de sistemas e análise de dados, estágio ou júnior, disponibilidade imediata.');
+  const og=(p,v)=>{let m=document.querySelector(`meta[property="${p}"]`);if(!m){m=document.createElement('meta');m.setAttribute('property',p);document.head.append(m)}m.content=v};
+  og('og:title',document.title);og('og:description',md?md.content:'');og('og:locale',l==='en'?'en_US':'pt_BR');og('og:type','website');
+  document.querySelectorAll('.lg').forEach(b=>b.setAttribute('aria-pressed',String(l==='en')));
+  document.querySelectorAll('[data-en]').forEach(el=>{if(el.dataset.ptx===undefined)el.dataset.ptx=el.textContent;el.textContent=l==='en'?el.dataset.en:el.dataset.ptx});
+  i18nHooks.forEach(f=>f())}
+applyLang(lang);
+{const mv=document.getElementById('mv');mv.setAttribute('aria-pressed',String(!reduce));mv.querySelectorAll('span').forEach(x=>x.setAttribute('data-noi18n',''));const mvL=()=>{mv.querySelector('.long').textContent=t(reduce?(root.classList.contains('os-rm')?'Ligar animações':'Animações: desligadas'):'Animações: ligadas');mv.querySelector('.short').textContent=reduce?'Anim.: off':'Anim.: on'};mvL();i18nHooks.push(mvL);
+ mv.addEventListener('click',()=>{try{localStorage.setItem('ea5-motion',reduce?'on':'off')}catch(e){}location.reload()})}
+const hasG=!!(window.gsap&&window.ScrollTrigger),E='cubic-bezier(.76,0,.24,1)',O='cubic-bezier(.16,1,.3,1)';
+const BG={dark:'#1A2414',light:'#E3E6D3'},BLUE={dark:'#0C2742',light:'#C9D9EA'};
+const lights=$('#lights'),bars=[...lights.children];
+function bank(theme,mid){if(reduce){mid&&mid();return Promise.resolve()}
+  lights.style.display='flex';bars.forEach((b,i)=>b.style.background=i===2?BLUE[theme]:BG[theme]);
+  const a=bars.map((b,i)=>b.animate([{transform:'scaleY(0)',transformOrigin:'top'},{transform:'scaleY(1)',transformOrigin:'top'}],{duration:420,delay:i*55,easing:E,fill:'forwards'}));
+  return a[a.length-1].finished.then(()=>{mid&&mid();const b2=bars.map((b,i)=>b.animate([{transform:'scaleY(1)',transformOrigin:'bottom'},{transform:'scaleY(0)',transformOrigin:'bottom'}],{duration:460,delay:90+i*55,easing:E,fill:'forwards'}));return b2[b2.length-1].finished}).then(()=>{lights.style.display='none'})}
+document.querySelectorAll('.lg').forEach(b=>b.addEventListener('click',()=>{const next=lang==='en'?'pt':'en';try{localStorage.setItem('ea5-lang',next)}catch(e){}bank(root.dataset.theme,()=>{applyLang(next);if(window.ScrollTrigger)ScrollTrigger.refresh()})}));
+$('#tg').addEventListener('click',()=>{const next=root.dataset.theme==='dark'?'light':'dark';bank(next,()=>{root.dataset.theme=next;try{localStorage.setItem('ea5-theme',next)}catch(e){}})});
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{try{if(localStorage.getItem('ea5-theme'))return}catch(x){}root.dataset.theme=e.matches?'dark':'light'});
+/* header sólido ao rolar */
+const top=$('#top');const chk=()=>top.classList.add('solid');addEventListener('scroll',chk,{passive:true});chk();
+/* menu / tudo em lista */
+const idx=$('#idx');$$('[data-idx]').forEach(b=>b.addEventListener('click',()=>{idx.showModal();if(!reduce)idx.animate([{clipPath:'inset(0 0 100% 0)'},{clipPath:'inset(0 0 0 0)'}],{duration:560,easing:E})}));
+$('#close-idx').addEventListener('click',()=>idx.close());
+$('#print-btn').addEventListener('click',()=>print());
+/* animações moderadas: entrada curta, títulos pintados pela fita */
+if(hasG&&!reduce){gsap.registerPlugin(ScrollTrigger);root.classList.add('paintfx');
+  gsap.from('.cv-top .wrap>*',{opacity:0,y:18,duration:.8,ease:'power3.out',stagger:.07});
+  $$('.rv').forEach(el=>gsap.from(el,{opacity:0,y:24,duration:.8,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 92%'}}));
+  $$('.paint').forEach(h=>{gsap.set(h,{'--p':'0%','--o':0});
+    gsap.timeline({scrollTrigger:{trigger:h,start:'top 90%'}}).to(h,{'--o':1,duration:.01},.2).to(h,{'--p':'100%',duration:.9,ease:'power2.inOut'},.2).to(h,{'--o':0,duration:.25})});
+  $$('.tl2>li>.x').forEach(x=>gsap.from(x,{scale:0,rotate:-45,duration:.5,ease:'back.out(2)',scrollTrigger:{trigger:x,start:'top 90%'}}));
+  addEventListener('beforeprint',()=>{root.classList.remove('paintfx')});addEventListener('afterprint',()=>{root.classList.add('paintfx')});
+}
+})();
+</script>
 </body>
 </html>
