@@ -567,17 +567,11 @@ dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
             <h4><button type="button" data-play="sistema">Sistema de gestão</button></h4>
             <p>Uso interno da locadora: mostra o que está livre em cada período, transforma o orçamento aprovado em contrato sem redigitar e controla o que cada pessoa da equipe vê.</p>
             <p class="ui-note">Interface do sistema em português</p>
-            <div class="vlinks"><button class="btn" type="button" data-play="sistema"><i aria-hidden="true">▶</i> Assistir</button><button class="lnk" type="button" id="shots-btn" aria-expanded="false" aria-controls="fm-telas">Ver telas</button></div>
+            <div class="vlinks"><button class="btn" type="button" data-play="sistema"><i aria-hidden="true">▶</i> Assistir</button></div>
           </div>
         </article>
       </div>
-      <!-- TELAS FIXAS (provisórias): troque src e legenda de cada figure -->
-      <div class="shots" id="fm-telas" hidden>
-        <figure><span class="sh-img"><img src="img/v5/fm-sistema-01.webp" alt="" loading="lazy" width="1366" height="599"></span><figcaption>Consulta de disponibilidade — unidades livres no período, já descontando reservas, higienização e material sublocado.</figcaption></figure>
-        <figure><span class="sh-img"><img src="img/v5/fm-sistema-03.webp" alt="" loading="lazy" width="1366" height="599"></span><figcaption>Detalhe do orçamento — aprovado, vira contrato sem redigitar.</figcaption></figure>
-        <figure><span class="sh-img"><img src="img/v5/fm-sistema-05.webp" alt="" loading="lazy" width="1366" height="599"></span><figcaption>Contrato — cliente, evento, itens e documentos numa pasta só.</figcaption></figure>
-        <p class="shots-n">Telas do sistema com dados fictícios. Interface do sistema em português.</p>
-      </div>
+      
       <!-- COMO FOI FEITO: só fatos confirmados -->
       <div class="how rv" id="fm-how">
         <p class="lbl how-k">Como foi feito</p>
@@ -1016,7 +1010,7 @@ function closeVideo(){vv.pause();const stage=vm.querySelector('.vm-stage');
   Object.assign(ghost.style,{display:'block'});stage.style.opacity=0;vm.querySelector('.vm-h').style.opacity=0;vm.querySelector('.vm-f').style.opacity=0;
   ghost.animate([{left:a.left+'px',top:a.top+'px',width:a.width+'px',height:a.height+'px'},{left:b.left+'px',top:b.top+'px',width:b.width+'px',height:b.height+'px'}],{duration:560,easing:'cubic-bezier(.76,0,.24,1)',fill:'forwards'}).finished.then(a2=>{done();a2.cancel()})}
 $$('[data-play]').forEach(b=>b.addEventListener('click',()=>openVideo(b.dataset.play,b)));
-{const sb=$('#shots-btn'),sh=$('#fm-telas');const lab=()=>{sb.textContent=t(sh.hidden?'Ver telas':'Ocultar telas')};sb.addEventListener('click',()=>{sh.hidden=!sh.hidden;sb.setAttribute('aria-expanded',String(!sh.hidden));lab();if(!sh.hidden&&!reduce)[...sh.children].forEach((f,i)=>f.animate([{opacity:0,transform:'translateY(18px)'},{opacity:1,transform:'none'}],{duration:600,delay:i*90,easing:'cubic-bezier(.16,1,.3,1)',fill:'backwards'}));if(!sh.hidden){if(lenis)lenis.scrollTo(sh,{offset:-90});else sh.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'})}if(window.ScrollTrigger)ScrollTrigger.refresh()});sb.setAttribute('data-noi18n','');i18nHooks.push(lab)}
+
 vm.querySelector('.vm-x').addEventListener('click',closeVideo);
 vm.addEventListener('cancel',e=>{e.preventDefault();closeVideo()});
 vm.addEventListener('click',e=>{if(e.target===vm||e.target.classList.contains('vm-in'))closeVideo()});
