@@ -464,6 +464,7 @@ dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
 @media (max-width:960px){.shots{grid-template-columns:1fr}.how{padding:20px}.how-g{grid-template-columns:1fr;gap:18px}.triage li{font-size:.78rem}}
 @media (max-width:1200px) and (min-width:961px){.top .tb{white-space:nowrap}.top .mv .long{display:none}.top .mv .short{display:inline}}
 @media (min-width:961px) and (max-height:700px){.hl .bridge{display:none}.triage{margin-top:12px}.triage li{padding:5px 8px;font-size:.76rem}.hl .ctas{margin-top:18px}}
+.how-proof{margin:22px 0 0}.how-proof pre{margin:0;padding:16px 18px;background:#0A1007;color:#DCE3CF;font:500 .92rem/1.5 ui-monospace,Consolas,monospace;border:1px solid rgba(168,191,110,.25);overflow-x:auto;white-space:pre}.how-proof .hp-dim{color:#6E7B5C}.how-proof .hp-ok{color:#A8BF6E;font-weight:700}.how-proof figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
 </style>
 </head>
 <body>
@@ -578,7 +579,7 @@ dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
         <div class="how-g">
           <section><h5>Sistema de gestão</h5><ul>
             <li>Python 3 + Django 5.2, banco SQLite</li>
-            <li>Mais de 2.000 testes automatizados (unittest / Django test runner) cobrindo as regras de negócio</li>
+            <li>2.291 testes automatizados (unittest / Django test runner) cobrindo as regras de negócio, todos passando</li>
             <li>PDF de contratos gerado com WeasyPrint</li>
             <li>Proteção contra força bruta no login (django-axes)</li>
             <li>Auditoria de dependências e de segurança (pip-audit, bandit); dependências com versão exata</li>
@@ -591,6 +592,10 @@ dialog.vmodal::backdrop{background:rgba(6,16,28,.92)}
             <li>Nada vai ao ar se algo falhar</li></ul></section>
           <section><h5>Papel</h5><p>Freelancer, responsável de ponta a ponta: especificação com a proprietária, desenvolvimento, testes e publicação.</p></section>
         </div>
+        <figure class="how-proof"><pre aria-label="Saída real do comando de testes do sistema"><span class="hp-dim">----------------------------------------------------------------------</span>
+Ran 2291 tests in 1192.570s
+
+<span class="hp-ok">OK</span></pre><figcaption>Saída real da suíte de testes do sistema · 22/11/2026</figcaption></figure>
       </div>
     </article>
 
@@ -740,7 +745,7 @@ const D={
 "Telas do sistema com dados fictícios. Interface do sistema em português.":"System screens with sample data. System UI is in Portuguese.",
 "Como foi feito":"How it was built",
 "Python 3 + Django 5.2, banco SQLite":"Python 3 + Django 5.2, SQLite database",
-"Mais de 2.000 testes automatizados (unittest / Django test runner) cobrindo as regras de negócio":"More than 2,000 automated tests (unittest / Django test runner) covering the business rules",
+"2.291 testes automatizados (unittest / Django test runner) cobrindo as regras de negócio, todos passando":"2,291 automated tests (unittest / Django test runner) covering the business rules, all passing","Saída real da suíte de testes do sistema · 22/11/2026":"Real output of the system test suite · Nov 22, 2026","Saída real do comando de testes do sistema":"Real output of the system test command",
 "PDF de contratos gerado com WeasyPrint":"Contract PDFs generated with WeasyPrint",
 "Proteção contra força bruta no login (django-axes)":"Brute-force login protection (django-axes)",
 "Auditoria de dependências e de segurança (pip-audit, bandit); dependências com versão exata":"Dependency and security audits (pip-audit, bandit); exactly pinned dependencies",
