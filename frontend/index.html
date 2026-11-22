@@ -981,10 +981,10 @@ let x0=null;st.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive
 /* ---------- VÍDEOS DO CASE: troque aqui por vídeos novos (um lugar só) ---------- */
 const VIDEOS={
   site:{titulo:'Site institucional + Painel',rotulo:'FM Locação · público',
-    src:'img/v5/videos/fm-site-painel.mp4',poster:'img/v5/videos/fm-site-painel-poster.webp',
+    src:'img/v5/videos/fm-site-painel.mp4',poster:'img/v5/videos/fm-site-painel-poster.webp',srcEn:'img/v5/videos/fm-site-painel-en.mp4',posterEn:'img/v5/videos/fm-site-painel-en-poster.webp',
     desc:'O site público da locadora e o painel privado onde o conteúdo é editado. O que muda no painel aparece no site em poucos minutos.',link:'https://fmlocacao.com.br'},
   sistema:{titulo:'Sistema de gestão',rotulo:'FM Locação · trabalho para cliente · dados fictícios',
-    src:'img/v5/videos/fm-sistema.mp4',poster:'img/v5/videos/fm-sistema-poster.webp',
+    src:'img/v5/videos/fm-sistema.mp4',poster:'img/v5/videos/fm-sistema-poster.webp',srcEn:'img/v5/videos/fm-sistema-en.mp4',posterEn:'img/v5/videos/fm-sistema-en-poster.webp',
     desc:'Sistema interno da locadora, em uso interno, acessível só por dispositivos autorizados: disponibilidade por período, orçamento que vira contrato e conferência no galpão. Telas com dados fictícios.',link:null}
 };
 /* modal: a capa do card cresce até virar o player */
@@ -994,7 +994,7 @@ function openVideo(key,trigger){const d=VIDEOS[key];if(!d)return;
   fromEl=trigger.closest('.vcard')?.querySelector('.vcov')||null;
   $('#vm-t').textContent=t(d.titulo);$('#vm-k').textContent=t(d.rotulo);$('#vm-d').textContent=t(d.desc);
   $('#vm-note').hidden=key!=='sistema';const ln=$('#vm-link');ln.hidden=!d.link;if(d.link)ln.href=d.link;
-  vv.poster=d.poster;vv.src=d.src;
+  {const en=lang==='en';vv.poster=(en&&d.posterEn)||d.poster;vv.src=(en&&d.srcEn)||d.src;}
   if(idx.open)idx.close();
   vm.showModal();lenis&&lenis.stop();
   const stage=vm.querySelector('.vm-stage');
